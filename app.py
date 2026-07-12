@@ -111,7 +111,8 @@ st.markdown(
     [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button span {
         color: #17322e !important;
     }
-    .block-container { max-width: 1240px; padding-top: 1.35rem; padding-bottom: 4rem; }
+    /* Clear Streamlit's fixed toolbar (~3.75rem) so the masthead is never covered. */
+    .block-container { max-width: 1240px; padding-top: 4.4rem; padding-bottom: 4rem; }
     h1, h2, h3 { color: var(--ws-ink); letter-spacing: -0.025em; }
     h2 { margin-top: 0.4rem; }
     a { color: #9b3e2b; }
@@ -137,11 +138,11 @@ st.markdown(
     .stDownloadButton > button { border-radius: 10px; font-weight: 650; }
     [data-testid="stExpander"], [data-testid="stAlert"] { border-radius: 14px; }
     .ws-sidebar-brand { padding: 0.25rem 0 1.1rem; }
-    .ws-sidebar-lockup { display: flex; align-items: center; gap: 0.72rem; }
-    .ws-sidebar-mark { width: 42px; height: 42px; flex: 0 0 auto; }
+    .ws-sidebar-lockup { display: flex; align-items: center; gap: 0.6rem; }
+    .ws-sidebar-mark { width: 34px; height: 34px; flex: 0 0 auto; }
     .ws-sidebar-name { color: #fff; font-size: 1.28rem; line-height: 1; font-weight: 800; letter-spacing: -0.035em; }
     .ws-sidebar-name span { color: #f2c66d !important; }
-    .ws-sidebar-tagline { margin: 0.38rem 0 0 !important; color: #b9cbc5 !important; font-size: 0.78rem; line-height: 1.35; }
+    .ws-sidebar-tagline { margin: 0.55rem 0 0 !important; color: #b9cbc5 !important; font-size: 0.78rem; line-height: 1.35; }
     .ws-masthead {
         display: flex; align-items: center; justify-content: space-between; gap: 1rem;
         padding: 0.75rem 1rem 0.75rem 0.8rem; margin-bottom: 1.35rem;
@@ -331,11 +332,9 @@ with st.sidebar:
         <div class="ws-sidebar-brand">
           <div class="ws-sidebar-lockup">
             <img class="ws-sidebar-mark" src="{MARK_DATA_URI}" alt="WorthSignal mark">
-            <div>
-              <div class="ws-sidebar-name">Worth<span>Signal</span></div>
-              <p class="ws-sidebar-tagline">Find the customers, value, and moves that matter.</p>
-            </div>
+            <div class="ws-sidebar-name">Worth<span>Signal</span></div>
           </div>
+          <p class="ws-sidebar-tagline">Find the customers, value, and moves that matter.</p>
         </div>
         """,
         unsafe_allow_html=True,
