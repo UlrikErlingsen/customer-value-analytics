@@ -107,9 +107,9 @@ Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-GPL-3.0-or-later. In plain words:
+AGPL-3.0-or-later. In plain words:
 
 - **Anyone — including companies — may use, study, and modify this software freely.** Changes kept for internal use never have to be published.
-- **What may not happen:** taking this project, closing the source, and selling it as a proprietary product. Anyone who *distributes* the software — original or modified, paid or free — must pass on the same source code and the same freedoms they received.
+- **What may not happen:** taking this project, closing the source, and selling it — whether as a downloadable product **or as a hosted online service**. Anyone who distributes the software *or offers it to others over a network*, original or modified, paid or free, must pass on the same source code and the same freedoms they received.
 
 That combination is deliberate: this should be a project everyone can benefit from and improve, and that nobody can take away. The full legal text is in [LICENSE](LICENSE).

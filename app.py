@@ -845,10 +845,11 @@ elif page == "About this app":
 
         ### Open source
 
-        The project is free software under the **GPL-3.0-or-later** license. Anyone — individuals and
+        The project is free software under the **AGPL-3.0-or-later** license. Anyone — individuals and
         companies alike — may use it, study it, and change it, including private changes for internal
-        use. What the license forbids is closing it: whoever *distributes* this software, original or
-        modified, must pass on the source code and the same freedoms. Improvements are welcome —
-        see `CONTRIBUTING.md` in the repository for how to get started.
+        use. What the license forbids is closing it: whoever distributes this software or offers it to
+        others as an online service, original or modified, must pass on the source code and the same
+        freedoms. Improvements are welcome — see `CONTRIBUTING.md` in the repository for how to get
+        started.
         """
     )

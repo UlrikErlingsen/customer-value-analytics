@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Streamlit app for customer value analytics: RFM segmentation, customer lifetime value, customer equity, and classic probabilistic customer-base models"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "GPL-3.0-or-later" }
+license = { text = "AGPL-3.0-or-later" }
 dependencies = [
   "numpy>=1.24,<3",
   "openpyxl>=3.1,<4",
