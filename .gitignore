@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+
+# Test caches
+.pytest_cache/
+
+# Streamlit secrets (never commit; .streamlit/config.toml is fine to commit)
+.streamlit/secrets.toml
+
+# Generated output
+outputs/
+
+# Local editor/assistant configuration
+.claude/

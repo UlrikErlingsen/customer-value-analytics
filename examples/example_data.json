@@ -1,0 +1,5892 @@
+{
+  "transactions": [
+    {
+      "customer_id": "C001",
+      "purchase_date": "2024-02-12",
+      "amount": 42.56
+    },
+    {
+      "customer_id": "C001",
+      "purchase_date": "2024-11-04",
+      "amount": 65.68
+    },
+    {
+      "customer_id": "C001",
+      "purchase_date": "2024-11-18",
+      "amount": 71.77
+    },
+    {
+      "customer_id": "C002",
+      "purchase_date": "2024-05-01",
+      "amount": 40.87
+    },
+    {
+      "customer_id": "C002",
+      "purchase_date": "2024-08-13",
+      "amount": 74.61
+    },
+    {
+      "customer_id": "C002",
+      "purchase_date": "2025-02-21",
+      "amount": 45.77
+    },
+    {
+      "customer_id": "C003",
+      "purchase_date": "2024-11-19",
+      "amount": 18.91
+    },
+    {
+      "customer_id": "C003",
+      "purchase_date": "2025-05-04",
+      "amount": 39.1
+    },
+    {
+      "customer_id": "C004",
+      "purchase_date": "2024-10-13",
+      "amount": 43.97
+    },
+    {
+      "customer_id": "C004",
+      "purchase_date": "2024-11-06",
+      "amount": 59.89
+    },
+    {
+      "customer_id": "C005",
+      "purchase_date": "2024-02-18",
+      "amount": 58.78
+    },
+    {
+      "customer_id": "C005",
+      "purchase_date": "2024-03-14",
+      "amount": 85.58
+    },
+    {
+      "customer_id": "C005",
+      "purchase_date": "2024-06-02",
+      "amount": 35.49
+    },
+    {
+      "customer_id": "C005",
+      "purchase_date": "2025-01-01",
+      "amount": 20.76
+    },
+    {
+      "customer_id": "C006",
+      "purchase_date": "2024-02-22",
+      "amount": 60.39
+    },
+    {
+      "customer_id": "C006",
+      "purchase_date": "2024-03-11",
+      "amount": 25.38
+    },
+    {
+      "customer_id": "C006",
+      "purchase_date": "2024-04-21",
+      "amount": 66.78
+    },
+    {
+      "customer_id": "C006",
+      "purchase_date": "2024-05-08",
+      "amount": 58.76
+    },
+    {
+      "customer_id": "C007",
+      "purchase_date": "2024-10-03",
+      "amount": 58.64
+    },
+    {
+      "customer_id": "C007",
+      "purchase_date": "2024-10-25",
+      "amount": 66.64
+    },
+    {
+      "customer_id": "C008",
+      "purchase_date": "2024-01-09",
+      "amount": 45.2
+    },
+    {
+      "customer_id": "C008",
+      "purchase_date": "2024-01-20",
+      "amount": 92.75
+    },
+    {
+      "customer_id": "C008",
+      "purchase_date": "2024-03-29",
+      "amount": 22.49
+    },
+    {
+      "customer_id": "C009",
+      "purchase_date": "2024-04-14",
+      "amount": 65.59
+    },
+    {
+      "customer_id": "C009",
+      "purchase_date": "2024-04-27",
+      "amount": 22.2
+    },
+    {
+      "customer_id": "C009",
+      "purchase_date": "2024-05-04",
+      "amount": 25.67
+    },
+    {
+      "customer_id": "C009",
+      "purchase_date": "2024-07-24",
+      "amount": 105.34
+    },
+    {
+      "customer_id": "C010",
+      "purchase_date": "2024-09-01",
+      "amount": 48.99
+    },
+    {
+      "customer_id": "C010",
+      "purchase_date": "2024-09-25",
+      "amount": 34.22
+    },
+    {
+      "customer_id": "C010",
+      "purchase_date": "2024-11-25",
+      "amount": 57.62
+    },
+    {
+      "customer_id": "C011",
+      "purchase_date": "2024-01-12",
+      "amount": 90.31
+    },
+    {
+      "customer_id": "C011",
+      "purchase_date": "2024-02-23",
+      "amount": 24.05
+    },
+    {
+      "customer_id": "C012",
+      "purchase_date": "2024-01-21",
+      "amount": 23.96
+    },
+    {
+      "customer_id": "C012",
+      "purchase_date": "2024-02-09",
+      "amount": 178.53
+    },
+    {
+      "customer_id": "C012",
+      "purchase_date": "2024-04-12",
+      "amount": 35.75
+    },
+    {
+      "customer_id": "C013",
+      "purchase_date": "2024-07-02",
+      "amount": 49.95
+    },
+    {
+      "customer_id": "C013",
+      "purchase_date": "2024-07-13",
+      "amount": 40.05
+    },
+    {
+      "customer_id": "C013",
+      "purchase_date": "2024-09-17",
+      "amount": 16.96
+    },
+    {
+      "customer_id": "C013",
+      "purchase_date": "2024-09-28",
+      "amount": 73.55
+    },
+    {
+      "customer_id": "C014",
+      "purchase_date": "2024-10-26",
+      "amount": 74.14
+    },
+    {
+      "customer_id": "C014",
+      "purchase_date": "2024-12-24",
+      "amount": 46.72
+    },
+    {
+      "customer_id": "C015",
+      "purchase_date": "2024-01-17",
+      "amount": 41.7
+    },
+    {
+      "customer_id": "C015",
+      "purchase_date": "2024-03-01",
+      "amount": 47.65
+    },
+    {
+      "customer_id": "C015",
+      "purchase_date": "2024-05-29",
+      "amount": 84.96
+    },
+    {
+      "customer_id": "C015",
+      "purchase_date": "2024-07-09",
+      "amount": 35.81
+    },
+    {
+      "customer_id": "C015",
+      "purchase_date": "2024-09-04",
+      "amount": 135.0
+    },
+    {
+      "customer_id": "C016",
+      "purchase_date": "2024-04-27",
+      "amount": 65.35
+    },
+    {
+      "customer_id": "C016",
+      "purchase_date": "2024-05-14",
+      "amount": 54.65
+    },
+    {
+      "customer_id": "C016",
+      "purchase_date": "2024-06-22",
+      "amount": 23.31
+    },
+    {
+      "customer_id": "C016",
+      "purchase_date": "2024-07-02",
+      "amount": 87.16
+    },
+    {
+      "customer_id": "C017",
+      "purchase_date": "2024-01-10",
+      "amount": 57.65
+    },
+    {
+      "customer_id": "C017",
+      "purchase_date": "2024-02-02",
+      "amount": 51.75
+    },
+    {
+      "customer_id": "C017",
+      "purchase_date": "2024-03-21",
+      "amount": 45.5
+    },
+    {
+      "customer_id": "C018",
+      "purchase_date": "2024-09-04",
+      "amount": 49.75
+    },
+    {
+      "customer_id": "C018",
+      "purchase_date": "2025-01-22",
+      "amount": 25.42
+    },
+    {
+      "customer_id": "C019",
+      "purchase_date": "2024-09-15",
+      "amount": 57.14
+    },
+    {
+      "customer_id": "C019",
+      "purchase_date": "2024-10-25",
+      "amount": 28.94
+    },
+    {
+      "customer_id": "C019",
+      "purchase_date": "2025-03-16",
+      "amount": 95.2
+    },
+    {
+      "customer_id": "C020",
+      "purchase_date": "2024-02-05",
+      "amount": 23.05
+    },
+    {
+      "customer_id": "C020",
+      "purchase_date": "2024-05-04",
+      "amount": 64.83
+    },
+    {
+      "customer_id": "C020",
+      "purchase_date": "2025-02-17",
+      "amount": 57.41
+    },
+    {
+      "customer_id": "C021",
+      "purchase_date": "2024-05-16",
+      "amount": 53.54
+    },
+    {
+      "customer_id": "C021",
+      "purchase_date": "2024-08-26",
+      "amount": 40.45
+    },
+    {
+      "customer_id": "C021",
+      "purchase_date": "2024-08-30",
+      "amount": 67.76
+    },
+    {
+      "customer_id": "C022",
+      "purchase_date": "2024-11-17",
+      "amount": 28.64
+    },
+    {
+      "customer_id": "C023",
+      "purchase_date": "2024-02-09",
+      "amount": 70.04
+    },
+    {
+      "customer_id": "C023",
+      "purchase_date": "2024-07-18",
+      "amount": 46.43
+    },
+    {
+      "customer_id": "C024",
+      "purchase_date": "2024-10-13",
+      "amount": 23.14
+    },
+    {
+      "customer_id": "C024",
+      "purchase_date": "2024-10-18",
+      "amount": 74.65
+    },
+    {
+      "customer_id": "C024",
+      "purchase_date": "2024-11-18",
+      "amount": 48.78
+    },
+    {
+      "customer_id": "C024",
+      "purchase_date": "2024-11-25",
+      "amount": 43.29
+    },
+    {
+      "customer_id": "C025",
+      "purchase_date": "2024-05-07",
+      "amount": 65.78
+    },
+    {
+      "customer_id": "C025",
+      "purchase_date": "2024-05-31",
+      "amount": 23.61
+    },
+    {
+      "customer_id": "C025",
+      "purchase_date": "2024-07-26",
+      "amount": 44.45
+    },
+    {
+      "customer_id": "C026",
+      "purchase_date": "2024-09-03",
+      "amount": 70.07
+    },
+    {
+      "customer_id": "C026",
+      "purchase_date": "2024-09-10",
+      "amount": 70.57
+    },
+    {
+      "customer_id": "C027",
+      "purchase_date": "2024-10-29",
+      "amount": 73.83
+    },
+    {
+      "customer_id": "C027",
+      "purchase_date": "2024-12-27",
+      "amount": 17.57
+    },
+    {
+      "customer_id": "C028",
+      "purchase_date": "2024-08-10",
+      "amount": 37.27
+    },
+    {
+      "customer_id": "C028",
+      "purchase_date": "2024-09-04",
+      "amount": 26.45
+    },
+    {
+      "customer_id": "C029",
+      "purchase_date": "2024-06-14",
+      "amount": 27.57
+    },
+    {
+      "customer_id": "C029",
+      "purchase_date": "2024-06-21",
+      "amount": 39.81
+    },
+    {
+      "customer_id": "C029",
+      "purchase_date": "2024-09-16",
+      "amount": 35.01
+    },
+    {
+      "customer_id": "C030",
+      "purchase_date": "2024-07-15",
+      "amount": 62.49
+    },
+    {
+      "customer_id": "C030",
+      "purchase_date": "2024-08-25",
+      "amount": 88.99
+    },
+    {
+      "customer_id": "C031",
+      "purchase_date": "2024-10-24",
+      "amount": 58.6
+    },
+    {
+      "customer_id": "C031",
+      "purchase_date": "2024-10-29",
+      "amount": 56.79
+    },
+    {
+      "customer_id": "C031",
+      "purchase_date": "2024-12-06",
+      "amount": 56.71
+    },
+    {
+      "customer_id": "C031",
+      "purchase_date": "2025-01-04",
+      "amount": 96.11
+    },
+    {
+      "customer_id": "C031",
+      "purchase_date": "2025-01-26",
+      "amount": 22.41
+    },
+    {
+      "customer_id": "C031",
+      "purchase_date": "2025-05-07",
+      "amount": 41.04
+    },
+    {
+      "customer_id": "C032",
+      "purchase_date": "2024-07-14",
+      "amount": 54.4
+    },
+    {
+      "customer_id": "C032",
+      "purchase_date": "2025-03-18",
+      "amount": 27.78
+    },
+    {
+      "customer_id": "C032",
+      "purchase_date": "2025-03-20",
+      "amount": 48.46
+    },
+    {
+      "customer_id": "C032",
+      "purchase_date": "2025-06-11",
+      "amount": 35.98
+    },
+    {
+      "customer_id": "C033",
+      "purchase_date": "2024-10-19",
+      "amount": 31.44
+    },
+    {
+      "customer_id": "C033",
+      "purchase_date": "2024-10-21",
+      "amount": 48.31
+    },
+    {
+      "customer_id": "C034",
+      "purchase_date": "2024-05-07",
+      "amount": 54.91
+    },
+    {
+      "customer_id": "C035",
+      "purchase_date": "2024-09-04",
+      "amount": 67.43
+    },
+    {
+      "customer_id": "C035",
+      "purchase_date": "2025-06-06",
+      "amount": 129.85
+    },
+    {
+      "customer_id": "C036",
+      "purchase_date": "2024-09-28",
+      "amount": 94.41
+    },
+    {
+      "customer_id": "C036",
+      "purchase_date": "2024-12-30",
+      "amount": 41.45
+    },
+    {
+      "customer_id": "C036",
+      "purchase_date": "2025-01-17",
+      "amount": 54.38
+    },
+    {
+      "customer_id": "C037",
+      "purchase_date": "2024-01-24",
+      "amount": 12.23
+    },
+    {
+      "customer_id": "C037",
+      "purchase_date": "2024-02-19",
+      "amount": 65.58
+    },
+    {
+      "customer_id": "C038",
+      "purchase_date": "2024-09-30",
+      "amount": 14.33
+    },
+    {
+      "customer_id": "C038",
+      "purchase_date": "2024-10-02",
+      "amount": 64.46
+    },
+    {
+      "customer_id": "C039",
+      "purchase_date": "2024-11-17",
+      "amount": 16.46
+    },
+    {
+      "customer_id": "C039",
+      "purchase_date": "2025-01-20",
+      "amount": 50.09
+    },
+    {
+      "customer_id": "C040",
+      "purchase_date": "2024-05-08",
+      "amount": 23.34
+    },
+    {
+      "customer_id": "C041",
+      "purchase_date": "2024-04-02",
+      "amount": 49.07
+    },
+    {
+      "customer_id": "C041",
+      "purchase_date": "2024-06-30",
+      "amount": 63.49
+    },
+    {
+      "customer_id": "C041",
+      "purchase_date": "2024-10-01",
+      "amount": 36.82
+    },
+    {
+      "customer_id": "C041",
+      "purchase_date": "2025-01-20",
+      "amount": 46.96
+    },
+    {
+      "customer_id": "C042",
+      "purchase_date": "2024-10-22",
+      "amount": 56.17
+    },
+    {
+      "customer_id": "C042",
+      "purchase_date": "2024-12-12",
+      "amount": 26.22
+    },
+    {
+      "customer_id": "C042",
+      "purchase_date": "2025-04-01",
+      "amount": 47.11
+    },
+    {
+      "customer_id": "C043",
+      "purchase_date": "2024-07-08",
+      "amount": 108.02
+    },
+    {
+      "customer_id": "C043",
+      "purchase_date": "2024-10-29",
+      "amount": 61.36
+    },
+    {
+      "customer_id": "C043",
+      "purchase_date": "2024-12-25",
+      "amount": 33.95
+    },
+    {
+      "customer_id": "C043",
+      "purchase_date": "2025-01-27",
+      "amount": 44.52
+    },
+    {
+      "customer_id": "C044",
+      "purchase_date": "2024-10-16",
+      "amount": 48.36
+    },
+    {
+      "customer_id": "C044",
+      "purchase_date": "2024-10-27",
+      "amount": 102.31
+    },
+    {
+      "customer_id": "C045",
+      "purchase_date": "2024-11-13",
+      "amount": 40.06
+    },
+    {
+      "customer_id": "C045",
+      "purchase_date": "2024-12-22",
+      "amount": 79.35
+    },
+    {
+      "customer_id": "C046",
+      "purchase_date": "2024-04-17",
+      "amount": 26.26
+    },
+    {
+      "customer_id": "C046",
+      "purchase_date": "2024-05-09",
+      "amount": 47.51
+    },
+    {
+      "customer_id": "C046",
+      "purchase_date": "2024-07-10",
+      "amount": 71.82
+    },
+    {
+      "customer_id": "C046",
+      "purchase_date": "2024-11-12",
+      "amount": 23.55
+    },
+    {
+      "customer_id": "C047",
+      "purchase_date": "2024-11-06",
+      "amount": 43.01
+    },
+    {
+      "customer_id": "C047",
+      "purchase_date": "2025-01-25",
+      "amount": 41.52
+    },
+    {
+      "customer_id": "C047",
+      "purchase_date": "2025-05-02",
+      "amount": 20.95
+    },
+    {
+      "customer_id": "C048",
+      "purchase_date": "2024-03-28",
+      "amount": 42.31
+    },
+    {
+      "customer_id": "C048",
+      "purchase_date": "2024-04-05",
+      "amount": 114.99
+    },
+    {
+      "customer_id": "C048",
+      "purchase_date": "2024-04-25",
+      "amount": 44.88
+    },
+    {
+      "customer_id": "C048",
+      "purchase_date": "2024-08-22",
+      "amount": 19.23
+    },
+    {
+      "customer_id": "C048",
+      "purchase_date": "2024-09-30",
+      "amount": 29.07
+    },
+    {
+      "customer_id": "C048",
+      "purchase_date": "2025-04-01",
+      "amount": 70.82
+    },
+    {
+      "customer_id": "C049",
+      "purchase_date": "2024-06-25",
+      "amount": 70.56
+    },
+    {
+      "customer_id": "C050",
+      "purchase_date": "2024-04-11",
+      "amount": 78.88
+    },
+    {
+      "customer_id": "C050",
+      "purchase_date": "2024-06-22",
+      "amount": 55.38
+    },
+    {
+      "customer_id": "C050",
+      "purchase_date": "2024-06-23",
+      "amount": 73.26
+    },
+    {
+      "customer_id": "C051",
+      "purchase_date": "2024-07-28",
+      "amount": 46.86
+    },
+    {
+      "customer_id": "C051",
+      "purchase_date": "2024-11-27",
+      "amount": 57.95
+    },
+    {
+      "customer_id": "C051",
+      "purchase_date": "2024-12-10",
+      "amount": 83.52
+    },
+    {
+      "customer_id": "C051",
+      "purchase_date": "2024-12-16",
+      "amount": 59.04
+    },
+    {
+      "customer_id": "C051",
+      "purchase_date": "2025-03-18",
+      "amount": 42.04
+    },
+    {
+      "customer_id": "C052",
+      "purchase_date": "2024-09-16",
+      "amount": 55.79
+    },
+    {
+      "customer_id": "C052",
+      "purchase_date": "2024-10-18",
+      "amount": 29.74
+    },
+    {
+      "customer_id": "C052",
+      "purchase_date": "2025-01-02",
+      "amount": 58.95
+    },
+    {
+      "customer_id": "C052",
+      "purchase_date": "2025-04-05",
+      "amount": 34.03
+    },
+    {
+      "customer_id": "C052",
+      "purchase_date": "2025-06-02",
+      "amount": 73.14
+    },
+    {
+      "customer_id": "C053",
+      "purchase_date": "2024-09-24",
+      "amount": 48.57
+    },
+    {
+      "customer_id": "C053",
+      "purchase_date": "2024-10-19",
+      "amount": 26.41
+    },
+    {
+      "customer_id": "C053",
+      "purchase_date": "2024-12-19",
+      "amount": 33.43
+    },
+    {
+      "customer_id": "C054",
+      "purchase_date": "2024-01-30",
+      "amount": 66.69
+    },
+    {
+      "customer_id": "C055",
+      "purchase_date": "2024-08-14",
+      "amount": 33.41
+    },
+    {
+      "customer_id": "C055",
+      "purchase_date": "2024-12-16",
+      "amount": 30.96
+    },
+    {
+      "customer_id": "C056",
+      "purchase_date": "2024-03-31",
+      "amount": 31.37
+    },
+    {
+      "customer_id": "C056",
+      "purchase_date": "2024-05-24",
+      "amount": 63.36
+    },
+    {
+      "customer_id": "C056",
+      "purchase_date": "2024-07-24",
+      "amount": 65.96
+    },
+    {
+      "customer_id": "C057",
+      "purchase_date": "2024-10-05",
+      "amount": 53.18
+    },
+    {
+      "customer_id": "C058",
+      "purchase_date": "2024-02-29",
+      "amount": 95.84
+    },
+    {
+      "customer_id": "C058",
+      "purchase_date": "2024-05-11",
+      "amount": 36.41
+    },
+    {
+      "customer_id": "C058",
+      "purchase_date": "2024-06-06",
+      "amount": 66.63
+    },
+    {
+      "customer_id": "C058",
+      "purchase_date": "2024-06-10",
+      "amount": 53.41
+    },
+    {
+      "customer_id": "C058",
+      "purchase_date": "2024-07-22",
+      "amount": 22.2
+    },
+    {
+      "customer_id": "C058",
+      "purchase_date": "2024-12-27",
+      "amount": 53.6
+    },
+    {
+      "customer_id": "C059",
+      "purchase_date": "2024-07-12",
+      "amount": 31.22
+    },
+    {
+      "customer_id": "C060",
+      "purchase_date": "2024-03-07",
+      "amount": 93.44
+    },
+    {
+      "customer_id": "C060",
+      "purchase_date": "2024-03-10",
+      "amount": 43.46
+    },
+    {
+      "customer_id": "C060",
+      "purchase_date": "2024-05-05",
+      "amount": 72.53
+    },
+    {
+      "customer_id": "C061",
+      "purchase_date": "2024-02-25",
+      "amount": 33.27
+    },
+    {
+      "customer_id": "C061",
+      "purchase_date": "2024-03-12",
+      "amount": 20.1
+    },
+    {
+      "customer_id": "C061",
+      "purchase_date": "2024-03-25",
+      "amount": 21.53
+    },
+    {
+      "customer_id": "C061",
+      "purchase_date": "2024-04-09",
+      "amount": 20.21
+    },
+    {
+      "customer_id": "C062",
+      "purchase_date": "2024-08-01",
+      "amount": 74.82
+    },
+    {
+      "customer_id": "C062",
+      "purchase_date": "2024-09-04",
+      "amount": 42.02
+    },
+    {
+      "customer_id": "C063",
+      "purchase_date": "2024-10-14",
+      "amount": 24.24
+    },
+    {
+      "customer_id": "C063",
+      "purchase_date": "2024-11-02",
+      "amount": 130.93
+    },
+    {
+      "customer_id": "C064",
+      "purchase_date": "2024-01-28",
+      "amount": 55.35
+    },
+    {
+      "customer_id": "C064",
+      "purchase_date": "2024-02-22",
+      "amount": 105.51
+    },
+    {
+      "customer_id": "C064",
+      "purchase_date": "2024-04-09",
+      "amount": 77.21
+    },
+    {
+      "customer_id": "C065",
+      "purchase_date": "2024-11-19",
+      "amount": 26.07
+    },
+    {
+      "customer_id": "C065",
+      "purchase_date": "2024-12-02",
+      "amount": 29.68
+    },
+    {
+      "customer_id": "C065",
+      "purchase_date": "2024-12-10",
+      "amount": 44.97
+    },
+    {
+      "customer_id": "C065",
+      "purchase_date": "2025-04-01",
+      "amount": 24.29
+    },
+    {
+      "customer_id": "C065",
+      "purchase_date": "2025-05-16",
+      "amount": 44.5
+    },
+    {
+      "customer_id": "C066",
+      "purchase_date": "2024-02-28",
+      "amount": 35.6
+    },
+    {
+      "customer_id": "C066",
+      "purchase_date": "2024-03-07",
+      "amount": 59.26
+    },
+    {
+      "customer_id": "C066",
+      "purchase_date": "2024-03-18",
+      "amount": 38.64
+    },
+    {
+      "customer_id": "C066",
+      "purchase_date": "2024-04-26",
+      "amount": 102.67
+    },
+    {
+      "customer_id": "C066",
+      "purchase_date": "2024-06-06",
+      "amount": 20.67
+    },
+    {
+      "customer_id": "C067",
+      "purchase_date": "2024-05-14",
+      "amount": 90.38
+    },
+    {
+      "customer_id": "C067",
+      "purchase_date": "2024-08-11",
+      "amount": 111.53
+    },
+    {
+      "customer_id": "C068",
+      "purchase_date": "2024-10-15",
+      "amount": 25.81
+    },
+    {
+      "customer_id": "C068",
+      "purchase_date": "2024-12-29",
+      "amount": 22.89
+    },
+    {
+      "customer_id": "C069",
+      "purchase_date": "2024-08-28",
+      "amount": 76.02
+    },
+    {
+      "customer_id": "C069",
+      "purchase_date": "2024-09-04",
+      "amount": 73.98
+    },
+    {
+      "customer_id": "C069",
+      "purchase_date": "2025-01-17",
+      "amount": 39.79
+    },
+    {
+      "customer_id": "C069",
+      "purchase_date": "2025-04-11",
+      "amount": 55.63
+    },
+    {
+      "customer_id": "C070",
+      "purchase_date": "2024-01-11",
+      "amount": 26.39
+    },
+    {
+      "customer_id": "C070",
+      "purchase_date": "2024-01-25",
+      "amount": 42.28
+    },
+    {
+      "customer_id": "C071",
+      "purchase_date": "2024-07-10",
+      "amount": 34.98
+    },
+    {
+      "customer_id": "C071",
+      "purchase_date": "2024-11-29",
+      "amount": 107.69
+    },
+    {
+      "customer_id": "C071",
+      "purchase_date": "2024-12-04",
+      "amount": 53.13
+    },
+    {
+      "customer_id": "C071",
+      "purchase_date": "2025-06-08",
+      "amount": 47.99
+    },
+    {
+      "customer_id": "C072",
+      "purchase_date": "2024-03-14",
+      "amount": 61.0
+    },
+    {
+      "customer_id": "C072",
+      "purchase_date": "2024-05-03",
+      "amount": 137.67
+    },
+    {
+      "customer_id": "C072",
+      "purchase_date": "2024-05-19",
+      "amount": 28.54
+    },
+    {
+      "customer_id": "C073",
+      "purchase_date": "2024-08-27",
+      "amount": 58.16
+    },
+    {
+      "customer_id": "C074",
+      "purchase_date": "2024-03-07",
+      "amount": 37.11
+    },
+    {
+      "customer_id": "C074",
+      "purchase_date": "2024-08-28",
+      "amount": 37.45
+    },
+    {
+      "customer_id": "C074",
+      "purchase_date": "2024-09-10",
+      "amount": 95.38
+    },
+    {
+      "customer_id": "C074",
+      "purchase_date": "2024-10-20",
+      "amount": 24.3
+    },
+    {
+      "customer_id": "C075",
+      "purchase_date": "2024-01-15",
+      "amount": 51.21
+    },
+    {
+      "customer_id": "C075",
+      "purchase_date": "2024-04-05",
+      "amount": 99.01
+    },
+    {
+      "customer_id": "C076",
+      "purchase_date": "2024-02-01",
+      "amount": 42.13
+    },
+    {
+      "customer_id": "C076",
+      "purchase_date": "2024-02-09",
+      "amount": 80.8
+    },
+    {
+      "customer_id": "C077",
+      "purchase_date": "2024-05-08",
+      "amount": 76.01
+    },
+    {
+      "customer_id": "C077",
+      "purchase_date": "2024-06-02",
+      "amount": 41.06
+    },
+    {
+      "customer_id": "C077",
+      "purchase_date": "2024-07-15",
+      "amount": 34.33
+    },
+    {
+      "customer_id": "C077",
+      "purchase_date": "2024-08-02",
+      "amount": 59.85
+    },
+    {
+      "customer_id": "C078",
+      "purchase_date": "2024-07-06",
+      "amount": 52.61
+    },
+    {
+      "customer_id": "C078",
+      "purchase_date": "2024-07-27",
+      "amount": 41.93
+    },
+    {
+      "customer_id": "C079",
+      "purchase_date": "2024-10-27",
+      "amount": 96.47
+    },
+    {
+      "customer_id": "C079",
+      "purchase_date": "2024-11-15",
+      "amount": 50.45
+    },
+    {
+      "customer_id": "C079",
+      "purchase_date": "2025-02-14",
+      "amount": 22.63
+    },
+    {
+      "customer_id": "C079",
+      "purchase_date": "2025-04-05",
+      "amount": 89.8
+    },
+    {
+      "customer_id": "C080",
+      "purchase_date": "2024-05-29",
+      "amount": 49.4
+    },
+    {
+      "customer_id": "C080",
+      "purchase_date": "2024-06-23",
+      "amount": 34.09
+    },
+    {
+      "customer_id": "C080",
+      "purchase_date": "2024-07-25",
+      "amount": 19.42
+    }
+  ],
+  "rfm_customers": [
+    {
+      "customer_id": "C001",
+      "recency_days": 54,
+      "frequency_per_month": 1.86,
+      "monetary_average": 49.07,
+      "response": 1
+    },
+    {
+      "customer_id": "C002",
+      "recency_days": 140,
+      "frequency_per_month": 1.69,
+      "monetary_average": 73.05,
+      "response": 0
+    },
+    {
+      "customer_id": "C003",
+      "recency_days": 106,
+      "frequency_per_month": 0.55,
+      "monetary_average": 47.05,
+      "response": 0
+    },
+    {
+      "customer_id": "C004",
+      "recency_days": 105,
+      "frequency_per_month": 0.36,
+      "monetary_average": 22.41,
+      "response": 1
+    },
+    {
+      "customer_id": "C005",
+      "recency_days": 234,
+      "frequency_per_month": 1.37,
+      "monetary_average": 57.64,
+      "response": 0
+    },
+    {
+      "customer_id": "C006",
+      "recency_days": 18,
+      "frequency_per_month": 0.89,
+      "monetary_average": 42.39,
+      "response": 1
+    },
+    {
+      "customer_id": "C007",
+      "recency_days": 31,
+      "frequency_per_month": 6.22,
+      "monetary_average": 107.79,
+      "response": 1
+    },
+    {
+      "customer_id": "C008",
+      "recency_days": 17,
+      "frequency_per_month": 0.65,
+      "monetary_average": 154.23,
+      "response": 1
+    },
+    {
+      "customer_id": "C009",
+      "recency_days": 50,
+      "frequency_per_month": 0.69,
+      "monetary_average": 69.52,
+      "response": 1
+    },
+    {
+      "customer_id": "C010",
+      "recency_days": 134,
+      "frequency_per_month": 0.93,
+      "monetary_average": 20.9,
+      "response": 0
+    },
+    {
+      "customer_id": "C011",
+      "recency_days": 54,
+      "frequency_per_month": 0.31,
+      "monetary_average": 59.28,
+      "response": 0
+    },
+    {
+      "customer_id": "C012",
+      "recency_days": 85,
+      "frequency_per_month": 0.54,
+      "monetary_average": 38.3,
+      "response": 0
+    },
+    {
+      "customer_id": "C013",
+      "recency_days": 10,
+      "frequency_per_month": 3.16,
+      "monetary_average": 100.4,
+      "response": 0
+    },
+    {
+      "customer_id": "C014",
+      "recency_days": 62,
+      "frequency_per_month": 0.91,
+      "monetary_average": 183.99,
+      "response": 0
+    },
+    {
+      "customer_id": "C015",
+      "recency_days": 24,
+      "frequency_per_month": 0.65,
+      "monetary_average": 80.68,
+      "response": 0
+    },
+    {
+      "customer_id": "C016",
+      "recency_days": 270,
+      "frequency_per_month": 0.41,
+      "monetary_average": 226.14,
+      "response": 0
+    },
+    {
+      "customer_id": "C017",
+      "recency_days": 121,
+      "frequency_per_month": 1.5,
+      "monetary_average": 165.46,
+      "response": 0
+    },
+    {
+      "customer_id": "C018",
+      "recency_days": 128,
+      "frequency_per_month": 1.59,
+      "monetary_average": 101.28,
+      "response": 0
+    },
+    {
+      "customer_id": "C019",
+      "recency_days": 52,
+      "frequency_per_month": 1.2,
+      "monetary_average": 39.8,
+      "response": 1
+    },
+    {
+      "customer_id": "C020",
+      "recency_days": 95,
+      "frequency_per_month": 0.76,
+      "monetary_average": 75.59,
+      "response": 1
+    },
+    {
+      "customer_id": "C021",
+      "recency_days": 99,
+      "frequency_per_month": 1.24,
+      "monetary_average": 29.86,
+      "response": 1
+    },
+    {
+      "customer_id": "C022",
+      "recency_days": 40,
+      "frequency_per_month": 1.31,
+      "monetary_average": 133.03,
+      "response": 0
+    },
+    {
+      "customer_id": "C023",
+      "recency_days": 35,
+      "frequency_per_month": 0.62,
+      "monetary_average": 76.96,
+      "response": 1
+    },
+    {
+      "customer_id": "C024",
+      "recency_days": 49,
+      "frequency_per_month": 1.55,
+      "monetary_average": 163.91,
+      "response": 1
+    },
+    {
+      "customer_id": "C025",
+      "recency_days": 32,
+      "frequency_per_month": 0.23,
+      "monetary_average": 85.81,
+      "response": 0
+    },
+    {
+      "customer_id": "C026",
+      "recency_days": 32,
+      "frequency_per_month": 0.41,
+      "monetary_average": 22.59,
+      "response": 0
+    },
+    {
+      "customer_id": "C027",
+      "recency_days": 42,
+      "frequency_per_month": 0.81,
+      "monetary_average": 106.98,
+      "response": 1
+    },
+    {
+      "customer_id": "C028",
+      "recency_days": 28,
+      "frequency_per_month": 0.93,
+      "monetary_average": 127.06,
+      "response": 1
+    },
+    {
+      "customer_id": "C029",
+      "recency_days": 109,
+      "frequency_per_month": 0.44,
+      "monetary_average": 197.46,
+      "response": 1
+    },
+    {
+      "customer_id": "C030",
+      "recency_days": 13,
+      "frequency_per_month": 1.26,
+      "monetary_average": 40.63,
+      "response": 1
+    },
+    {
+      "customer_id": "C031",
+      "recency_days": 115,
+      "frequency_per_month": 2.09,
+      "monetary_average": 41.87,
+      "response": 0
+    },
+    {
+      "customer_id": "C032",
+      "recency_days": 31,
+      "frequency_per_month": 1.37,
+      "monetary_average": 75.73,
+      "response": 0
+    },
+    {
+      "customer_id": "C033",
+      "recency_days": 33,
+      "frequency_per_month": 1.17,
+      "monetary_average": 38.66,
+      "response": 0
+    },
+    {
+      "customer_id": "C034",
+      "recency_days": 16,
+      "frequency_per_month": 1.79,
+      "monetary_average": 31.85,
+      "response": 1
+    },
+    {
+      "customer_id": "C035",
+      "recency_days": 48,
+      "frequency_per_month": 1.33,
+      "monetary_average": 37.65,
+      "response": 0
+    },
+    {
+      "customer_id": "C036",
+      "recency_days": 44,
+      "frequency_per_month": 0.45,
+      "monetary_average": 343.03,
+      "response": 0
+    },
+    {
+      "customer_id": "C037",
+      "recency_days": 65,
+      "frequency_per_month": 0.87,
+      "monetary_average": 49.42,
+      "response": 0
+    },
+    {
+      "customer_id": "C038",
+      "recency_days": 34,
+      "frequency_per_month": 2.47,
+      "monetary_average": 39.07,
+      "response": 0
+    },
+    {
+      "customer_id": "C039",
+      "recency_days": 59,
+      "frequency_per_month": 0.45,
+      "monetary_average": 54.65,
+      "response": 1
+    },
+    {
+      "customer_id": "C040",
+      "recency_days": 281,
+      "frequency_per_month": 1.04,
+      "monetary_average": 71.35,
+      "response": 0
+    },
+    {
+      "customer_id": "C041",
+      "recency_days": 79,
+      "frequency_per_month": 0.76,
+      "monetary_average": 154.22,
+      "response": 1
+    },
+    {
+      "customer_id": "C042",
+      "recency_days": 33,
+      "frequency_per_month": 0.53,
+      "monetary_average": 125.22,
+      "response": 0
+    },
+    {
+      "customer_id": "C043",
+      "recency_days": 129,
+      "frequency_per_month": 0.49,
+      "monetary_average": 113.9,
+      "response": 1
+    },
+    {
+      "customer_id": "C044",
+      "recency_days": 49,
+      "frequency_per_month": 1.07,
+      "monetary_average": 72.84,
+      "response": 0
+    },
+    {
+      "customer_id": "C045",
+      "recency_days": 93,
+      "frequency_per_month": 1.25,
+      "monetary_average": 77.9,
+      "response": 0
+    },
+    {
+      "customer_id": "C046",
+      "recency_days": 95,
+      "frequency_per_month": 1.24,
+      "monetary_average": 48.34,
+      "response": 0
+    },
+    {
+      "customer_id": "C047",
+      "recency_days": 38,
+      "frequency_per_month": 0.36,
+      "monetary_average": 28.72,
+      "response": 1
+    },
+    {
+      "customer_id": "C048",
+      "recency_days": 10,
+      "frequency_per_month": 0.82,
+      "monetary_average": 240.71,
+      "response": 0
+    },
+    {
+      "customer_id": "C049",
+      "recency_days": 40,
+      "frequency_per_month": 1.27,
+      "monetary_average": 53.85,
+      "response": 0
+    },
+    {
+      "customer_id": "C050",
+      "recency_days": 90,
+      "frequency_per_month": 1.94,
+      "monetary_average": 129.99,
+      "response": 1
+    },
+    {
+      "customer_id": "C051",
+      "recency_days": 39,
+      "frequency_per_month": 1.6,
+      "monetary_average": 58.51,
+      "response": 1
+    },
+    {
+      "customer_id": "C052",
+      "recency_days": 81,
+      "frequency_per_month": 1.79,
+      "monetary_average": 66.96,
+      "response": 1
+    },
+    {
+      "customer_id": "C053",
+      "recency_days": 132,
+      "frequency_per_month": 2.16,
+      "monetary_average": 64.45,
+      "response": 0
+    },
+    {
+      "customer_id": "C054",
+      "recency_days": 33,
+      "frequency_per_month": 1.78,
+      "monetary_average": 30.91,
+      "response": 1
+    },
+    {
+      "customer_id": "C055",
+      "recency_days": 165,
+      "frequency_per_month": 0.57,
+      "monetary_average": 67.37,
+      "response": 0
+    },
+    {
+      "customer_id": "C056",
+      "recency_days": 235,
+      "frequency_per_month": 1.04,
+      "monetary_average": 88.69,
+      "response": 0
+    },
+    {
+      "customer_id": "C057",
+      "recency_days": 144,
+      "frequency_per_month": 0.61,
+      "monetary_average": 116.0,
+      "response": 1
+    },
+    {
+      "customer_id": "C058",
+      "recency_days": 156,
+      "frequency_per_month": 0.19,
+      "monetary_average": 94.84,
+      "response": 1
+    },
+    {
+      "customer_id": "C059",
+      "recency_days": 147,
+      "frequency_per_month": 0.31,
+      "monetary_average": 129.97,
+      "response": 0
+    },
+    {
+      "customer_id": "C060",
+      "recency_days": 415,
+      "frequency_per_month": 4.32,
+      "monetary_average": 84.05,
+      "response": 0
+    },
+    {
+      "customer_id": "C061",
+      "recency_days": 65,
+      "frequency_per_month": 0.46,
+      "monetary_average": 70.15,
+      "response": 0
+    },
+    {
+      "customer_id": "C062",
+      "recency_days": 55,
+      "frequency_per_month": 0.21,
+      "monetary_average": 21.61,
+      "response": 0
+    },
+    {
+      "customer_id": "C063",
+      "recency_days": 94,
+      "frequency_per_month": 0.66,
+      "monetary_average": 50.94,
+      "response": 0
+    },
+    {
+      "customer_id": "C064",
+      "recency_days": 24,
+      "frequency_per_month": 2.9,
+      "monetary_average": 178.42,
+      "response": 1
+    },
+    {
+      "customer_id": "C065",
+      "recency_days": 13,
+      "frequency_per_month": 0.97,
+      "monetary_average": 75.54,
+      "response": 0
+    },
+    {
+      "customer_id": "C066",
+      "recency_days": 25,
+      "frequency_per_month": 1.33,
+      "monetary_average": 113.23,
+      "response": 1
+    },
+    {
+      "customer_id": "C067",
+      "recency_days": 76,
+      "frequency_per_month": 0.83,
+      "monetary_average": 61.8,
+      "response": 1
+    },
+    {
+      "customer_id": "C068",
+      "recency_days": 84,
+      "frequency_per_month": 0.94,
+      "monetary_average": 46.83,
+      "response": 1
+    },
+    {
+      "customer_id": "C069",
+      "recency_days": 14,
+      "frequency_per_month": 2.43,
+      "monetary_average": 239.68,
+      "response": 1
+    },
+    {
+      "customer_id": "C070",
+      "recency_days": 10,
+      "frequency_per_month": 1.75,
+      "monetary_average": 86.95,
+      "response": 1
+    },
+    {
+      "customer_id": "C071",
+      "recency_days": 41,
+      "frequency_per_month": 0.94,
+      "monetary_average": 172.01,
+      "response": 0
+    },
+    {
+      "customer_id": "C072",
+      "recency_days": 46,
+      "frequency_per_month": 1.87,
+      "monetary_average": 96.43,
+      "response": 1
+    },
+    {
+      "customer_id": "C073",
+      "recency_days": 52,
+      "frequency_per_month": 2.12,
+      "monetary_average": 58.75,
+      "response": 0
+    },
+    {
+      "customer_id": "C074",
+      "recency_days": 100,
+      "frequency_per_month": 0.86,
+      "monetary_average": 18.24,
+      "response": 0
+    },
+    {
+      "customer_id": "C075",
+      "recency_days": 165,
+      "frequency_per_month": 1.21,
+      "monetary_average": 74.04,
+      "response": 0
+    },
+    {
+      "customer_id": "C076",
+      "recency_days": 67,
+      "frequency_per_month": 1.19,
+      "monetary_average": 27.37,
+      "response": 1
+    },
+    {
+      "customer_id": "C077",
+      "recency_days": 95,
+      "frequency_per_month": 0.63,
+      "monetary_average": 18.48,
+      "response": 0
+    },
+    {
+      "customer_id": "C078",
+      "recency_days": 20,
+      "frequency_per_month": 2.24,
+      "monetary_average": 147.51,
+      "response": 1
+    },
+    {
+      "customer_id": "C079",
+      "recency_days": 19,
+      "frequency_per_month": 0.89,
+      "monetary_average": 108.07,
+      "response": 1
+    },
+    {
+      "customer_id": "C080",
+      "recency_days": 68,
+      "frequency_per_month": 0.65,
+      "monetary_average": 102.96,
+      "response": 1
+    },
+    {
+      "customer_id": "C081",
+      "recency_days": 99,
+      "frequency_per_month": 0.31,
+      "monetary_average": 72.13,
+      "response": 0
+    },
+    {
+      "customer_id": "C082",
+      "recency_days": 105,
+      "frequency_per_month": 0.41,
+      "monetary_average": 68.5,
+      "response": 0
+    },
+    {
+      "customer_id": "C083",
+      "recency_days": 93,
+      "frequency_per_month": 2.91,
+      "monetary_average": 90.23,
+      "response": 1
+    },
+    {
+      "customer_id": "C084",
+      "recency_days": 111,
+      "frequency_per_month": 0.45,
+      "monetary_average": 76.83,
+      "response": 0
+    },
+    {
+      "customer_id": "C085",
+      "recency_days": 113,
+      "frequency_per_month": 1.35,
+      "monetary_average": 73.01,
+      "response": 0
+    },
+    {
+      "customer_id": "C086",
+      "recency_days": 11,
+      "frequency_per_month": 0.77,
+      "monetary_average": 109.11,
+      "response": 0
+    },
+    {
+      "customer_id": "C087",
+      "recency_days": 28,
+      "frequency_per_month": 1.43,
+      "monetary_average": 15.99,
+      "response": 0
+    },
+    {
+      "customer_id": "C088",
+      "recency_days": 82,
+      "frequency_per_month": 1.52,
+      "monetary_average": 119.41,
+      "response": 0
+    },
+    {
+      "customer_id": "C089",
+      "recency_days": 93,
+      "frequency_per_month": 0.58,
+      "monetary_average": 47.74,
+      "response": 1
+    },
+    {
+      "customer_id": "C090",
+      "recency_days": 14,
+      "frequency_per_month": 0.82,
+      "monetary_average": 116.54,
+      "response": 1
+    },
+    {
+      "customer_id": "C091",
+      "recency_days": 157,
+      "frequency_per_month": 1.07,
+      "monetary_average": 141.07,
+      "response": 0
+    },
+    {
+      "customer_id": "C092",
+      "recency_days": 37,
+      "frequency_per_month": 1.08,
+      "monetary_average": 41.94,
+      "response": 0
+    },
+    {
+      "customer_id": "C093",
+      "recency_days": 44,
+      "frequency_per_month": 0.98,
+      "monetary_average": 111.8,
+      "response": 1
+    },
+    {
+      "customer_id": "C094",
+      "recency_days": 70,
+      "frequency_per_month": 0.8,
+      "monetary_average": 110.75,
+      "response": 0
+    },
+    {
+      "customer_id": "C095",
+      "recency_days": 107,
+      "frequency_per_month": 1.55,
+      "monetary_average": 44.96,
+      "response": 0
+    },
+    {
+      "customer_id": "C096",
+      "recency_days": 15,
+      "frequency_per_month": 2.51,
+      "monetary_average": 49.71,
+      "response": 1
+    },
+    {
+      "customer_id": "C097",
+      "recency_days": 133,
+      "frequency_per_month": 1.46,
+      "monetary_average": 72.83,
+      "response": 0
+    },
+    {
+      "customer_id": "C098",
+      "recency_days": 59,
+      "frequency_per_month": 0.6,
+      "monetary_average": 17.79,
+      "response": 0
+    },
+    {
+      "customer_id": "C099",
+      "recency_days": 27,
+      "frequency_per_month": 1.32,
+      "monetary_average": 51.66,
+      "response": 0
+    },
+    {
+      "customer_id": "C100",
+      "recency_days": 43,
+      "frequency_per_month": 1.04,
+      "monetary_average": 75.4,
+      "response": 1
+    },
+    {
+      "customer_id": "C101",
+      "recency_days": 8,
+      "frequency_per_month": 1.38,
+      "monetary_average": 51.45,
+      "response": 0
+    },
+    {
+      "customer_id": "C102",
+      "recency_days": 30,
+      "frequency_per_month": 3.64,
+      "monetary_average": 25.73,
+      "response": 0
+    },
+    {
+      "customer_id": "C103",
+      "recency_days": 64,
+      "frequency_per_month": 0.86,
+      "monetary_average": 53.1,
+      "response": 0
+    },
+    {
+      "customer_id": "C104",
+      "recency_days": 29,
+      "frequency_per_month": 0.99,
+      "monetary_average": 166.82,
+      "response": 0
+    },
+    {
+      "customer_id": "C105",
+      "recency_days": 41,
+      "frequency_per_month": 0.54,
+      "monetary_average": 148.69,
+      "response": 0
+    },
+    {
+      "customer_id": "C106",
+      "recency_days": 48,
+      "frequency_per_month": 0.82,
+      "monetary_average": 62.41,
+      "response": 1
+    },
+    {
+      "customer_id": "C107",
+      "recency_days": 57,
+      "frequency_per_month": 0.67,
+      "monetary_average": 41.32,
+      "response": 1
+    },
+    {
+      "customer_id": "C108",
+      "recency_days": 137,
+      "frequency_per_month": 3.06,
+      "monetary_average": 66.34,
+      "response": 0
+    },
+    {
+      "customer_id": "C109",
+      "recency_days": 53,
+      "frequency_per_month": 1.24,
+      "monetary_average": 67.56,
+      "response": 0
+    },
+    {
+      "customer_id": "C110",
+      "recency_days": 43,
+      "frequency_per_month": 0.67,
+      "monetary_average": 44.56,
+      "response": 0
+    },
+    {
+      "customer_id": "C111",
+      "recency_days": 89,
+      "frequency_per_month": 3.86,
+      "monetary_average": 54.71,
+      "response": 0
+    },
+    {
+      "customer_id": "C112",
+      "recency_days": 354,
+      "frequency_per_month": 0.39,
+      "monetary_average": 97.28,
+      "response": 0
+    },
+    {
+      "customer_id": "C113",
+      "recency_days": 40,
+      "frequency_per_month": 1.83,
+      "monetary_average": 117.24,
+      "response": 0
+    },
+    {
+      "customer_id": "C114",
+      "recency_days": 87,
+      "frequency_per_month": 2.04,
+      "monetary_average": 15.46,
+      "response": 0
+    },
+    {
+      "customer_id": "C115",
+      "recency_days": 13,
+      "frequency_per_month": 1.49,
+      "monetary_average": 120.26,
+      "response": 1
+    },
+    {
+      "customer_id": "C116",
+      "recency_days": 183,
+      "frequency_per_month": 0.83,
+      "monetary_average": 72.54,
+      "response": 0
+    },
+    {
+      "customer_id": "C117",
+      "recency_days": 99,
+      "frequency_per_month": 0.91,
+      "monetary_average": 133.39,
+      "response": 0
+    },
+    {
+      "customer_id": "C118",
+      "recency_days": 181,
+      "frequency_per_month": 0.79,
+      "monetary_average": 66.07,
+      "response": 0
+    },
+    {
+      "customer_id": "C119",
+      "recency_days": 52,
+      "frequency_per_month": 1.73,
+      "monetary_average": 87.08,
+      "response": 1
+    },
+    {
+      "customer_id": "C120",
+      "recency_days": 21,
+      "frequency_per_month": 0.2,
+      "monetary_average": 178.99,
+      "response": 1
+    }
+  ],
+  "response_model": [
+    {
+      "customer_id": "C001",
+      "recency_days": 235,
+      "purchases_last_year": 5,
+      "average_amount": 16.44,
+      "months_as_customer": 85,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C002",
+      "recency_days": 5,
+      "purchases_last_year": 3,
+      "average_amount": 37.81,
+      "months_as_customer": 27,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C003",
+      "recency_days": 118,
+      "purchases_last_year": 4,
+      "average_amount": 67.03,
+      "months_as_customer": 62,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C004",
+      "recency_days": 58,
+      "purchases_last_year": 4,
+      "average_amount": 49.27,
+      "months_as_customer": 72,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C005",
+      "recency_days": 157,
+      "purchases_last_year": 0,
+      "average_amount": 40.56,
+      "months_as_customer": 50,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C006",
+      "recency_days": 74,
+      "purchases_last_year": 5,
+      "average_amount": 30.48,
+      "months_as_customer": 70,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C007",
+      "recency_days": 236,
+      "purchases_last_year": 0,
+      "average_amount": 41.01,
+      "months_as_customer": 55,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C008",
+      "recency_days": 56,
+      "purchases_last_year": 3,
+      "average_amount": 53.99,
+      "months_as_customer": 53,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C009",
+      "recency_days": 36,
+      "purchases_last_year": 2,
+      "average_amount": 46.67,
+      "months_as_customer": 51,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C010",
+      "recency_days": 87,
+      "purchases_last_year": 2,
+      "average_amount": 96.53,
+      "months_as_customer": 95,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C011",
+      "recency_days": 77,
+      "purchases_last_year": 3,
+      "average_amount": 82.08,
+      "months_as_customer": 5,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C012",
+      "recency_days": 41,
+      "purchases_last_year": 5,
+      "average_amount": 28.69,
+      "months_as_customer": 80,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C013",
+      "recency_days": 45,
+      "purchases_last_year": 4,
+      "average_amount": 87.16,
+      "months_as_customer": 48,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C014",
+      "recency_days": 97,
+      "purchases_last_year": 3,
+      "average_amount": 55.4,
+      "months_as_customer": 16,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C015",
+      "recency_days": 96,
+      "purchases_last_year": 0,
+      "average_amount": 79.95,
+      "months_as_customer": 36,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C016",
+      "recency_days": 37,
+      "purchases_last_year": 2,
+      "average_amount": 39.3,
+      "months_as_customer": 86,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C017",
+      "recency_days": 41,
+      "purchases_last_year": 2,
+      "average_amount": 85.48,
+      "months_as_customer": 38,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C018",
+      "recency_days": 13,
+      "purchases_last_year": 3,
+      "average_amount": 38.21,
+      "months_as_customer": 31,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C019",
+      "recency_days": 209,
+      "purchases_last_year": 6,
+      "average_amount": 90.9,
+      "months_as_customer": 32,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C020",
+      "recency_days": 46,
+      "purchases_last_year": 4,
+      "average_amount": 53.79,
+      "months_as_customer": 95,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C021",
+      "recency_days": 159,
+      "purchases_last_year": 2,
+      "average_amount": 47.98,
+      "months_as_customer": 91,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C022",
+      "recency_days": 76,
+      "purchases_last_year": 5,
+      "average_amount": 28.25,
+      "months_as_customer": 58,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C023",
+      "recency_days": 259,
+      "purchases_last_year": 1,
+      "average_amount": 24.4,
+      "months_as_customer": 1,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C024",
+      "recency_days": 187,
+      "purchases_last_year": 1,
+      "average_amount": 84.09,
+      "months_as_customer": 21,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C025",
+      "recency_days": 70,
+      "purchases_last_year": 2,
+      "average_amount": 31.2,
+      "months_as_customer": 52,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C026",
+      "recency_days": 179,
+      "purchases_last_year": 8,
+      "average_amount": 30.36,
+      "months_as_customer": 2,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C027",
+      "recency_days": 26,
+      "purchases_last_year": 2,
+      "average_amount": 66.55,
+      "months_as_customer": 7,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C028",
+      "recency_days": 149,
+      "purchases_last_year": 3,
+      "average_amount": 55.14,
+      "months_as_customer": 80,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C029",
+      "recency_days": 17,
+      "purchases_last_year": 3,
+      "average_amount": 72.98,
+      "months_as_customer": 51,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C030",
+      "recency_days": 72,
+      "purchases_last_year": 1,
+      "average_amount": 28.34,
+      "months_as_customer": 70,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C031",
+      "recency_days": 128,
+      "purchases_last_year": 4,
+      "average_amount": 18.89,
+      "months_as_customer": 72,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C032",
+      "recency_days": 65,
+      "purchases_last_year": 2,
+      "average_amount": 34.68,
+      "months_as_customer": 37,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C033",
+      "recency_days": 41,
+      "purchases_last_year": 3,
+      "average_amount": 89.79,
+      "months_as_customer": 25,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C034",
+      "recency_days": 29,
+      "purchases_last_year": 2,
+      "average_amount": 53.63,
+      "months_as_customer": 80,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C035",
+      "recency_days": 42,
+      "purchases_last_year": 1,
+      "average_amount": 67.85,
+      "months_as_customer": 45,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C036",
+      "recency_days": 127,
+      "purchases_last_year": 2,
+      "average_amount": 70.73,
+      "months_as_customer": 72,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C037",
+      "recency_days": 111,
+      "purchases_last_year": 2,
+      "average_amount": 59.28,
+      "months_as_customer": 64,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C038",
+      "recency_days": 44,
+      "purchases_last_year": 4,
+      "average_amount": 59.34,
+      "months_as_customer": 62,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C039",
+      "recency_days": 20,
+      "purchases_last_year": 4,
+      "average_amount": 49.19,
+      "months_as_customer": 44,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C040",
+      "recency_days": 94,
+      "purchases_last_year": 3,
+      "average_amount": 60.84,
+      "months_as_customer": 96,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C041",
+      "recency_days": 17,
+      "purchases_last_year": 2,
+      "average_amount": 64.14,
+      "months_as_customer": 10,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C042",
+      "recency_days": 36,
+      "purchases_last_year": 2,
+      "average_amount": 39.44,
+      "months_as_customer": 42,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C043",
+      "recency_days": 30,
+      "purchases_last_year": 3,
+      "average_amount": 73.59,
+      "months_as_customer": 65,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C044",
+      "recency_days": 99,
+      "purchases_last_year": 2,
+      "average_amount": 54.55,
+      "months_as_customer": 15,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C045",
+      "recency_days": 66,
+      "purchases_last_year": 2,
+      "average_amount": 52.36,
+      "months_as_customer": 46,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C046",
+      "recency_days": 79,
+      "purchases_last_year": 3,
+      "average_amount": 50.47,
+      "months_as_customer": 46,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C047",
+      "recency_days": 68,
+      "purchases_last_year": 1,
+      "average_amount": 84.71,
+      "months_as_customer": 60,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C048",
+      "recency_days": 32,
+      "purchases_last_year": 5,
+      "average_amount": 50.8,
+      "months_as_customer": 75,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C049",
+      "recency_days": 84,
+      "purchases_last_year": 3,
+      "average_amount": 98.94,
+      "months_as_customer": 24,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C050",
+      "recency_days": 169,
+      "purchases_last_year": 6,
+      "average_amount": 33.11,
+      "months_as_customer": 85,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C051",
+      "recency_days": 53,
+      "purchases_last_year": 5,
+      "average_amount": 72.77,
+      "months_as_customer": 10,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C052",
+      "recency_days": 91,
+      "purchases_last_year": 3,
+      "average_amount": 25.29,
+      "months_as_customer": 90,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C053",
+      "recency_days": 49,
+      "purchases_last_year": 1,
+      "average_amount": 56.05,
+      "months_as_customer": 52,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C054",
+      "recency_days": 124,
+      "purchases_last_year": 5,
+      "average_amount": 42.5,
+      "months_as_customer": 34,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C055",
+      "recency_days": 93,
+      "purchases_last_year": 5,
+      "average_amount": 43.46,
+      "months_as_customer": 5,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C056",
+      "recency_days": 110,
+      "purchases_last_year": 4,
+      "average_amount": 32.56,
+      "months_as_customer": 65,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C057",
+      "recency_days": 72,
+      "purchases_last_year": 6,
+      "average_amount": 53.89,
+      "months_as_customer": 1,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C058",
+      "recency_days": 203,
+      "purchases_last_year": 3,
+      "average_amount": 71.56,
+      "months_as_customer": 67,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C059",
+      "recency_days": 41,
+      "purchases_last_year": 2,
+      "average_amount": 21.86,
+      "months_as_customer": 32,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C060",
+      "recency_days": 42,
+      "purchases_last_year": 0,
+      "average_amount": 51.15,
+      "months_as_customer": 64,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C061",
+      "recency_days": 34,
+      "purchases_last_year": 4,
+      "average_amount": 59.75,
+      "months_as_customer": 50,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C062",
+      "recency_days": 89,
+      "purchases_last_year": 4,
+      "average_amount": 73.84,
+      "months_as_customer": 73,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C063",
+      "recency_days": 33,
+      "purchases_last_year": 3,
+      "average_amount": 65.12,
+      "months_as_customer": 30,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C064",
+      "recency_days": 33,
+      "purchases_last_year": 5,
+      "average_amount": 31.85,
+      "months_as_customer": 25,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C065",
+      "recency_days": 98,
+      "purchases_last_year": 6,
+      "average_amount": 89.42,
+      "months_as_customer": 16,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C066",
+      "recency_days": 138,
+      "purchases_last_year": 2,
+      "average_amount": 35.36,
+      "months_as_customer": 26,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C067",
+      "recency_days": 86,
+      "purchases_last_year": 3,
+      "average_amount": 69.71,
+      "months_as_customer": 89,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C068",
+      "recency_days": 6,
+      "purchases_last_year": 3,
+      "average_amount": 59.94,
+      "months_as_customer": 88,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C069",
+      "recency_days": 25,
+      "purchases_last_year": 1,
+      "average_amount": 40.78,
+      "months_as_customer": 34,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C070",
+      "recency_days": 23,
+      "purchases_last_year": 4,
+      "average_amount": 34.65,
+      "months_as_customer": 80,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C071",
+      "recency_days": 21,
+      "purchases_last_year": 5,
+      "average_amount": 48.93,
+      "months_as_customer": 82,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C072",
+      "recency_days": 39,
+      "purchases_last_year": 3,
+      "average_amount": 111.21,
+      "months_as_customer": 64,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C073",
+      "recency_days": 234,
+      "purchases_last_year": 1,
+      "average_amount": 74.83,
+      "months_as_customer": 59,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C074",
+      "recency_days": 43,
+      "purchases_last_year": 3,
+      "average_amount": 40.83,
+      "months_as_customer": 64,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C075",
+      "recency_days": 30,
+      "purchases_last_year": 3,
+      "average_amount": 78.16,
+      "months_as_customer": 18,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C076",
+      "recency_days": 95,
+      "purchases_last_year": 2,
+      "average_amount": 124.62,
+      "months_as_customer": 48,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C077",
+      "recency_days": 58,
+      "purchases_last_year": 3,
+      "average_amount": 159.42,
+      "months_as_customer": 38,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C078",
+      "recency_days": 60,
+      "purchases_last_year": 3,
+      "average_amount": 23.18,
+      "months_as_customer": 6,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C079",
+      "recency_days": 32,
+      "purchases_last_year": 5,
+      "average_amount": 78.2,
+      "months_as_customer": 89,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C080",
+      "recency_days": 55,
+      "purchases_last_year": 1,
+      "average_amount": 82.43,
+      "months_as_customer": 40,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C081",
+      "recency_days": 77,
+      "purchases_last_year": 3,
+      "average_amount": 36.49,
+      "months_as_customer": 13,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C082",
+      "recency_days": 12,
+      "purchases_last_year": 2,
+      "average_amount": 21.54,
+      "months_as_customer": 34,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C083",
+      "recency_days": 15,
+      "purchases_last_year": 8,
+      "average_amount": 102.28,
+      "months_as_customer": 44,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C084",
+      "recency_days": 130,
+      "purchases_last_year": 1,
+      "average_amount": 43.31,
+      "months_as_customer": 22,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C085",
+      "recency_days": 107,
+      "purchases_last_year": 1,
+      "average_amount": 24.36,
+      "months_as_customer": 30,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C086",
+      "recency_days": 36,
+      "purchases_last_year": 2,
+      "average_amount": 32.02,
+      "months_as_customer": 45,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C087",
+      "recency_days": 24,
+      "purchases_last_year": 5,
+      "average_amount": 78.54,
+      "months_as_customer": 16,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C088",
+      "recency_days": 47,
+      "purchases_last_year": 2,
+      "average_amount": 161.95,
+      "months_as_customer": 93,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C089",
+      "recency_days": 21,
+      "purchases_last_year": 3,
+      "average_amount": 86.79,
+      "months_as_customer": 7,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C090",
+      "recency_days": 42,
+      "purchases_last_year": 1,
+      "average_amount": 35.57,
+      "months_as_customer": 36,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C091",
+      "recency_days": 205,
+      "purchases_last_year": 3,
+      "average_amount": 102.75,
+      "months_as_customer": 14,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C092",
+      "recency_days": 61,
+      "purchases_last_year": 4,
+      "average_amount": 21.47,
+      "months_as_customer": 96,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C093",
+      "recency_days": 139,
+      "purchases_last_year": 2,
+      "average_amount": 89.62,
+      "months_as_customer": 87,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C094",
+      "recency_days": 46,
+      "purchases_last_year": 2,
+      "average_amount": 86.64,
+      "months_as_customer": 34,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C095",
+      "recency_days": 73,
+      "purchases_last_year": 2,
+      "average_amount": 133.68,
+      "months_as_customer": 12,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C096",
+      "recency_days": 165,
+      "purchases_last_year": 5,
+      "average_amount": 89.15,
+      "months_as_customer": 19,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C097",
+      "recency_days": 19,
+      "purchases_last_year": 5,
+      "average_amount": 96.61,
+      "months_as_customer": 28,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C098",
+      "recency_days": 41,
+      "purchases_last_year": 6,
+      "average_amount": 58.03,
+      "months_as_customer": 57,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C099",
+      "recency_days": 48,
+      "purchases_last_year": 0,
+      "average_amount": 46.43,
+      "months_as_customer": 10,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C100",
+      "recency_days": 68,
+      "purchases_last_year": 2,
+      "average_amount": 55.8,
+      "months_as_customer": 59,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C101",
+      "recency_days": 189,
+      "purchases_last_year": 5,
+      "average_amount": 143.54,
+      "months_as_customer": 26,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C102",
+      "recency_days": 94,
+      "purchases_last_year": 2,
+      "average_amount": 41.45,
+      "months_as_customer": 67,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C103",
+      "recency_days": 16,
+      "purchases_last_year": 2,
+      "average_amount": 53.59,
+      "months_as_customer": 91,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C104",
+      "recency_days": 44,
+      "purchases_last_year": 3,
+      "average_amount": 43.78,
+      "months_as_customer": 19,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C105",
+      "recency_days": 27,
+      "purchases_last_year": 6,
+      "average_amount": 77.16,
+      "months_as_customer": 11,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C106",
+      "recency_days": 26,
+      "purchases_last_year": 4,
+      "average_amount": 70.14,
+      "months_as_customer": 45,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C107",
+      "recency_days": 276,
+      "purchases_last_year": 1,
+      "average_amount": 152.52,
+      "months_as_customer": 41,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C108",
+      "recency_days": 23,
+      "purchases_last_year": 2,
+      "average_amount": 163.64,
+      "months_as_customer": 1,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C109",
+      "recency_days": 66,
+      "purchases_last_year": 2,
+      "average_amount": 97.33,
+      "months_as_customer": 4,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C110",
+      "recency_days": 31,
+      "purchases_last_year": 2,
+      "average_amount": 86.45,
+      "months_as_customer": 5,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C111",
+      "recency_days": 109,
+      "purchases_last_year": 3,
+      "average_amount": 51.8,
+      "months_as_customer": 74,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C112",
+      "recency_days": 72,
+      "purchases_last_year": 1,
+      "average_amount": 26.31,
+      "months_as_customer": 11,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C113",
+      "recency_days": 60,
+      "purchases_last_year": 1,
+      "average_amount": 60.19,
+      "months_as_customer": 4,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C114",
+      "recency_days": 51,
+      "purchases_last_year": 2,
+      "average_amount": 56.58,
+      "months_as_customer": 91,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C115",
+      "recency_days": 136,
+      "purchases_last_year": 2,
+      "average_amount": 31.5,
+      "months_as_customer": 9,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C116",
+      "recency_days": 26,
+      "purchases_last_year": 3,
+      "average_amount": 61.83,
+      "months_as_customer": 82,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C117",
+      "recency_days": 31,
+      "purchases_last_year": 2,
+      "average_amount": 90.18,
+      "months_as_customer": 11,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C118",
+      "recency_days": 22,
+      "purchases_last_year": 2,
+      "average_amount": 35.54,
+      "months_as_customer": 81,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C119",
+      "recency_days": 159,
+      "purchases_last_year": 3,
+      "average_amount": 86.26,
+      "months_as_customer": 80,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C120",
+      "recency_days": 43,
+      "purchases_last_year": 0,
+      "average_amount": 68.11,
+      "months_as_customer": 68,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C121",
+      "recency_days": 24,
+      "purchases_last_year": 2,
+      "average_amount": 42.27,
+      "months_as_customer": 75,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C122",
+      "recency_days": 39,
+      "purchases_last_year": 2,
+      "average_amount": 58.65,
+      "months_as_customer": 22,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C123",
+      "recency_days": 403,
+      "purchases_last_year": 1,
+      "average_amount": 80.88,
+      "months_as_customer": 91,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C124",
+      "recency_days": 50,
+      "purchases_last_year": 2,
+      "average_amount": 50.66,
+      "months_as_customer": 87,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C125",
+      "recency_days": 108,
+      "purchases_last_year": 5,
+      "average_amount": 53.78,
+      "months_as_customer": 75,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C126",
+      "recency_days": 79,
+      "purchases_last_year": 3,
+      "average_amount": 107.25,
+      "months_as_customer": 18,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C127",
+      "recency_days": 54,
+      "purchases_last_year": 3,
+      "average_amount": 73.36,
+      "months_as_customer": 67,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C128",
+      "recency_days": 31,
+      "purchases_last_year": 2,
+      "average_amount": 72.57,
+      "months_as_customer": 78,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C129",
+      "recency_days": 42,
+      "purchases_last_year": 2,
+      "average_amount": 43.12,
+      "months_as_customer": 67,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C130",
+      "recency_days": 41,
+      "purchases_last_year": 4,
+      "average_amount": 78.94,
+      "months_as_customer": 27,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C131",
+      "recency_days": 9,
+      "purchases_last_year": 2,
+      "average_amount": 117.57,
+      "months_as_customer": 2,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C132",
+      "recency_days": 434,
+      "purchases_last_year": 1,
+      "average_amount": 34.61,
+      "months_as_customer": 8,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C133",
+      "recency_days": 114,
+      "purchases_last_year": 1,
+      "average_amount": 24.26,
+      "months_as_customer": 91,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C134",
+      "recency_days": 60,
+      "purchases_last_year": 3,
+      "average_amount": 37.09,
+      "months_as_customer": 2,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C135",
+      "recency_days": 46,
+      "purchases_last_year": 2,
+      "average_amount": 51.9,
+      "months_as_customer": 64,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C136",
+      "recency_days": 29,
+      "purchases_last_year": 4,
+      "average_amount": 33.49,
+      "months_as_customer": 82,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C137",
+      "recency_days": 117,
+      "purchases_last_year": 5,
+      "average_amount": 23.7,
+      "months_as_customer": 96,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C138",
+      "recency_days": 47,
+      "purchases_last_year": 3,
+      "average_amount": 126.44,
+      "months_as_customer": 42,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C139",
+      "recency_days": 80,
+      "purchases_last_year": 8,
+      "average_amount": 44.85,
+      "months_as_customer": 71,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C140",
+      "recency_days": 18,
+      "purchases_last_year": 4,
+      "average_amount": 36.74,
+      "months_as_customer": 95,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C141",
+      "recency_days": 74,
+      "purchases_last_year": 3,
+      "average_amount": 13.06,
+      "months_as_customer": 66,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C142",
+      "recency_days": 270,
+      "purchases_last_year": 3,
+      "average_amount": 87.21,
+      "months_as_customer": 7,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C143",
+      "recency_days": 43,
+      "purchases_last_year": 3,
+      "average_amount": 25.35,
+      "months_as_customer": 42,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C144",
+      "recency_days": 104,
+      "purchases_last_year": 5,
+      "average_amount": 106.99,
+      "months_as_customer": 36,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C145",
+      "recency_days": 56,
+      "purchases_last_year": 3,
+      "average_amount": 73.39,
+      "months_as_customer": 36,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C146",
+      "recency_days": 132,
+      "purchases_last_year": 3,
+      "average_amount": 61.59,
+      "months_as_customer": 4,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C147",
+      "recency_days": 128,
+      "purchases_last_year": 2,
+      "average_amount": 49.59,
+      "months_as_customer": 34,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C148",
+      "recency_days": 57,
+      "purchases_last_year": 2,
+      "average_amount": 89.43,
+      "months_as_customer": 23,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C149",
+      "recency_days": 35,
+      "purchases_last_year": 3,
+      "average_amount": 41.51,
+      "months_as_customer": 54,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C150",
+      "recency_days": 69,
+      "purchases_last_year": 5,
+      "average_amount": 66.53,
+      "months_as_customer": 76,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C151",
+      "recency_days": 56,
+      "purchases_last_year": 0,
+      "average_amount": 42.98,
+      "months_as_customer": 28,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C152",
+      "recency_days": 33,
+      "purchases_last_year": 4,
+      "average_amount": 47.13,
+      "months_as_customer": 67,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C153",
+      "recency_days": 79,
+      "purchases_last_year": 5,
+      "average_amount": 121.71,
+      "months_as_customer": 23,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C154",
+      "recency_days": 77,
+      "purchases_last_year": 6,
+      "average_amount": 96.71,
+      "months_as_customer": 84,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C155",
+      "recency_days": 27,
+      "purchases_last_year": 3,
+      "average_amount": 34.5,
+      "months_as_customer": 31,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C156",
+      "recency_days": 50,
+      "purchases_last_year": 1,
+      "average_amount": 35.75,
+      "months_as_customer": 32,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C157",
+      "recency_days": 565,
+      "purchases_last_year": 5,
+      "average_amount": 56.3,
+      "months_as_customer": 72,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C158",
+      "recency_days": 105,
+      "purchases_last_year": 3,
+      "average_amount": 51.63,
+      "months_as_customer": 80,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C159",
+      "recency_days": 59,
+      "purchases_last_year": 1,
+      "average_amount": 70.76,
+      "months_as_customer": 12,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C160",
+      "recency_days": 407,
+      "purchases_last_year": 3,
+      "average_amount": 45.57,
+      "months_as_customer": 79,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C161",
+      "recency_days": 38,
+      "purchases_last_year": 2,
+      "average_amount": 32.61,
+      "months_as_customer": 69,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C162",
+      "recency_days": 8,
+      "purchases_last_year": 1,
+      "average_amount": 83.59,
+      "months_as_customer": 48,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C163",
+      "recency_days": 12,
+      "purchases_last_year": 2,
+      "average_amount": 49.3,
+      "months_as_customer": 66,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C164",
+      "recency_days": 16,
+      "purchases_last_year": 1,
+      "average_amount": 77.92,
+      "months_as_customer": 40,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C165",
+      "recency_days": 67,
+      "purchases_last_year": 4,
+      "average_amount": 35.02,
+      "months_as_customer": 4,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C166",
+      "recency_days": 119,
+      "purchases_last_year": 3,
+      "average_amount": 118.1,
+      "months_as_customer": 60,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C167",
+      "recency_days": 10,
+      "purchases_last_year": 6,
+      "average_amount": 63.4,
+      "months_as_customer": 12,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C168",
+      "recency_days": 133,
+      "purchases_last_year": 4,
+      "average_amount": 62.89,
+      "months_as_customer": 83,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C169",
+      "recency_days": 20,
+      "purchases_last_year": 4,
+      "average_amount": 66.8,
+      "months_as_customer": 19,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C170",
+      "recency_days": 67,
+      "purchases_last_year": 1,
+      "average_amount": 24.89,
+      "months_as_customer": 64,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C171",
+      "recency_days": 79,
+      "purchases_last_year": 5,
+      "average_amount": 78.63,
+      "months_as_customer": 9,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C172",
+      "recency_days": 77,
+      "purchases_last_year": 3,
+      "average_amount": 42.4,
+      "months_as_customer": 84,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C173",
+      "recency_days": 55,
+      "purchases_last_year": 2,
+      "average_amount": 31.22,
+      "months_as_customer": 92,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C174",
+      "recency_days": 63,
+      "purchases_last_year": 6,
+      "average_amount": 66.96,
+      "months_as_customer": 70,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C175",
+      "recency_days": 22,
+      "purchases_last_year": 5,
+      "average_amount": 131.62,
+      "months_as_customer": 9,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C176",
+      "recency_days": 68,
+      "purchases_last_year": 9,
+      "average_amount": 38.64,
+      "months_as_customer": 14,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C177",
+      "recency_days": 120,
+      "purchases_last_year": 6,
+      "average_amount": 120.49,
+      "months_as_customer": 19,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C178",
+      "recency_days": 115,
+      "purchases_last_year": 2,
+      "average_amount": 18.0,
+      "months_as_customer": 93,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C179",
+      "recency_days": 442,
+      "purchases_last_year": 5,
+      "average_amount": 64.16,
+      "months_as_customer": 21,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C180",
+      "recency_days": 130,
+      "purchases_last_year": 2,
+      "average_amount": 40.72,
+      "months_as_customer": 20,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C181",
+      "recency_days": 98,
+      "purchases_last_year": 4,
+      "average_amount": 62.53,
+      "months_as_customer": 22,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C182",
+      "recency_days": 207,
+      "purchases_last_year": 6,
+      "average_amount": 162.65,
+      "months_as_customer": 44,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C183",
+      "recency_days": 66,
+      "purchases_last_year": 2,
+      "average_amount": 77.49,
+      "months_as_customer": 4,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C184",
+      "recency_days": 19,
+      "purchases_last_year": 6,
+      "average_amount": 25.87,
+      "months_as_customer": 38,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C185",
+      "recency_days": 9,
+      "purchases_last_year": 4,
+      "average_amount": 115.38,
+      "months_as_customer": 90,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C186",
+      "recency_days": 152,
+      "purchases_last_year": 6,
+      "average_amount": 32.2,
+      "months_as_customer": 56,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C187",
+      "recency_days": 86,
+      "purchases_last_year": 4,
+      "average_amount": 41.26,
+      "months_as_customer": 14,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C188",
+      "recency_days": 108,
+      "purchases_last_year": 0,
+      "average_amount": 34.78,
+      "months_as_customer": 26,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C189",
+      "recency_days": 42,
+      "purchases_last_year": 4,
+      "average_amount": 58.81,
+      "months_as_customer": 54,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C190",
+      "recency_days": 72,
+      "purchases_last_year": 5,
+      "average_amount": 51.98,
+      "months_as_customer": 86,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C191",
+      "recency_days": 246,
+      "purchases_last_year": 7,
+      "average_amount": 126.04,
+      "months_as_customer": 80,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C192",
+      "recency_days": 71,
+      "purchases_last_year": 2,
+      "average_amount": 65.64,
+      "months_as_customer": 15,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C193",
+      "recency_days": 22,
+      "purchases_last_year": 3,
+      "average_amount": 78.37,
+      "months_as_customer": 69,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C194",
+      "recency_days": 39,
+      "purchases_last_year": 3,
+      "average_amount": 51.01,
+      "months_as_customer": 31,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C195",
+      "recency_days": 165,
+      "purchases_last_year": 2,
+      "average_amount": 97.57,
+      "months_as_customer": 52,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C196",
+      "recency_days": 23,
+      "purchases_last_year": 1,
+      "average_amount": 32.54,
+      "months_as_customer": 40,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C197",
+      "recency_days": 7,
+      "purchases_last_year": 1,
+      "average_amount": 26.54,
+      "months_as_customer": 11,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C198",
+      "recency_days": 9,
+      "purchases_last_year": 5,
+      "average_amount": 86.8,
+      "months_as_customer": 73,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C199",
+      "recency_days": 19,
+      "purchases_last_year": 5,
+      "average_amount": 81.0,
+      "months_as_customer": 43,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C200",
+      "recency_days": 103,
+      "purchases_last_year": 4,
+      "average_amount": 56.81,
+      "months_as_customer": 47,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C201",
+      "recency_days": 59,
+      "purchases_last_year": 3,
+      "average_amount": 173.49,
+      "months_as_customer": 21,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C202",
+      "recency_days": 30,
+      "purchases_last_year": 2,
+      "average_amount": 35.22,
+      "months_as_customer": 61,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C203",
+      "recency_days": 20,
+      "purchases_last_year": 1,
+      "average_amount": 114.26,
+      "months_as_customer": 60,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C204",
+      "recency_days": 50,
+      "purchases_last_year": 0,
+      "average_amount": 120.42,
+      "months_as_customer": 67,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C205",
+      "recency_days": 48,
+      "purchases_last_year": 2,
+      "average_amount": 29.63,
+      "months_as_customer": 8,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C206",
+      "recency_days": 35,
+      "purchases_last_year": 1,
+      "average_amount": 73.66,
+      "months_as_customer": 61,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C207",
+      "recency_days": 45,
+      "purchases_last_year": 6,
+      "average_amount": 82.83,
+      "months_as_customer": 2,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C208",
+      "recency_days": 30,
+      "purchases_last_year": 1,
+      "average_amount": 52.0,
+      "months_as_customer": 45,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C209",
+      "recency_days": 231,
+      "purchases_last_year": 2,
+      "average_amount": 52.25,
+      "months_as_customer": 54,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C210",
+      "recency_days": 8,
+      "purchases_last_year": 0,
+      "average_amount": 54.2,
+      "months_as_customer": 55,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C211",
+      "recency_days": 60,
+      "purchases_last_year": 1,
+      "average_amount": 35.95,
+      "months_as_customer": 28,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C212",
+      "recency_days": 24,
+      "purchases_last_year": 5,
+      "average_amount": 27.72,
+      "months_as_customer": 92,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C213",
+      "recency_days": 96,
+      "purchases_last_year": 2,
+      "average_amount": 82.95,
+      "months_as_customer": 92,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C214",
+      "recency_days": 45,
+      "purchases_last_year": 3,
+      "average_amount": 62.56,
+      "months_as_customer": 91,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C215",
+      "recency_days": 73,
+      "purchases_last_year": 3,
+      "average_amount": 56.75,
+      "months_as_customer": 33,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C216",
+      "recency_days": 84,
+      "purchases_last_year": 2,
+      "average_amount": 72.94,
+      "months_as_customer": 17,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C217",
+      "recency_days": 64,
+      "purchases_last_year": 1,
+      "average_amount": 37.05,
+      "months_as_customer": 13,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C218",
+      "recency_days": 121,
+      "purchases_last_year": 2,
+      "average_amount": 40.19,
+      "months_as_customer": 33,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C219",
+      "recency_days": 18,
+      "purchases_last_year": 1,
+      "average_amount": 83.95,
+      "months_as_customer": 25,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C220",
+      "recency_days": 117,
+      "purchases_last_year": 5,
+      "average_amount": 55.72,
+      "months_as_customer": 47,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C221",
+      "recency_days": 46,
+      "purchases_last_year": 3,
+      "average_amount": 71.43,
+      "months_as_customer": 79,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C222",
+      "recency_days": 74,
+      "purchases_last_year": 2,
+      "average_amount": 96.49,
+      "months_as_customer": 73,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C223",
+      "recency_days": 190,
+      "purchases_last_year": 3,
+      "average_amount": 134.93,
+      "months_as_customer": 83,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C224",
+      "recency_days": 134,
+      "purchases_last_year": 0,
+      "average_amount": 35.17,
+      "months_as_customer": 87,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C225",
+      "recency_days": 267,
+      "purchases_last_year": 1,
+      "average_amount": 41.69,
+      "months_as_customer": 94,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C226",
+      "recency_days": 9,
+      "purchases_last_year": 6,
+      "average_amount": 26.97,
+      "months_as_customer": 86,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C227",
+      "recency_days": 25,
+      "purchases_last_year": 5,
+      "average_amount": 39.21,
+      "months_as_customer": 34,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C228",
+      "recency_days": 118,
+      "purchases_last_year": 3,
+      "average_amount": 71.98,
+      "months_as_customer": 5,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C229",
+      "recency_days": 22,
+      "purchases_last_year": 6,
+      "average_amount": 42.39,
+      "months_as_customer": 52,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C230",
+      "recency_days": 47,
+      "purchases_last_year": 4,
+      "average_amount": 167.71,
+      "months_as_customer": 54,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C231",
+      "recency_days": 214,
+      "purchases_last_year": 5,
+      "average_amount": 44.75,
+      "months_as_customer": 40,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C232",
+      "recency_days": 110,
+      "purchases_last_year": 3,
+      "average_amount": 22.52,
+      "months_as_customer": 47,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C233",
+      "recency_days": 25,
+      "purchases_last_year": 1,
+      "average_amount": 35.31,
+      "months_as_customer": 18,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C234",
+      "recency_days": 78,
+      "purchases_last_year": 1,
+      "average_amount": 159.61,
+      "months_as_customer": 25,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C235",
+      "recency_days": 91,
+      "purchases_last_year": 1,
+      "average_amount": 35.36,
+      "months_as_customer": 67,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C236",
+      "recency_days": 58,
+      "purchases_last_year": 3,
+      "average_amount": 53.54,
+      "months_as_customer": 59,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C237",
+      "recency_days": 50,
+      "purchases_last_year": 3,
+      "average_amount": 36.68,
+      "months_as_customer": 19,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C238",
+      "recency_days": 61,
+      "purchases_last_year": 2,
+      "average_amount": 31.83,
+      "months_as_customer": 38,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C239",
+      "recency_days": 16,
+      "purchases_last_year": 4,
+      "average_amount": 99.84,
+      "months_as_customer": 66,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C240",
+      "recency_days": 60,
+      "purchases_last_year": 2,
+      "average_amount": 30.37,
+      "months_as_customer": 80,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C241",
+      "recency_days": 25,
+      "purchases_last_year": 0,
+      "average_amount": 22.41,
+      "months_as_customer": 8,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C242",
+      "recency_days": 75,
+      "purchases_last_year": 3,
+      "average_amount": 38.06,
+      "months_as_customer": 25,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C243",
+      "recency_days": 77,
+      "purchases_last_year": 3,
+      "average_amount": 39.69,
+      "months_as_customer": 25,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C244",
+      "recency_days": 27,
+      "purchases_last_year": 5,
+      "average_amount": 69.24,
+      "months_as_customer": 63,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C245",
+      "recency_days": 89,
+      "purchases_last_year": 4,
+      "average_amount": 58.74,
+      "months_as_customer": 68,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C246",
+      "recency_days": 73,
+      "purchases_last_year": 0,
+      "average_amount": 103.72,
+      "months_as_customer": 10,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C247",
+      "recency_days": 53,
+      "purchases_last_year": 3,
+      "average_amount": 49.94,
+      "months_as_customer": 81,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C248",
+      "recency_days": 98,
+      "purchases_last_year": 6,
+      "average_amount": 69.13,
+      "months_as_customer": 83,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C249",
+      "recency_days": 43,
+      "purchases_last_year": 3,
+      "average_amount": 71.4,
+      "months_as_customer": 8,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C250",
+      "recency_days": 43,
+      "purchases_last_year": 4,
+      "average_amount": 93.07,
+      "months_as_customer": 72,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C251",
+      "recency_days": 58,
+      "purchases_last_year": 5,
+      "average_amount": 29.94,
+      "months_as_customer": 24,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C252",
+      "recency_days": 52,
+      "purchases_last_year": 1,
+      "average_amount": 46.9,
+      "months_as_customer": 45,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C253",
+      "recency_days": 136,
+      "purchases_last_year": 3,
+      "average_amount": 13.96,
+      "months_as_customer": 5,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C254",
+      "recency_days": 8,
+      "purchases_last_year": 4,
+      "average_amount": 37.1,
+      "months_as_customer": 52,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C255",
+      "recency_days": 43,
+      "purchases_last_year": 1,
+      "average_amount": 29.93,
+      "months_as_customer": 57,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C256",
+      "recency_days": 11,
+      "purchases_last_year": 5,
+      "average_amount": 35.62,
+      "months_as_customer": 22,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C257",
+      "recency_days": 36,
+      "purchases_last_year": 2,
+      "average_amount": 121.16,
+      "months_as_customer": 33,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C258",
+      "recency_days": 66,
+      "purchases_last_year": 0,
+      "average_amount": 92.86,
+      "months_as_customer": 7,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C259",
+      "recency_days": 54,
+      "purchases_last_year": 1,
+      "average_amount": 25.78,
+      "months_as_customer": 67,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C260",
+      "recency_days": 116,
+      "purchases_last_year": 2,
+      "average_amount": 136.92,
+      "months_as_customer": 49,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C261",
+      "recency_days": 69,
+      "purchases_last_year": 1,
+      "average_amount": 105.36,
+      "months_as_customer": 93,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C262",
+      "recency_days": 6,
+      "purchases_last_year": 3,
+      "average_amount": 60.6,
+      "months_as_customer": 25,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C263",
+      "recency_days": 22,
+      "purchases_last_year": 3,
+      "average_amount": 52.45,
+      "months_as_customer": 86,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C264",
+      "recency_days": 183,
+      "purchases_last_year": 2,
+      "average_amount": 51.51,
+      "months_as_customer": 58,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C265",
+      "recency_days": 184,
+      "purchases_last_year": 2,
+      "average_amount": 54.16,
+      "months_as_customer": 89,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C266",
+      "recency_days": 57,
+      "purchases_last_year": 3,
+      "average_amount": 76.6,
+      "months_as_customer": 84,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C267",
+      "recency_days": 15,
+      "purchases_last_year": 2,
+      "average_amount": 47.99,
+      "months_as_customer": 45,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C268",
+      "recency_days": 297,
+      "purchases_last_year": 2,
+      "average_amount": 90.9,
+      "months_as_customer": 21,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C269",
+      "recency_days": 10,
+      "purchases_last_year": 2,
+      "average_amount": 46.56,
+      "months_as_customer": 84,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C270",
+      "recency_days": 67,
+      "purchases_last_year": 7,
+      "average_amount": 38.79,
+      "months_as_customer": 30,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C271",
+      "recency_days": 50,
+      "purchases_last_year": 2,
+      "average_amount": 51.12,
+      "months_as_customer": 63,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C272",
+      "recency_days": 63,
+      "purchases_last_year": 3,
+      "average_amount": 64.75,
+      "months_as_customer": 76,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C273",
+      "recency_days": 20,
+      "purchases_last_year": 4,
+      "average_amount": 67.75,
+      "months_as_customer": 1,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C274",
+      "recency_days": 37,
+      "purchases_last_year": 0,
+      "average_amount": 54.32,
+      "months_as_customer": 45,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C275",
+      "recency_days": 122,
+      "purchases_last_year": 1,
+      "average_amount": 25.49,
+      "months_as_customer": 43,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C276",
+      "recency_days": 35,
+      "purchases_last_year": 3,
+      "average_amount": 27.66,
+      "months_as_customer": 16,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C277",
+      "recency_days": 17,
+      "purchases_last_year": 3,
+      "average_amount": 23.02,
+      "months_as_customer": 60,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C278",
+      "recency_days": 51,
+      "purchases_last_year": 3,
+      "average_amount": 47.52,
+      "months_as_customer": 46,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C279",
+      "recency_days": 55,
+      "purchases_last_year": 5,
+      "average_amount": 76.96,
+      "months_as_customer": 28,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C280",
+      "recency_days": 46,
+      "purchases_last_year": 1,
+      "average_amount": 55.4,
+      "months_as_customer": 71,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C281",
+      "recency_days": 27,
+      "purchases_last_year": 4,
+      "average_amount": 53.32,
+      "months_as_customer": 41,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C282",
+      "recency_days": 79,
+      "purchases_last_year": 4,
+      "average_amount": 42.84,
+      "months_as_customer": 35,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C283",
+      "recency_days": 46,
+      "purchases_last_year": 1,
+      "average_amount": 45.98,
+      "months_as_customer": 51,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C284",
+      "recency_days": 20,
+      "purchases_last_year": 1,
+      "average_amount": 38.97,
+      "months_as_customer": 60,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C285",
+      "recency_days": 61,
+      "purchases_last_year": 3,
+      "average_amount": 93.31,
+      "months_as_customer": 44,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C286",
+      "recency_days": 50,
+      "purchases_last_year": 2,
+      "average_amount": 29.29,
+      "months_as_customer": 92,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C287",
+      "recency_days": 57,
+      "purchases_last_year": 2,
+      "average_amount": 35.02,
+      "months_as_customer": 3,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C288",
+      "recency_days": 13,
+      "purchases_last_year": 5,
+      "average_amount": 69.68,
+      "months_as_customer": 55,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C289",
+      "recency_days": 27,
+      "purchases_last_year": 1,
+      "average_amount": 45.49,
+      "months_as_customer": 15,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C290",
+      "recency_days": 74,
+      "purchases_last_year": 1,
+      "average_amount": 76.21,
+      "months_as_customer": 63,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C291",
+      "recency_days": 108,
+      "purchases_last_year": 6,
+      "average_amount": 43.35,
+      "months_as_customer": 14,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C292",
+      "recency_days": 68,
+      "purchases_last_year": 5,
+      "average_amount": 67.81,
+      "months_as_customer": 79,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C293",
+      "recency_days": 58,
+      "purchases_last_year": 2,
+      "average_amount": 61.4,
+      "months_as_customer": 94,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C294",
+      "recency_days": 92,
+      "purchases_last_year": 4,
+      "average_amount": 28.7,
+      "months_as_customer": 65,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C295",
+      "recency_days": 114,
+      "purchases_last_year": 5,
+      "average_amount": 72.5,
+      "months_as_customer": 68,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C296",
+      "recency_days": 214,
+      "purchases_last_year": 4,
+      "average_amount": 103.38,
+      "months_as_customer": 32,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C297",
+      "recency_days": 76,
+      "purchases_last_year": 3,
+      "average_amount": 39.19,
+      "months_as_customer": 49,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C298",
+      "recency_days": 33,
+      "purchases_last_year": 4,
+      "average_amount": 51.31,
+      "months_as_customer": 78,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C299",
+      "recency_days": 77,
+      "purchases_last_year": 5,
+      "average_amount": 75.59,
+      "months_as_customer": 31,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C300",
+      "recency_days": 11,
+      "purchases_last_year": 2,
+      "average_amount": 118.91,
+      "months_as_customer": 63,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C301",
+      "recency_days": 55,
+      "purchases_last_year": 3,
+      "average_amount": 65.84,
+      "months_as_customer": 84,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C302",
+      "recency_days": 37,
+      "purchases_last_year": 5,
+      "average_amount": 177.16,
+      "months_as_customer": 75,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C303",
+      "recency_days": 52,
+      "purchases_last_year": 3,
+      "average_amount": 45.02,
+      "months_as_customer": 42,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C304",
+      "recency_days": 79,
+      "purchases_last_year": 0,
+      "average_amount": 144.92,
+      "months_as_customer": 46,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C305",
+      "recency_days": 56,
+      "purchases_last_year": 3,
+      "average_amount": 37.98,
+      "months_as_customer": 88,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C306",
+      "recency_days": 17,
+      "purchases_last_year": 1,
+      "average_amount": 54.52,
+      "months_as_customer": 45,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C307",
+      "recency_days": 40,
+      "purchases_last_year": 5,
+      "average_amount": 34.96,
+      "months_as_customer": 22,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C308",
+      "recency_days": 28,
+      "purchases_last_year": 1,
+      "average_amount": 90.68,
+      "months_as_customer": 12,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C309",
+      "recency_days": 53,
+      "purchases_last_year": 0,
+      "average_amount": 75.93,
+      "months_as_customer": 41,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C310",
+      "recency_days": 72,
+      "purchases_last_year": 1,
+      "average_amount": 23.08,
+      "months_as_customer": 37,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C311",
+      "recency_days": 25,
+      "purchases_last_year": 2,
+      "average_amount": 14.82,
+      "months_as_customer": 85,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C312",
+      "recency_days": 97,
+      "purchases_last_year": 2,
+      "average_amount": 162.73,
+      "months_as_customer": 41,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C313",
+      "recency_days": 154,
+      "purchases_last_year": 3,
+      "average_amount": 47.68,
+      "months_as_customer": 59,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C314",
+      "recency_days": 44,
+      "purchases_last_year": 2,
+      "average_amount": 23.91,
+      "months_as_customer": 74,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C315",
+      "recency_days": 97,
+      "purchases_last_year": 4,
+      "average_amount": 35.14,
+      "months_as_customer": 60,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C316",
+      "recency_days": 17,
+      "purchases_last_year": 2,
+      "average_amount": 43.72,
+      "months_as_customer": 59,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C317",
+      "recency_days": 35,
+      "purchases_last_year": 2,
+      "average_amount": 121.79,
+      "months_as_customer": 51,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C318",
+      "recency_days": 117,
+      "purchases_last_year": 3,
+      "average_amount": 68.87,
+      "months_as_customer": 56,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C319",
+      "recency_days": 13,
+      "purchases_last_year": 7,
+      "average_amount": 56.43,
+      "months_as_customer": 74,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C320",
+      "recency_days": 36,
+      "purchases_last_year": 4,
+      "average_amount": 34.26,
+      "months_as_customer": 23,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C321",
+      "recency_days": 27,
+      "purchases_last_year": 0,
+      "average_amount": 77.03,
+      "months_as_customer": 87,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C322",
+      "recency_days": 136,
+      "purchases_last_year": 2,
+      "average_amount": 22.86,
+      "months_as_customer": 12,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C323",
+      "recency_days": 136,
+      "purchases_last_year": 2,
+      "average_amount": 96.75,
+      "months_as_customer": 47,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C324",
+      "recency_days": 33,
+      "purchases_last_year": 3,
+      "average_amount": 89.7,
+      "months_as_customer": 38,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C325",
+      "recency_days": 60,
+      "purchases_last_year": 1,
+      "average_amount": 43.52,
+      "months_as_customer": 53,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C326",
+      "recency_days": 7,
+      "purchases_last_year": 3,
+      "average_amount": 25.93,
+      "months_as_customer": 47,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C327",
+      "recency_days": 107,
+      "purchases_last_year": 3,
+      "average_amount": 40.35,
+      "months_as_customer": 75,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C328",
+      "recency_days": 72,
+      "purchases_last_year": 0,
+      "average_amount": 51.77,
+      "months_as_customer": 44,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C329",
+      "recency_days": 157,
+      "purchases_last_year": 4,
+      "average_amount": 150.49,
+      "months_as_customer": 4,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C330",
+      "recency_days": 8,
+      "purchases_last_year": 4,
+      "average_amount": 129.12,
+      "months_as_customer": 7,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C331",
+      "recency_days": 72,
+      "purchases_last_year": 2,
+      "average_amount": 39.85,
+      "months_as_customer": 95,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C332",
+      "recency_days": 41,
+      "purchases_last_year": 5,
+      "average_amount": 37.55,
+      "months_as_customer": 75,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C333",
+      "recency_days": 7,
+      "purchases_last_year": 4,
+      "average_amount": 27.71,
+      "months_as_customer": 18,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C334",
+      "recency_days": 31,
+      "purchases_last_year": 4,
+      "average_amount": 66.49,
+      "months_as_customer": 51,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C335",
+      "recency_days": 51,
+      "purchases_last_year": 1,
+      "average_amount": 41.85,
+      "months_as_customer": 9,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C336",
+      "recency_days": 103,
+      "purchases_last_year": 1,
+      "average_amount": 78.22,
+      "months_as_customer": 29,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C337",
+      "recency_days": 64,
+      "purchases_last_year": 3,
+      "average_amount": 56.9,
+      "months_as_customer": 45,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C338",
+      "recency_days": 36,
+      "purchases_last_year": 3,
+      "average_amount": 41.9,
+      "months_as_customer": 69,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C339",
+      "recency_days": 78,
+      "purchases_last_year": 1,
+      "average_amount": 33.27,
+      "months_as_customer": 20,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C340",
+      "recency_days": 50,
+      "purchases_last_year": 1,
+      "average_amount": 24.71,
+      "months_as_customer": 23,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C341",
+      "recency_days": 32,
+      "purchases_last_year": 1,
+      "average_amount": 73.64,
+      "months_as_customer": 74,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C342",
+      "recency_days": 24,
+      "purchases_last_year": 1,
+      "average_amount": 28.35,
+      "months_as_customer": 41,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C343",
+      "recency_days": 61,
+      "purchases_last_year": 4,
+      "average_amount": 78.26,
+      "months_as_customer": 19,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C344",
+      "recency_days": 62,
+      "purchases_last_year": 2,
+      "average_amount": 23.96,
+      "months_as_customer": 25,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C345",
+      "recency_days": 237,
+      "purchases_last_year": 1,
+      "average_amount": 15.36,
+      "months_as_customer": 15,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C346",
+      "recency_days": 38,
+      "purchases_last_year": 8,
+      "average_amount": 55.26,
+      "months_as_customer": 80,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C347",
+      "recency_days": 196,
+      "purchases_last_year": 5,
+      "average_amount": 40.73,
+      "months_as_customer": 65,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C348",
+      "recency_days": 72,
+      "purchases_last_year": 6,
+      "average_amount": 86.9,
+      "months_as_customer": 93,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C349",
+      "recency_days": 140,
+      "purchases_last_year": 4,
+      "average_amount": 54.89,
+      "months_as_customer": 56,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C350",
+      "recency_days": 26,
+      "purchases_last_year": 1,
+      "average_amount": 52.89,
+      "months_as_customer": 50,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C351",
+      "recency_days": 27,
+      "purchases_last_year": 4,
+      "average_amount": 84.69,
+      "months_as_customer": 67,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C352",
+      "recency_days": 43,
+      "purchases_last_year": 4,
+      "average_amount": 39.54,
+      "months_as_customer": 3,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C353",
+      "recency_days": 112,
+      "purchases_last_year": 3,
+      "average_amount": 75.7,
+      "months_as_customer": 10,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C354",
+      "recency_days": 63,
+      "purchases_last_year": 3,
+      "average_amount": 187.94,
+      "months_as_customer": 49,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C355",
+      "recency_days": 100,
+      "purchases_last_year": 4,
+      "average_amount": 61.71,
+      "months_as_customer": 70,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C356",
+      "recency_days": 70,
+      "purchases_last_year": 4,
+      "average_amount": 34.75,
+      "months_as_customer": 6,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C357",
+      "recency_days": 124,
+      "purchases_last_year": 3,
+      "average_amount": 54.18,
+      "months_as_customer": 86,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C358",
+      "recency_days": 64,
+      "purchases_last_year": 4,
+      "average_amount": 36.93,
+      "months_as_customer": 59,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C359",
+      "recency_days": 36,
+      "purchases_last_year": 0,
+      "average_amount": 46.67,
+      "months_as_customer": 41,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C360",
+      "recency_days": 82,
+      "purchases_last_year": 7,
+      "average_amount": 127.26,
+      "months_as_customer": 48,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C361",
+      "recency_days": 59,
+      "purchases_last_year": 4,
+      "average_amount": 33.77,
+      "months_as_customer": 32,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C362",
+      "recency_days": 221,
+      "purchases_last_year": 2,
+      "average_amount": 29.9,
+      "months_as_customer": 16,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C363",
+      "recency_days": 48,
+      "purchases_last_year": 3,
+      "average_amount": 71.69,
+      "months_as_customer": 43,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C364",
+      "recency_days": 60,
+      "purchases_last_year": 2,
+      "average_amount": 45.2,
+      "months_as_customer": 24,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C365",
+      "recency_days": 43,
+      "purchases_last_year": 6,
+      "average_amount": 50.91,
+      "months_as_customer": 57,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C366",
+      "recency_days": 138,
+      "purchases_last_year": 2,
+      "average_amount": 40.56,
+      "months_as_customer": 49,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C367",
+      "recency_days": 110,
+      "purchases_last_year": 2,
+      "average_amount": 62.59,
+      "months_as_customer": 21,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C368",
+      "recency_days": 92,
+      "purchases_last_year": 5,
+      "average_amount": 115.72,
+      "months_as_customer": 44,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C369",
+      "recency_days": 20,
+      "purchases_last_year": 1,
+      "average_amount": 76.35,
+      "months_as_customer": 88,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C370",
+      "recency_days": 16,
+      "purchases_last_year": 2,
+      "average_amount": 45.03,
+      "months_as_customer": 84,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C371",
+      "recency_days": 67,
+      "purchases_last_year": 2,
+      "average_amount": 46.54,
+      "months_as_customer": 73,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C372",
+      "recency_days": 97,
+      "purchases_last_year": 1,
+      "average_amount": 35.25,
+      "months_as_customer": 91,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C373",
+      "recency_days": 178,
+      "purchases_last_year": 0,
+      "average_amount": 35.74,
+      "months_as_customer": 73,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C374",
+      "recency_days": 13,
+      "purchases_last_year": 3,
+      "average_amount": 88.88,
+      "months_as_customer": 46,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C375",
+      "recency_days": 48,
+      "purchases_last_year": 5,
+      "average_amount": 72.78,
+      "months_as_customer": 18,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C376",
+      "recency_days": 14,
+      "purchases_last_year": 1,
+      "average_amount": 70.19,
+      "months_as_customer": 66,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C377",
+      "recency_days": 25,
+      "purchases_last_year": 3,
+      "average_amount": 71.49,
+      "months_as_customer": 66,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C378",
+      "recency_days": 46,
+      "purchases_last_year": 2,
+      "average_amount": 40.76,
+      "months_as_customer": 25,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C379",
+      "recency_days": 118,
+      "purchases_last_year": 3,
+      "average_amount": 55.47,
+      "months_as_customer": 71,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C380",
+      "recency_days": 36,
+      "purchases_last_year": 5,
+      "average_amount": 72.29,
+      "months_as_customer": 73,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C381",
+      "recency_days": 31,
+      "purchases_last_year": 1,
+      "average_amount": 124.29,
+      "months_as_customer": 52,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C382",
+      "recency_days": 42,
+      "purchases_last_year": 3,
+      "average_amount": 63.58,
+      "months_as_customer": 49,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C383",
+      "recency_days": 149,
+      "purchases_last_year": 3,
+      "average_amount": 57.97,
+      "months_as_customer": 75,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C384",
+      "recency_days": 377,
+      "purchases_last_year": 3,
+      "average_amount": 37.75,
+      "months_as_customer": 6,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C385",
+      "recency_days": 16,
+      "purchases_last_year": 5,
+      "average_amount": 93.57,
+      "months_as_customer": 11,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C386",
+      "recency_days": 44,
+      "purchases_last_year": 2,
+      "average_amount": 49.46,
+      "months_as_customer": 90,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C387",
+      "recency_days": 39,
+      "purchases_last_year": 1,
+      "average_amount": 63.61,
+      "months_as_customer": 53,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C388",
+      "recency_days": 139,
+      "purchases_last_year": 5,
+      "average_amount": 68.24,
+      "months_as_customer": 77,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C389",
+      "recency_days": 77,
+      "purchases_last_year": 6,
+      "average_amount": 38.08,
+      "months_as_customer": 2,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C390",
+      "recency_days": 187,
+      "purchases_last_year": 2,
+      "average_amount": 64.93,
+      "months_as_customer": 82,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C391",
+      "recency_days": 24,
+      "purchases_last_year": 2,
+      "average_amount": 98.54,
+      "months_as_customer": 83,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C392",
+      "recency_days": 55,
+      "purchases_last_year": 2,
+      "average_amount": 36.19,
+      "months_as_customer": 63,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C393",
+      "recency_days": 38,
+      "purchases_last_year": 4,
+      "average_amount": 43.42,
+      "months_as_customer": 34,
+      "newsletter": 1,
+      "response": 0
+    },
+    {
+      "customer_id": "C394",
+      "recency_days": 23,
+      "purchases_last_year": 6,
+      "average_amount": 37.44,
+      "months_as_customer": 40,
+      "newsletter": 0,
+      "response": 1
+    },
+    {
+      "customer_id": "C395",
+      "recency_days": 48,
+      "purchases_last_year": 1,
+      "average_amount": 59.11,
+      "months_as_customer": 26,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C396",
+      "recency_days": 21,
+      "purchases_last_year": 2,
+      "average_amount": 159.28,
+      "months_as_customer": 19,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C397",
+      "recency_days": 310,
+      "purchases_last_year": 5,
+      "average_amount": 66.17,
+      "months_as_customer": 91,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C398",
+      "recency_days": 76,
+      "purchases_last_year": 6,
+      "average_amount": 104.39,
+      "months_as_customer": 87,
+      "newsletter": 0,
+      "response": 0
+    },
+    {
+      "customer_id": "C399",
+      "recency_days": 24,
+      "purchases_last_year": 4,
+      "average_amount": 63.51,
+      "months_as_customer": 90,
+      "newsletter": 1,
+      "response": 1
+    },
+    {
+      "customer_id": "C400",
+      "recency_days": 34,
+      "purchases_last_year": 0,
+      "average_amount": 45.66,
+      "months_as_customer": 8,
+      "newsletter": 0,
+      "response": 0
+    }
+  ],
+  "equity": [
+    {
+      "period": 0,
+      "customers": 1000
+    },
+    {
+      "period": 1,
+      "customers": 1080
+    },
+    {
+      "period": 2,
+      "customers": 1210
+    },
+    {
+      "period": 3,
+      "customers": 1410
+    },
+    {
+      "period": 4,
+      "customers": 1680
+    },
+    {
+      "period": 5,
+      "customers": 1980
+    },
+    {
+      "period": 6,
+      "customers": 2250
+    },
+    {
+      "period": 7,
+      "customers": 2440
+    },
+    {
+      "period": 8,
+      "customers": 2530
+    },
+    {
+      "period": 9,
+      "customers": 2510
+    }
+  ],
+  "contractual_survival": [
+    {
+      "period": 0,
+      "survivors": 1000
+    },
+    {
+      "period": 1,
+      "survivors": 631
+    },
+    {
+      "period": 2,
+      "survivors": 468
+    },
+    {
+      "period": 3,
+      "survivors": 382
+    },
+    {
+      "period": 4,
+      "survivors": 326
+    },
+    {
+      "period": 5,
+      "survivors": 289
+    },
+    {
+      "period": 6,
+      "survivors": 262
+    },
+    {
+      "period": 7,
+      "survivors": 241
+    }
+  ],
+  "bgnbd": [
+    {
+      "customer_id": 1,
+      "x": 2,
+      "tx": 11.0,
+      "T": 38.86
+    },
+    {
+      "customer_id": 2,
+      "x": 8,
+      "tx": 17.0,
+      "T": 38.86
+    },
+    {
+      "customer_id": 3,
+      "x": 0,
+      "tx": 0.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 4,
+      "x": 1,
+      "tx": 35.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 5,
+      "x": 3,
+      "tx": 30.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 6,
+      "x": 5,
+      "tx": 37.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 7,
+      "x": 1,
+      "tx": 2.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 8,
+      "x": 4,
+      "tx": 12.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 9,
+      "x": 7,
+      "tx": 38.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 10,
+      "x": 2,
+      "tx": 28.0,
+      "T": 39.0
+    },
+    {
+      "customer_id": 11,
+      "x": 0,
+      "tx": 0.0,
+      "T": 20.0
+    },
+    {
+      "customer_id": 12,
+      "x": 3,
+      "tx": 18.0,
+      "T": 25.0
+    }
+  ],
+  "bgbb_histories": [
+    {
+      "n": 6,
+      "tx": 0,
+      "x": 0,
+      "count": 1203
+    },
+    {
+      "n": 6,
+      "tx": 1,
+      "x": 1,
+      "count": 310
+    },
+    {
+      "n": 6,
+      "tx": 2,
+      "x": 1,
+      "count": 180
+    },
+    {
+      "n": 6,
+      "tx": 3,
+      "x": 1,
+      "count": 125
+    },
+    {
+      "n": 6,
+      "tx": 4,
+      "x": 1,
+      "count": 95
+    },
+    {
+      "n": 6,
+      "tx": 5,
+      "x": 1,
+      "count": 80
+    },
+    {
+      "n": 6,
+      "tx": 6,
+      "x": 1,
+      "count": 70
+    },
+    {
+      "n": 6,
+      "tx": 2,
+      "x": 2,
+      "count": 130
+    },
+    {
+      "n": 6,
+      "tx": 4,
+      "x": 2,
+      "count": 115
+    },
+    {
+      "n": 6,
+      "tx": 6,
+      "x": 2,
+      "count": 105
+    },
+    {
+      "n": 6,
+      "tx": 4,
+      "x": 3,
+      "count": 75
+    },
+    {
+      "n": 6,
+      "tx": 6,
+      "x": 3,
+      "count": 85
+    },
+    {
+      "n": 6,
+      "tx": 6,
+      "x": 4,
+      "count": 55
+    },
+    {
+      "n": 6,
+      "tx": 6,
+      "x": 5,
+      "count": 30
+    },
+    {
+      "n": 6,
+      "tx": 6,
+      "x": 6,
+      "count": 15
+    }
+  ],
+  "events": [
+    {
+      "customer_id": "A",
+      "event_date": "2025-01-01",
+      "event_type": "purchase"
+    },
+    {
+      "customer_id": "A",
+      "event_date": "2025-02-01",
+      "event_type": "purchase"
+    },
+    {
+      "customer_id": "A",
+      "event_date": "2025-02-01",
+      "event_type": "complaint"
+    },
+    {
+      "customer_id": "A",
+      "event_date": "2025-03-15",
+      "event_type": "complaint"
+    },
+    {
+      "customer_id": "B",
+      "event_date": "2025-01-10",
+      "event_type": "purchase"
+    },
+    {
+      "customer_id": "B",
+      "event_date": "2025-04-10",
+      "event_type": "purchase"
+    },
+    {
+      "customer_id": "C",
+      "event_date": "2025-01-20",
+      "event_type": "purchase"
+    },
+    {
+      "customer_id": "C",
+      "event_date": "2025-01-25",
+      "event_type": "complaint"
+    }
+  ]
+}
