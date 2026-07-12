@@ -845,8 +845,10 @@ elif page == "About this app":
 
         ### Open source
 
-        The project is free software under the **GPL-3.0-or-later** license: you may use, study, change,
-        and share it, and anything built from it must remain equally open. Improvements are welcome —
+        The project is free software under the **GPL-3.0-or-later** license. Anyone — individuals and
+        companies alike — may use it, study it, and change it, including private changes for internal
+        use. What the license forbids is closing it: whoever *distributes* this software, original or
+        modified, must pass on the source code and the same freedoms. Improvements are welcome —
         see `CONTRIBUTING.md` in the repository for how to get started.
         """
     )
