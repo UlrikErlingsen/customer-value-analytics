@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import base64
+import hashlib
 import sys
 import traceback
 from pathlib import Path
@@ -11,7 +13,11 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
+MARK_DATA_URI = "data:image/svg+xml;base64," + base64.b64encode(
+    (ROOT / "assets" / "worthsignal-mark.svg").read_bytes()
+).decode("ascii")
 
+from cva import __version__
 from cva.bgbb import score_bgbb, summary_from_binary_periods
 from cva.bgnbd import score_bgnbd, summarize_transactions
 from cva.clv import finite_horizon_clv, growth_clv, summarize_clv, timed_clv
@@ -41,16 +47,146 @@ from cva.validation import (
     skipped_rows_note,
 )
 
-MEASUREMENT_WARNING = (
-    "**Before you trust any number here:** marketing measurement is hard. John Wanamaker's "
-    "century-old line still applies — “Half the money I spend on advertising is wasted; "
-    "the trouble is I don't know which half.” And as a rule of thumb, only about 30% of "
-    "marketing activities can be meaningfully measured at all. Treat every result as "
-    "decision support, not as truth."
+MODEL_WARNING = (
+    "**Use estimates wisely.** Every model simplifies real customer behaviour and depends on the quality "
+    "of your inputs. Use results to compare options, test assumptions, and support judgement — not as a "
+    "precise promise about the future."
 )
 
 
-st.set_page_config(page_title="Customer Value Analytics", page_icon="📊", layout="wide")
+st.set_page_config(
+    page_title="WorthSignal | Open customer value toolkit",
+    page_icon=str(ROOT / "assets" / "worthsignal-mark.png"),
+    layout="wide",
+)
+
+st.markdown(
+    """
+    <style>
+    :root {
+        --ws-ink: #17322e;
+        --ws-deep: #102c2a;
+        --ws-coral: #d95b40;
+        --ws-mint: #83d2b4;
+        --ws-gold: #f2c66d;
+        --ws-paper: #f8f5ed;
+        --ws-line: rgba(23, 50, 46, 0.14);
+    }
+    [data-testid="stAppViewContainer"] {
+        background:
+            radial-gradient(circle at 94% 3%, rgba(131, 210, 180, 0.19), transparent 26rem),
+            linear-gradient(180deg, #fbf8f1 0%, var(--ws-paper) 100%);
+    }
+    [data-testid="stHeader"] { background: rgba(248, 245, 237, 0.78); }
+    [data-testid="stSidebar"] {
+        background: linear-gradient(165deg, #173c3a 0%, #102c2a 62%, #0c2422 100%);
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3,
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] span { color: #f8f5ed; }
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p { color: #b9cbc5; }
+    [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(131, 210, 180, 0.32);
+    }
+    [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] small,
+    [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] small span {
+        color: #b9cbc5 !important;
+    }
+    [data-testid="stSidebar"] button {
+        border-color: rgba(255, 255, 255, 0.22);
+    }
+    [data-testid="stSidebar"] [data-testid="stDownloadButton"] button,
+    [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button {
+        background: #f8f5ed;
+        color: #17322e !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stDownloadButton"] button p,
+    [data-testid="stSidebar"] [data-testid="stDownloadButton"] button span,
+    [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button p,
+    [data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button span {
+        color: #17322e !important;
+    }
+    .block-container { max-width: 1240px; padding-top: 1.35rem; padding-bottom: 4rem; }
+    h1, h2, h3 { color: var(--ws-ink); letter-spacing: -0.025em; }
+    h2 { margin-top: 0.4rem; }
+    a { color: #9b3e2b; }
+    [data-testid="stMetric"] {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--ws-line);
+        border-radius: 16px;
+        padding: 1rem 1.05rem;
+        box-shadow: 0 8px 28px rgba(23, 50, 46, 0.045);
+    }
+    [data-testid="stMetricValue"] { color: var(--ws-ink); }
+    .stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #e26748, #c94c34);
+        color: white;
+        border: 0;
+        box-shadow: 0 8px 20px rgba(217, 91, 64, 0.22);
+        font-weight: 700;
+    }
+    .stButton > button[kind="primary"]:hover {
+        background: linear-gradient(135deg, #c94c34, #b63f2b);
+        color: white;
+    }
+    .stDownloadButton > button { border-radius: 10px; font-weight: 650; }
+    [data-testid="stExpander"], [data-testid="stAlert"] { border-radius: 14px; }
+    .ws-sidebar-brand { padding: 0.25rem 0 1.1rem; }
+    .ws-sidebar-lockup { display: flex; align-items: center; gap: 0.72rem; }
+    .ws-sidebar-mark { width: 42px; height: 42px; flex: 0 0 auto; }
+    .ws-sidebar-name { color: #fff; font-size: 1.28rem; line-height: 1; font-weight: 800; letter-spacing: -0.035em; }
+    .ws-sidebar-name span { color: #f2c66d !important; }
+    .ws-sidebar-tagline { margin: 0.38rem 0 0 !important; color: #b9cbc5 !important; font-size: 0.78rem; line-height: 1.35; }
+    .ws-masthead {
+        display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+        padding: 0.75rem 1rem 0.75rem 0.8rem; margin-bottom: 1.35rem;
+        background: rgba(255, 255, 255, 0.62); border: 1px solid var(--ws-line);
+        border-radius: 18px; box-shadow: 0 10px 36px rgba(23, 50, 46, 0.05);
+        backdrop-filter: blur(12px);
+    }
+    .ws-lockup { display: flex; align-items: center; gap: 0.75rem; }
+    .ws-masthead-mark { width: 48px; height: 48px; }
+    .ws-wordmark { color: var(--ws-ink); font-weight: 850; letter-spacing: -0.045em; font-size: 1.55rem; line-height: 1; }
+    .ws-wordmark span { color: var(--ws-coral); }
+    .ws-kicker { margin-top: 0.32rem; color: #59716c; font-size: 0.68rem; font-weight: 750; letter-spacing: 0.13em; }
+    .ws-promise { color: #47645e; font-size: 0.78rem; font-weight: 650; white-space: nowrap; }
+    .ws-promise span { color: var(--ws-coral); padding: 0 0.3rem; }
+    .ws-home-hero {
+        padding: clamp(1.65rem, 4vw, 3.25rem); margin-bottom: 1.25rem; overflow: hidden;
+        position: relative; background: linear-gradient(135deg, #173c3a 0%, #102c2a 72%);
+        color: #f8f5ed; border-radius: 26px; box-shadow: 0 18px 50px rgba(23, 50, 46, 0.17);
+    }
+    .ws-home-hero:after {
+        content: ""; position: absolute; width: 290px; height: 290px; right: -95px; top: -120px;
+        border-radius: 50%; border: 56px solid rgba(131, 210, 180, 0.12);
+    }
+    .ws-home-eyebrow { color: #83d2b4; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; }
+    .ws-home-hero h1 { color: #fff; font-size: clamp(2.15rem, 5vw, 4.45rem); line-height: 0.98; margin: 0.72rem 0 1rem; max-width: 850px; }
+    .ws-home-hero h1 em { color: #f2c66d; font-style: normal; }
+    .ws-home-hero p { color: #d7e3df; font-size: 1.05rem; line-height: 1.6; max-width: 760px; margin-bottom: 1.25rem; }
+    .ws-pills { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+    .ws-pill { padding: 0.4rem 0.72rem; border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 999px; color: #f8f5ed; font-size: 0.78rem; font-weight: 650; background: rgba(255, 255, 255, 0.055); }
+    .ws-privacy-note { color: #59716c; font-size: 0.82rem; line-height: 1.5; padding: 0.1rem 0 0.7rem; }
+    .ws-footer {
+        margin-top: 3.25rem; padding-top: 1rem; border-top: 1px solid var(--ws-line);
+        color: #617670; font-size: 0.76rem; line-height: 1.6; text-align: center;
+    }
+    .ws-footer a { color: #365f57; font-weight: 700; text-decoration: none; }
+    .ws-footer span { color: var(--ws-coral); padding: 0 0.38rem; }
+    @media (max-width: 760px) {
+        .ws-promise { display: none; }
+        .ws-masthead { padding-right: 0.8rem; }
+        .ws-home-hero { border-radius: 20px; }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 def fmt_number(value: float) -> str:
@@ -160,23 +296,56 @@ def chosen_table(data: LoadedData | None, key: str, preferred: tuple[str, ...] =
     return frame
 
 
-@st.cache_data(show_spinner=False)
-def cached_load(raw: bytes, filename: str) -> LoadedData:
+def load_for_session(raw: bytes, filename: str) -> LoadedData:
+    """Parse an upload once per browser session without placing customer data in a global cache."""
     import io
 
-    return load_data(io.BytesIO(raw), filename)
+    key = (filename, hashlib.sha256(raw).hexdigest())
+    cached = st.session_state.get("_worthsignal_upload")
+    if cached is not None and cached["key"] == key:
+        return cached["data"]
+    parsed = load_data(io.BytesIO(raw), filename)
+    st.session_state["_worthsignal_upload"] = {"key": key, "data": parsed}
+    return parsed
 
 
-st.title("Customer Value Analytics")
-st.caption("Classic customer-value models for your own Excel, CSV, or JSON data — free, open source, runs entirely on your computer")
+st.markdown(
+    f"""
+    <div class="ws-masthead">
+      <div class="ws-lockup">
+        <img class="ws-masthead-mark" src="{MARK_DATA_URI}" alt="WorthSignal mark">
+        <div>
+          <div class="ws-wordmark">Worth<span>Signal</span></div>
+          <div class="ws-kicker">OPEN CUSTOMER VALUE TOOLKIT</div>
+        </div>
+      </div>
+      <div class="ws-promise">Local-first <span>•</span> Explainable <span>•</span> Open source</div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 with st.sidebar:
-    st.header("1. Add your data")
+    st.markdown(
+        f"""
+        <div class="ws-sidebar-brand">
+          <div class="ws-sidebar-lockup">
+            <img class="ws-sidebar-mark" src="{MARK_DATA_URI}" alt="WorthSignal mark">
+            <div>
+              <div class="ws-sidebar-name">Worth<span>Signal</span></div>
+              <p class="ws-sidebar-tagline">Find the customers, value, and moves that matter.</p>
+            </div>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.header("1. Bring your data")
     upload = st.file_uploader("Excel, CSV, or JSON", type=["xlsx", "xls", "xlsm", "json", "csv"])
     loaded: LoadedData | None = None
     if upload is not None:
         try:
-            loaded = cached_load(upload.getvalue(), upload.name)
+            loaded = load_for_session(upload.getvalue(), upload.name)
             st.success(f"Loaded {upload.name}")
         except Exception as exc:
             st.error(f"Could not read the file: {exc}")
@@ -188,14 +357,14 @@ with st.sidebar:
         st.download_button(
             "No file yet? Get a test workbook",
             data=cached_template_workbook(None, True),
-            file_name="cva_quick_test.xlsx",
+            file_name="worthsignal_quick_test.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
         st.caption(
             "One example sheet per analysis — upload it as-is to try everything, "
             "then replace the rows with your own data."
         )
-    st.header("2. Choose an analysis")
+    st.header("2. Choose your lens")
     page = st.radio(
         "Analysis",
         [
@@ -216,11 +385,36 @@ with st.sidebar:
 
 
 if page == "Start & data check":
-    st.warning(MEASUREMENT_WARNING, icon="⚠️")
+    st.markdown(
+        """
+        <section class="ws-home-hero">
+          <div class="ws-home-eyebrow">FROM ROWS TO RELATIONSHIPS</div>
+          <h1>Customer value,<br><em>without the black box.</em></h1>
+          <p>WorthSignal turns the customer data you already have into transparent segmentation,
+          lifetime value, retention, and ROI decisions — with methods you can inspect and results you can export.</p>
+          <div class="ws-pills">
+            <span class="ws-pill">Excel, CSV &amp; JSON</span>
+            <span class="ws-pill">No account required</span>
+            <span class="ws-pill">Published models</span>
+            <span class="ws-pill">AGPL open source</span>
+          </div>
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.info(MODEL_WARNING, icon="↗")
     st.header("Start here")
     st.write(
         "Upload one file, choose the analysis that matches your business question, confirm the suggested columns, "
-        "and press the analysis button. Your source file is never changed, and nothing leaves your computer."
+        "and press the analysis button. Your source file is never changed."
+    )
+    st.markdown(
+        """
+        <div class="ws-privacy-note"><strong>Privacy:</strong> when you run WorthSignal on your own computer,
+        your data stays there. On a hosted deployment, uploads are processed by that deployment's server;
+        WorthSignal itself adds no accounts, telemetry, or persistent customer-data storage.</div>
+        """,
+        unsafe_allow_html=True,
     )
     st.markdown(
         """
@@ -814,17 +1008,18 @@ elif page == "Complaints & recovery":
 
 
 elif page == "About this app":
-    st.header("About this app")
-    st.warning(MEASUREMENT_WARNING, icon="⚠️")
+    st.header("About WorthSignal")
+    st.info(MODEL_WARNING, icon="↗")
     st.markdown(
         """
         ### What it is
 
-        Customer Value Analytics turns a customer data file — Excel, CSV, or JSON — into the classic
+        WorthSignal turns a customer data file — Excel, CSV, or JSON — into the classic
         customer-value analyses: segmentation, targeting, lifetime value, retention forecasting, and
         marketing ROI. It is built to be usable without a statistics background: upload a file, confirm
-        the suggested columns, press a button. Everything runs locally on your computer; your data is
-        never uploaded anywhere, and your source file is never changed.
+        the suggested columns, press a button. When you run it locally, your data stays on your computer,
+        and your source file is never changed. On a hosted deployment, uploads are processed by that host;
+        WorthSignal itself adds no accounts, telemetry, or persistent customer-data storage. See `PRIVACY.md`.
 
         ### What the numbers can and cannot tell you
 
@@ -845,15 +1040,30 @@ elif page == "About this app":
 
         ### Open source
 
-        The project is free software under the **AGPL-3.0-or-later** license. Anyone — individuals and
-        companies alike — may use it, study it, and change it, including private changes for internal
-        use. What the license forbids is closing it: whoever distributes this software or offers it to
-        others as an online service, original or modified, must pass on the source code and the same
-        freedoms. Improvements are welcome — see `CONTRIBUTING.md` in the repository for how to get
-        started.
+        The project is free software under the **AGPL-3.0-or-later** license. Commercial use is allowed.
+        If you distribute the original or a modified version, the corresponding-source and license
+        conditions apply. If users interact with a modified version over a network, you must offer those
+        users the corresponding source for that version. Private modifications do not have to be posted
+        publicly merely because they were made. The full `LICENSE` text controls; this is only a practical
+        summary. Improvements are welcome — see `CONTRIBUTING.md` in the repository.
 
         The license covers this app's code. The statistical models it implements are the published
         work of the researchers cited on each page and in `docs/methods.md` — this project claims no
         ownership of the theory.
         """
     )
+
+
+st.markdown(
+    f"""
+    <footer class="ws-footer">
+      WorthSignal {__version__} <span>•</span>
+      <a href="https://github.com/UlrikErlingsen/customer-value-analytics" target="_blank">Source code</a>
+      <span>•</span>
+      <a href="https://github.com/UlrikErlingsen/customer-value-analytics/blob/main/PRIVACY.md" target="_blank">Privacy</a>
+      <span>•</span>
+      <a href="https://github.com/UlrikErlingsen/customer-value-analytics/blob/main/LICENSE" target="_blank">AGPL-3.0-or-later</a>
+    </footer>
+    """,
+    unsafe_allow_html=True,
+)

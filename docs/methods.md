@@ -1,4 +1,4 @@
-# Methods
+# WorthSignal methods
 
 This document records the exact formulas and conventions the app implements, with citations to the published literature each method comes from. It is the reference that the automated test suite is checked against (run `python3 -m pytest`).
 

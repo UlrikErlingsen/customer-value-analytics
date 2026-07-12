@@ -4,11 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "customer-value-analytics"
-version = "1.0.0"
-description = "Streamlit app for customer value analytics: RFM segmentation, customer lifetime value, customer equity, and classic probabilistic customer-base models"
+version = "1.1.0"
+description = "WorthSignal: an open, local-first customer value toolkit for marketers"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "Ulrik Erlingsen" }]
+keywords = ["customer analytics", "customer lifetime value", "marketing analytics", "rfm", "streamlit"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business",
+]
 dependencies = [
   "numpy>=1.24,<3",
   "openpyxl>=3.1,<4",
@@ -26,6 +37,9 @@ test = ["pytest>=8,<9"]
 
 [project.urls]
 Homepage = "https://github.com/UlrikErlingsen/customer-value-analytics"
+Documentation = "https://github.com/UlrikErlingsen/customer-value-analytics/blob/main/docs/data_guide.md"
+Issues = "https://github.com/UlrikErlingsen/customer-value-analytics/issues"
+Changelog = "https://github.com/UlrikErlingsen/customer-value-analytics/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -34,4 +48,3 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
-

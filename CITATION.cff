@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If WorthSignal supports your work, please cite the software and the original papers for the models you use."
+title: "WorthSignal: Open customer value toolkit"
+type: software
+authors:
+  - family-names: "Erlingsen"
+    given-names: "Ulrik"
+    alias: "UlrikErlingsen"
+version: 1.1.0
+license: AGPL-3.0-or-later
+repository-code: "https://github.com/UlrikErlingsen/customer-value-analytics"
+url: "https://github.com/UlrikErlingsen/customer-value-analytics"
+keywords:
+  - customer lifetime value
+  - customer analytics
+  - RFM
+  - retention
+  - BG/NBD
+  - BG/BB

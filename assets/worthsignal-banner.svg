@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">WorthSignal</title>
+  <desc id="desc">WorthSignal, the open customer value toolkit. Find the customers, value, and moves that matter.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1200" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5ED"/>
+      <stop offset="1" stop-color="#E8F2EC"/>
+    </linearGradient>
+    <linearGradient id="markBg" x1="66" y1="105" x2="298" y2="346" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173C3A"/>
+      <stop offset="1" stop-color="#0E2928"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="91" y1="274" x2="270" y2="153" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#83D2B4"/>
+      <stop offset="1" stop-color="#F5C86B"/>
+    </linearGradient>
+    <filter id="shadow" x="30" y="70" width="305" height="330" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#173C3A" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="460" rx="36" fill="url(#panel)"/>
+  <circle cx="1115" cy="64" r="170" fill="#83D2B4" opacity="0.15"/>
+  <circle cx="1050" cy="420" r="210" fill="#F5C86B" opacity="0.14"/>
+  <g filter="url(#shadow)">
+    <rect x="66" y="105" width="232" height="232" rx="66" fill="url(#markBg)"/>
+    <path d="M101 183v105h164" fill="none" stroke="#315451" stroke-width="10" stroke-linecap="round"/>
+    <path d="m103 257 39 34 41-82 38 46 48-84" fill="none" stroke="url(#signal)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="103" cy="257" r="13" fill="#83D2B4"/>
+    <circle cx="183" cy="209" r="13" fill="#F8F4E8"/>
+    <circle cx="269" cy="171" r="18" fill="#E96749" stroke="#F8F4E8" stroke-width="7"/>
+  </g>
+  <text x="372" y="142" fill="#4B6A64" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="700" letter-spacing="5">OPEN CUSTOMER VALUE TOOLKIT</text>
+  <text x="368" y="238" fill="#15302D" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="84" font-weight="800" letter-spacing="-3">Worth<tspan fill="#E05D42">Signal</tspan></text>
+  <text x="372" y="296" fill="#36534E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="29" font-weight="500">Find the customers, value, and moves that matter.</text>
+  <g transform="translate(372 337)">
+    <rect width="130" height="40" rx="20" fill="#173C3A"/>
+    <text x="65" y="27" text-anchor="middle" fill="#F8F5ED" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="650">Local-first</text>
+    <rect x="144" width="158" height="40" rx="20" fill="#DDEBE3"/>
+    <text x="223" y="27" text-anchor="middle" fill="#173C3A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="650">Explainable</text>
+    <rect x="316" width="168" height="40" rx="20" fill="#F4E4CA"/>
+    <text x="400" y="27" text-anchor="middle" fill="#6A4B1B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="650">Open source</text>
+  </g>
+</svg>

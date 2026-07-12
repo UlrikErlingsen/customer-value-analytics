@@ -10,18 +10,18 @@ else
 fi
 
 if ! "$PYTHON_BIN" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)' ; then
-  echo "Customer Value Analytics needs Python 3.10 or newer."
+  echo "WorthSignal needs Python 3.10 or newer."
   read "?Press Return to close."
   exit 1
 fi
 
 if [[ ! -x ".venv/bin/python" ]]; then
-  echo "Preparing Customer Value Analytics for first use..."
-  "$PYTHON_BIN" -m venv --system-site-packages .venv
+  echo "Preparing WorthSignal for first use..."
+  "$PYTHON_BIN" -m venv .venv
 fi
 
-# Check that every dependency is importable AND meets the version floors in
-# requirements.txt (the venv sees system packages, which may be too old).
+# Check that every dependency is importable and meets the version floors in
+# requirements.txt.
 if ! .venv/bin/python - >/dev/null 2>&1 <<'PYCHECK'
 import importlib
 
