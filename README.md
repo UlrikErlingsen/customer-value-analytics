@@ -10,22 +10,45 @@ Customer Value Analytics is a free, open-source app that turns a customer data f
 >
 > The models in this app are useful precisely because they bring structure to that uncertainty. But every output is an estimate built on assumptions. Treat each number as **decision support, not truth**: use it to compare options, challenge gut feelings, and frame discussions — not as a precise prediction of the future.
 
+## Get the app
+
+You need the project folder on your computer first. Two ways — pick one:
+
+- **No tools needed (easiest):** on the project's GitHub page, click the green **Code** button → **Download ZIP**. Unzip it anywhere (for example your Desktop) and open the unzipped folder.
+- **With git:**
+
+  ```bash
+  git clone https://github.com/UlrikErlingsen/customer-value-analytics.git
+  ```
+
+You also need **Python 3.10 or newer** — many computers already have it. If not, install it free from [python.org/downloads](https://www.python.org/downloads/). **On Windows, tick the "Add python.exe to PATH" checkbox during installation** — it matters.
+
 ## Quick start
 
-**Mac (easiest)**
+**Windows**
 
-1. Double-click `run_app.command`.
-2. The first run creates a local `.venv` folder and installs everything the app needs. Later starts skip the installation.
+1. In the project folder, double-click `run_app.bat`.
+2. The first start creates a local `.venv` folder and installs everything the app needs (a few minutes). Later starts skip this.
+3. A browser tab opens with the app.
+
+If Windows shows a protection warning for a downloaded file, click **More info → Run anyway**.
+
+**Mac**
+
+1. In the project folder, double-click `run_app.command`.
+2. The first start installs everything into a local `.venv` folder. Later starts skip this.
 3. A browser tab opens with the app.
 
 If macOS blocks the first double-click, right-click `run_app.command`, choose **Open**, then confirm.
 
-**Any operating system**
+**Any operating system (terminal)**
 
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
 ```
+
+(Use `python3` instead of `python` if that is what your system calls it.)
 
 **Docker**
 
