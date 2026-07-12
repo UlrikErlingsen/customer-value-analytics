@@ -233,4 +233,6 @@ The recovery-value calculator on the same page needs **no file** — future valu
 
 **Multiple sheets.** When a workbook has several sheets, the app asks which one to use for each analysis. If the columns you expect aren't in the dropdowns, you are probably on the wrong sheet.
 
+**Very large files.** Uploads are accepted up to 1 GB per file (set in `.streamlit/config.toml` under `maxUploadSize`; raise it if you need more). A few hundred MB of transactions is millions of rows — some practical tips at that scale: CSV loads much faster than Excel; close other memory-hungry programs, since the whole table is held in memory while analyzing; and for BG/NBD or BG/BB you can shrink the file enormously by grouping customers with identical histories into one row with a `count` column — the models are mathematically identical either way.
+
 **Error messages.** The app fails politely rather than silently: problems appear in a red box on the page explaining what went wrong (for example an unsupported file type — `Supported files are .xlsx, .xls, .xlsm, .json, and .csv.` — a column that isn't numeric, a survivor count that increases over time, or too few rows to fit a model). The **Start & data check** page shows every column's type, missing-value share, and an example value, which resolves most puzzles quickly.
