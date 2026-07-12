@@ -1,4 +1,4 @@
-# Data guide
+# WorthSignal data guide
 
 This guide explains, analysis by analysis, exactly what data the app needs, what it should look like, and where to find a working example. It is written for people who are comfortable with spreadsheets, not programming.
 

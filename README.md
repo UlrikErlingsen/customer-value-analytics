@@ -1,14 +1,28 @@
-# Customer Value Analytics
+<p align="center">
+  <img src="assets/worthsignal-banner.svg" alt="WorthSignal — Find the customers, value, and moves that matter" width="100%">
+</p>
 
-Customer Value Analytics is a free, open-source app that turns a customer data file (Excel, CSV, or JSON) into the classic customer-value analyses — segmentation, lifetime value, retention, and marketing ROI — through a point-and-click interface. Upload a file, confirm the column suggestions, press a button, and download the results as Excel or JSON. The app runs entirely on your own computer: your data never leaves your machine.
+<p align="center">
+  <a href="https://github.com/UlrikErlingsen/customer-value-analytics/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/UlrikErlingsen/customer-value-analytics/actions/workflows/tests.yml/badge.svg"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-173C3A?logo=python&logoColor=white">
+  <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-app-D95B40?logo=streamlit&logoColor=white">
+  <a href="LICENSE"><img alt="License: AGPL-3.0-or-later" src="https://img.shields.io/badge/License-AGPL--3.0--or--later-36534E"></a>
+</p>
+
+<p align="center"><strong>Open customer-value analytics for marketers — transparent models, local-first data, no black box.</strong></p>
+
+**WorthSignal** turns an Excel, CSV, or JSON customer file into segmentation, lifetime value, retention, and marketing ROI through a point-and-click interface. Confirm the suggested columns, run an analysis, and download the results as Excel or JSON. No account is required, the methods are documented, and local mode keeps customer data on your computer.
 
 ## Read this first
 
-> **Two honest warnings before you trust any number this app produces.**
->
-> John Wanamaker famously said that half the money he spent on advertising was wasted — the trouble was he didn't know which half. More than a century later that is still largely true: a practical rule of thumb is that only roughly 30% of marketing activities can be meaningfully measured.
->
-> The models in this app are useful precisely because they bring structure to that uncertainty. But every output is an estimate built on assumptions. Treat each number as **decision support, not truth**: use it to compare options, challenge gut feelings, and frame discussions — not as a precise prediction of the future.
+> **Use estimates wisely.** Every model simplifies real customer behaviour and depends on the quality of its inputs. Treat each output as **decision support, not truth**: use it to compare options, challenge assumptions, and frame discussions — not as a precise prediction of the future.
+
+## Why WorthSignal
+
+- **Made for working marketers:** guided pages, plain-language errors, downloadable templates, and no notebook or statistics software required.
+- **Explainable by design:** every method is named, documented, cited, and tested against published or independently derived references.
+- **Local-first:** run it on your computer with no account, telemetry, or built-in customer-data storage.
+- **Portable:** read Excel, CSV, and JSON; export every result to Excel or JSON.
 
 ## Get the app
 
@@ -55,7 +69,7 @@ python -m streamlit run app.py
 A `Dockerfile` is included at the repository root:
 
 ```bash
-docker build -t cva . && docker run -p 8501:8501 cva
+docker build -t worthsignal . && docker run -p 8501:8501 worthsignal
 ```
 
 Then open http://localhost:8501.
@@ -63,6 +77,8 @@ Then open http://localhost:8501.
 **Deploying for your team**
 
 This is a standard Streamlit app, so it can be deployed on [Streamlit Community Cloud](https://streamlit.io/cloud) straight from a GitHub repository (private repositories work too) — just point the deployment at `app.py`.
+
+**Privacy changes when you host it:** in local mode, an uploaded file stays on that computer. In hosted mode, the file is sent to and processed by the chosen host. WorthSignal adds no accounts, telemetry, or persistent customer-data storage, but the deployment operator is responsible for its server, access controls, logs, retention, and privacy obligations. See [PRIVACY.md](PRIVACY.md).
 
 ## Try it in two minutes
 
@@ -99,19 +115,25 @@ Every formula and convention the app uses is documented in **[docs/methods.md](d
 python3 -m pytest
 ```
 
-## About this project
+## About WorthSignal
 
 This app was built with AI assistance and reviewed against the published models it implements. The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope. The selection of models reflects a graduate customer-analytics curriculum; every method implemented here comes from the published literature cited in [docs/methods.md](docs/methods.md).
 
-Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+The public-facing product name is **WorthSignal**. The repository and Python project keep the stable `customer-value-analytics` name so existing links, clones, imports, and deployment instructions continue to work.
+
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Security issues should be reported privately as described in [SECURITY.md](SECURITY.md).
 
 ## License
 
 AGPL-3.0-or-later. In plain words:
 
-- **Anyone — including companies — may use, study, and modify this software freely.** Changes kept for internal use never have to be published.
-- **What may not happen:** taking this project, closing the source, and selling it — whether as a downloadable product **or as a hosted online service**. Anyone who distributes the software *or offers it to others over a network*, original or modified, paid or free, must pass on the same source code and the same freedoms they received.
+- **Commercial use is allowed.** Anyone — including companies — may use, study, modify, copy, distribute, or sell this software.
+- **Distribution carries source obligations.** If you give someone the original or a modified version, the AGPL requires the corresponding source and the same license freedoms to travel with it.
+- **Modified network services carry a source offer.** If users interact with your modified version over a network, you must offer those users the corresponding source for that version at no charge.
+- **Private use does not automatically mean public release.** You do not have to post private modifications to the world merely because you made them; the distribution and network-use conditions above still apply where relevant.
 
-That combination is deliberate: this should be a project everyone can benefit from and improve, and that nobody can take away. The full legal text is in [LICENSE](LICENSE).
+That combination is deliberate: this should be a project everyone can benefit from and improve. The full legal text is in [LICENSE](LICENSE).
+
+This section is a practical summary, not legal advice. If it conflicts with the license text, the license text controls.
 
 **What the license covers — and what it doesn't.** The license applies to the *code and text of this project*, which are original work. The statistical models themselves — CLV, customer equity, sBG, BG/NBD, BG/BB, and the rest — are the intellectual contribution of the researchers cited in [docs/methods.md](docs/methods.md). Mathematical methods and formulas are not owned by this project (copyright law does not protect ideas or formulas, only their concrete expression), and nothing here restricts anyone from implementing the same models independently.

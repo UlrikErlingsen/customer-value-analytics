@@ -1,6 +1,6 @@
-# Contributing to Customer Value Analytics
+# Contributing to WorthSignal
 
-Thanks for your interest in improving this project! Contributions of all
+Thanks for your interest in improving WorthSignal! Contributions of all
 kinds are welcome: bug reports, documentation fixes, new analyses, and
 better explanations for non-specialists.
 
@@ -83,3 +83,7 @@ is unavoidable, explain it the first time it appears.
 
 Open an issue if anything here is unclear — confusing documentation is a
 bug too.
+
+For a vulnerability or privacy issue, follow [SECURITY.md](SECURITY.md) and
+use GitHub's private security-advisory form. Never include real customer data
+or credentials in a public issue.

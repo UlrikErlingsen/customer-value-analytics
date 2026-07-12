@@ -1,4 +1,4 @@
-"""Customer Value Analytics analytical engine.
+"""WorthSignal's customer-value analytical engine.
 
 Pure computation modules for classic customer-base analysis — contractual
 retention (shifted-beta-geometric), BG/NBD and BG/BB repeat-purchase models,
@@ -7,5 +7,4 @@ profiling, and export utilities. Kept free of UI dependencies so the models
 can also be used as a plain Python library.
 """
 
-__version__ = "1.0.0"
-
+__version__ = "1.1.0"

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">WorthSignal</title>
+  <desc id="desc">WorthSignal turns customer data into transparent value, retention, and marketing decisions.</desc>
+  <defs>
+    <linearGradient id="background" x1="80" y1="20" x2="1200" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173C3A"/>
+      <stop offset="1" stop-color="#0B2422"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="96" y1="162" x2="334" y2="414" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#83D2B4"/>
+      <stop offset="1" stop-color="#F5C86B"/>
+    </linearGradient>
+    <filter id="shadow" x="30" y="85" width="390" height="420" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="25" flood-color="#071B19" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <circle cx="1185" cy="45" r="250" fill="none" stroke="#83D2B4" stroke-width="75" opacity="0.09"/>
+  <circle cx="1120" cy="610" r="260" fill="#F5C86B" opacity="0.055"/>
+  <path d="M0 574C210 500 350 650 560 568S935 460 1280 565V640H0Z" fill="#83D2B4" opacity="0.06"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="135" width="300" height="300" rx="82" fill="#F8F5ED"/>
+    <path d="M127 232v145h210" fill="none" stroke="#D8E4DD" stroke-width="14" stroke-linecap="round"/>
+    <path d="m132 335 52 44 56-109 49 60 64-111" fill="none" stroke="url(#mark)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="132" cy="335" r="17" fill="#83D2B4"/>
+    <circle cx="240" cy="270" r="17" fill="#173C3A"/>
+    <circle cx="353" cy="219" r="23" fill="#E96749" stroke="#F8F5ED" stroke-width="9"/>
+  </g>
+
+  <text x="455" y="168" fill="#83D2B4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="750" letter-spacing="5">OPEN CUSTOMER VALUE TOOLKIT</text>
+  <text x="449" y="282" fill="#F8F5ED" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="92" font-weight="820" letter-spacing="-4">Worth</text>
+  <text x="681" y="282" fill="#F2C66D" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="92" font-weight="820" letter-spacing="-4">Signal</text>
+  <text x="455" y="352" fill="#D7E3DF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="32" font-weight="500">Find the customers, value,</text>
+  <text x="455" y="397" fill="#D7E3DF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="32" font-weight="500">and moves that matter.</text>
+
+  <g transform="translate(455 455)">
+    <rect width="166" height="52" rx="26" fill="#F8F5ED"/>
+    <text x="83" y="34" text-anchor="middle" fill="#173C3A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="19" font-weight="700">Local-first</text>
+    <rect x="182" width="184" height="52" rx="26" fill="#244B47" stroke="#83D2B4" stroke-opacity="0.38"/>
+    <text x="274" y="34" text-anchor="middle" fill="#F8F5ED" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="19" font-weight="700">Explainable</text>
+    <rect x="382" width="188" height="52" rx="26" fill="#244B47" stroke="#F2C66D" stroke-opacity="0.38"/>
+    <text x="476" y="34" text-anchor="middle" fill="#F8F5ED" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="19" font-weight="700">Open source</text>
+  </g>
+</svg>

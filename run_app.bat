@@ -1,5 +1,5 @@
 @echo off
-rem Customer Value Analytics - Windows launcher.
+rem WorthSignal - Windows launcher.
 rem Double-click this file. The first start creates a local .venv folder and
 rem installs everything the app needs; later starts skip the installation.
 setlocal
@@ -9,7 +9,7 @@ rem Find Python 3 (the py launcher comes with the python.org installer).
 set "PYTHON_BIN=py -3"
 %PYTHON_BIN% -c "import sys" >nul 2>nul || set "PYTHON_BIN=python"
 %PYTHON_BIN% -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>nul || (
-  echo Customer Value Analytics needs Python 3.10 or newer.
+  echo WorthSignal needs Python 3.10 or newer.
   echo Install it from https://www.python.org/downloads/
   echo IMPORTANT: tick "Add python.exe to PATH" during installation, then run this file again.
   pause
@@ -17,7 +17,7 @@ set "PYTHON_BIN=py -3"
 )
 
 if not exist ".venv\Scripts\python.exe" (
-  echo Preparing Customer Value Analytics for first use...
+  echo Preparing WorthSignal for first use...
   %PYTHON_BIN% -m venv .venv
 )
 
@@ -28,6 +28,6 @@ rem Install/upgrade dependencies when anything is missing or older than requirem
   ".venv\Scripts\python.exe" -m pip install -r requirements.txt
 )
 
-echo Starting Customer Value Analytics - a browser tab will open shortly.
+echo Starting WorthSignal - a browser tab will open shortly.
 ".venv\Scripts\python.exe" -m streamlit run app.py --browser.gatherUsageStats false
 pause
