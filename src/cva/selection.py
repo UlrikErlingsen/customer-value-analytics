@@ -267,7 +267,7 @@ def fit_decision_tree(
         verbose_feature_names_out=False,
     )
     estimator = DecisionTreeClassifier(
-        criterion="gini", max_depth=max_depth, min_samples_leaf=min_samples_leaf, random_state=6435
+        criterion="gini", max_depth=max_depth, min_samples_leaf=min_samples_leaf, random_state=42
     )
     pipeline = Pipeline([("preprocess", transformer), ("tree", estimator)])
     pipeline.fit(x, y)

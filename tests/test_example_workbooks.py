@@ -58,7 +58,7 @@ def test_response_model_sheet(workbook):
 
 def test_equity_sheet(workbook):
     frame = workbook["equity"]
-    result = customer_equity(frame["period"].to_numpy(), frame["customers"].to_numpy(), 100, 80, 0.84, 0.12, 0.38, 50)
+    result = customer_equity(frame["period"].to_numpy(), frame["customers"].to_numpy(), 120, 100, 0.90, 0.10, 0.38, 50)
     assert result.summary.customer_equity > 0
 
 

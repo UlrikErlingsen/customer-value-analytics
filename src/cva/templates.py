@@ -219,15 +219,17 @@ def _example_response_model(n_customers: int, seed: int = 13) -> pd.DataFrame:
 _EQUITY = pd.DataFrame(
     {"period": range(10), "customers": [1000, 1080, 1210, 1410, 1680, 1980, 2250, 2440, 2530, 2510]}
 )
+# Survival counts from the published example in Fader & Hardie (2007, "How to
+# Project Customer Retention"), originally from Berry & Linoff (2004).
 _CONTRACTUAL = pd.DataFrame(
     {"period": range(8), "survivors": [1000, 631, 468, 382, 326, 289, 262, 241]}
 )
 _BGNBD = pd.DataFrame(
     {
         "customer_id": range(1, 13),
-        "x": [2, 8, 0, 1, 3, 5, 1, 4, 7, 2, 0, 3],
-        "tx": [11.0, 17.0, 0.0, 35.0, 30.0, 37.0, 2.0, 12.0, 38.0, 28.0, 0.0, 18.0],
-        "T": [38.86, 38.86, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 20.0, 25.0],
+        "x": [2, 6, 0, 1, 3, 5, 1, 4, 7, 2, 0, 3],
+        "tx": [12.0, 20.0, 0.0, 35.0, 30.0, 37.0, 2.0, 12.0, 38.0, 28.0, 0.0, 18.0],
+        "T": [39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 39.0, 20.0, 25.0],
     }
 )
 _BGBB = pd.DataFrame(
@@ -235,7 +237,7 @@ _BGBB = pd.DataFrame(
         "n": [6] * 15,
         "tx": [0, 1, 2, 3, 4, 5, 6, 2, 4, 6, 4, 6, 6, 6, 6],
         "x": [0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6],
-        "count": [1203, 310, 180, 125, 95, 80, 70, 130, 115, 105, 75, 85, 55, 30, 15],
+        "count": [1150, 310, 180, 125, 95, 80, 70, 130, 115, 105, 75, 85, 55, 30, 15],
     }
 )
 _EVENTS = pd.DataFrame(

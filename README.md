@@ -101,7 +101,7 @@ python3 -m pytest
 
 ## About this project
 
-This app was built with AI assistance and reviewed against the published models it implements. The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope.
+This app was built with AI assistance and reviewed against the published models it implements. The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope. The selection of models reflects a graduate customer-analytics curriculum; every method implemented here comes from the published literature cited in [docs/methods.md](docs/methods.md).
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -113,3 +113,5 @@ AGPL-3.0-or-later. In plain words:
 - **What may not happen:** taking this project, closing the source, and selling it — whether as a downloadable product **or as a hosted online service**. Anyone who distributes the software *or offers it to others over a network*, original or modified, paid or free, must pass on the same source code and the same freedoms they received.
 
 That combination is deliberate: this should be a project everyone can benefit from and improve, and that nobody can take away. The full legal text is in [LICENSE](LICENSE).
+
+**What the license covers — and what it doesn't.** The license applies to the *code and text of this project*, which are original work. The statistical models themselves — CLV, customer equity, sBG, BG/NBD, BG/BB, and the rest — are the intellectual contribution of the researchers cited in [docs/methods.md](docs/methods.md). Mathematical methods and formulas are not owned by this project (copyright law does not protect ideas or formulas, only their concrete expression), and nothing here restricts anyone from implementing the same models independently.

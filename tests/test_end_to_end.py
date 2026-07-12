@@ -32,7 +32,7 @@ def test_example_json_and_exports():
 def test_equity_example_is_fitted_and_finite():
     frame = load_data(EXAMPLE).tables["equity"]
     result = customer_equity(
-        frame["period"].to_numpy(), frame["customers"].to_numpy(), 100, 80, 0.84, 0.12, 0.38, 100
+        frame["period"].to_numpy(), frame["customers"].to_numpy(), 120, 100, 0.90, 0.10, 0.38, 100
     )
     assert result.curve_fit.r_squared > 0.95
     assert np.isfinite(result.summary.customer_equity)

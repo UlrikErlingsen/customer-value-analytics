@@ -7,6 +7,8 @@ Two things to keep in mind while reading:
 - These are **classic, deliberately simple models**. They were chosen because they are transparent and well documented; more advanced statistical approaches exist for every problem here and are beyond this app's scope.
 - Every output is an estimate built on assumptions. Treat the numbers as decision support, not truth.
 
+**On credit:** the models documented here are the intellectual work of the researchers cited in the references — this project only implements them and claims no ownership of the theory. The project's license (AGPL) covers the code, not the mathematics.
+
 ## 1. Customer selection
 
 *Plain language: score and rank customers so a campaign goes to the people most likely to make it profitable.*
@@ -33,9 +35,9 @@ If profit on response is `vR` and profit on no response is `vN`, target when:
 
 `p*vR + (1-p)*vN > 0`, so the break-even probability is `-vN/(vR-vN)`.
 
-For example, with `vR=20` and `vN=-1`, the threshold is `1/21 = 4.7619%`.
+For example, with `vR=30` and `vN=-2`, the threshold is `2/32 = 6.25%`.
 
-Lift is the response rate within a ranked group divided by the total response rate. The export contains both a cumulative sum of per-decile lifts and the conventional cumulative-response lift.
+Lift is the response rate within a ranked group divided by the total response rate. The export contains both a running sum of per-decile lifts (a simple additive convention used in some teaching materials) and the conventional cumulative-response lift.
 
 ## 2. Customer lifetime value
 
@@ -57,7 +59,7 @@ The margin multiple is `r/(1+i-r)`. Margin elasticity is `1`; retention elastici
 
 ## 3. Customer equity
 
-*Plain language: value the whole customer base by adding the value of today's customers to the discounted value of the customers you will acquire in the future.* The approach follows Gupta, Lehmann & Stuart (2004).
+*Plain language: value the whole customer base by adding the value of today's customers to the discounted value of the customers you will acquire in the future.* The approach is a discrete-time simplification of Gupta, Lehmann & Stuart (2004), of the kind commonly used when teaching the model: per-period acquisition flows are backed out of the customer counts and the acquisition curve is fitted to those flows.
 
 Observed acquired customers are reconstructed from current-customer counts:
 
@@ -137,7 +139,7 @@ The program evaluates the exact history likelihood as the sum of the alive-throu
 
 *Plain language: prepare the per-customer summaries needed by the complaint-and-recovery customer-base model, and put an upper bound on what recovering a complaining customer is worth.* The model is from Knox & van Oest (2014).
 
-Knox & van Oest (2014) show the model requires six sufficient statistics per customer: repeat purchases, same-day complaints, other complaints, last-event time, whether the last event involved a complaint, and observation length. The program constructs all six.
+The purchase-and-complaint model family (Van Oest & Knox 2011; Knox & van Oest 2014) summarises each customer by six sufficient statistics: repeat purchases, same-day complaints, other complaints, last-event time, whether the last event involved a complaint, and observation length. The program constructs all six.
 
 The full purchase-and-complaint model adds five heterogeneous processes and requires an 11-parameter likelihood plus simulation for predictions. Rather than substitute a rough approximation, this program limits itself to preparing the exact inputs that model needs. It implements the financial recovery rule: the maximum justified recovery cost equals `CLV if recovered - CLV if unrecovered`.
 
@@ -151,3 +153,4 @@ The full purchase-and-complaint model adds five heterogeneous processes and requ
 - Gupta, S., Lehmann, D. R., & Stuart, J. A. (2004). Valuing Customers. *Journal of Marketing Research*, 41(1), 7–18.
 - Knox, G., & van Oest, R. (2014). Customer Complaints and Recovery Effectiveness: A Customer Base Approach. *Journal of Marketing*, 78(5), 42–57.
 - Rust, R. T., Lemon, K. N., & Zeithaml, V. A. (2004). Return on Marketing: Using Customer Equity to Focus Marketing Strategy. *Journal of Marketing*, 68(1), 109–127.
+- Van Oest, R., & Knox, G. (2011). Extending the BG/NBD: A Simple Model of Purchases and Complaints. *International Journal of Research in Marketing*, 28(1), 30–37.

@@ -125,7 +125,7 @@ def optimize_budgets(
         return -value if np.isfinite(value) else 1e100
 
     fit = differential_evolution(
-        objective, bounds=[(0, upper_a), (0, upper_r)], seed=6435, polish=True, tol=1e-10
+        objective, bounds=[(0, upper_a), (0, upper_r)], seed=42, polish=True, tol=1e-10
     )
     optimal, a_opt, r_opt, _ = prospect_value(
         fit.x[0], fit.x[1], maximum_acquisition, maximum_retention, beta_a, beta_r, margin, discount

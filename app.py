@@ -341,9 +341,9 @@ elif page == "Customer selection":
             predictors = st.multiselect("Predictor columns", list(frame.columns), default=default_predictors)
             c1, c2 = st.columns(2)
             with c1:
-                profit_response = st.number_input("Profit if response", value=20.0)
+                profit_response = st.number_input("Profit if response", value=25.0)
             with c2:
-                profit_no_response = st.number_input("Profit if no response", value=-1.0)
+                profit_no_response = st.number_input("Profit if no response", value=-2.0)
             max_depth, min_leaf = 4, 50
             if analysis == "Decision tree":
                 c1, c2 = st.columns(2)
@@ -403,13 +403,13 @@ elif page == "Customer lifetime value":
     st.info("No data file is needed here — type your assumptions directly.", icon="✍️")
     c1, c2, c3, c4 = st.columns(4)
     with c1:
-        margin = st.number_input("Net margin per period", min_value=0.0, value=80.0)
+        margin = st.number_input("Net margin per period", min_value=0.0, value=100.0)
     with c2:
-        retention = st.number_input("Retention rate", min_value=0.0, max_value=1.0, value=0.84)
+        retention = st.number_input("Retention rate", min_value=0.0, max_value=1.0, value=0.90)
     with c3:
-        discount = st.number_input("Discount rate", min_value=0.0, value=0.12)
+        discount = st.number_input("Discount rate", min_value=0.0, value=0.10)
     with c4:
-        acquisition_cost = st.number_input("Acquisition cost per customer", min_value=0.0, value=100.0)
+        acquisition_cost = st.number_input("Acquisition cost per customer", min_value=0.0, value=120.0)
     model = st.selectbox("CLV version", ["Infinite horizon", "Finite horizon", "Margin growth", "Custom first and last period"])
     extra: dict[str, float | int] = {}
     if model == "Finite horizon":
@@ -462,11 +462,11 @@ elif page == "Customer equity":
             customer_col = column_select("Number of current customers", frame, "customers", "equity_customers")
         c1, c2, c3 = st.columns(3)
         with c1:
-            acquisition_cost = st.number_input("Acquisition cost per customer", min_value=0.0, value=100.0, key="eq_acq")
-            margin = st.number_input("Net margin per period", min_value=0.0, value=80.0, key="eq_margin")
+            acquisition_cost = st.number_input("Acquisition cost per customer", min_value=0.0, value=120.0, key="eq_acq")
+            margin = st.number_input("Net margin per period", min_value=0.0, value=100.0, key="eq_margin")
         with c2:
-            retention = st.number_input("Retention per period", min_value=0.0, max_value=1.0, value=0.84, key="eq_ret")
-            discount = st.number_input("Discount per period", min_value=0.0, value=0.12, key="eq_disc")
+            retention = st.number_input("Retention per period", min_value=0.0, max_value=1.0, value=0.90, key="eq_ret")
+            discount = st.number_input("Discount per period", min_value=0.0, value=0.10, key="eq_disc")
         with c3:
             tax = st.number_input("Corporate tax rate", min_value=0.0, max_value=1.0, value=0.38)
             forecast_periods = st.number_input("Future periods", min_value=10, value=100)
@@ -528,19 +528,19 @@ elif page == "Acquisition & retention budgets":
     c1, c2 = st.columns(2)
     with c1:
         st.subheader("Acquisition")
-        A = st.number_input("Current spend per prospect", min_value=0.01, value=5.0)
-        a = st.number_input("Current acquisition rate", min_value=0.0001, max_value=0.9999, value=0.20)
-        Ca = st.number_input("Maximum possible acquisition rate", min_value=0.0002, max_value=1.0, value=0.40)
+        A = st.number_input("Current spend per prospect", min_value=0.01, value=6.0)
+        a = st.number_input("Current acquisition rate", min_value=0.0001, max_value=0.9999, value=0.25)
+        Ca = st.number_input("Maximum possible acquisition rate", min_value=0.0002, max_value=1.0, value=0.45)
     with c2:
         st.subheader("Retention")
-        R = st.number_input("Current retention spend per customer", min_value=0.01, value=8.0)
-        r = st.number_input("Current retention rate", min_value=0.0001, max_value=0.9999, value=0.40)
-        Cr = st.number_input("Maximum possible retention rate", min_value=0.0002, max_value=1.0, value=0.70)
+        R = st.number_input("Current retention spend per customer", min_value=0.01, value=10.0)
+        r = st.number_input("Current retention rate", min_value=0.0001, max_value=0.9999, value=0.50)
+        Cr = st.number_input("Maximum possible retention rate", min_value=0.0002, max_value=1.0, value=0.80)
     c1, c2 = st.columns(2)
     with c1:
-        margin = st.number_input("Profit margin per period", min_value=0.0, value=50.0, key="bd_margin")
+        margin = st.number_input("Profit margin per period", min_value=0.0, value=60.0, key="bd_margin")
     with c2:
-        discount = st.number_input("Discount rate", min_value=0.0, value=0.12, key="bd_discount")
+        discount = st.number_input("Discount rate", min_value=0.0, value=0.10, key="bd_discount")
     if st.button("Optimize budgets", type="primary"):
         try:
             result = optimize_budgets(A, a, Ca, R, r, Cr, margin, discount)
@@ -569,8 +569,8 @@ elif page == "Markov ROI":
     default_old = np.eye(n) * 0.7 + (np.ones((n, n)) - np.eye(n)) * (0.3 / (n - 1))
     default_new = default_old.copy()
     if n == 2:
-        default_old = np.array([[0.8, 0.2], [0.3, 0.7]])
-        default_new = np.array([[0.85, 0.15], [0.35, 0.65]])
+        default_old = np.array([[0.75, 0.25], [0.2, 0.8]])
+        default_new = np.array([[0.8, 0.2], [0.15, 0.85]])
     c1, c2 = st.columns(2)
     with c1:
         st.write("Current transition matrix (rows = previous choice)")
@@ -584,15 +584,15 @@ elif page == "Markov ROI":
     c1, c2, c3 = st.columns(3)
     with c1:
         focal = st.selectbox("Focal company", list(range(1, n + 1))) - 1
-        amount = st.number_input("Amount per purchase", min_value=0.0, value=100.0)
-        profit_margin = st.number_input("Net profit margin", min_value=0.0, max_value=1.0, value=0.20)
+        amount = st.number_input("Amount per purchase", min_value=0.0, value=120.0)
+        profit_margin = st.number_input("Net profit margin", min_value=0.0, max_value=1.0, value=0.25)
     with c2:
         frequency = st.number_input("Purchases per year", min_value=0.01, value=2.0)
-        horizon = st.number_input("Planning horizon (years)", min_value=0.0, value=3.0)
-        discount = st.number_input("Annual discount rate", min_value=0.0, value=0.12, key="markov_discount")
+        horizon = st.number_input("Planning horizon (years)", min_value=0.0, value=4.0)
+        discount = st.number_input("Annual discount rate", min_value=0.0, value=0.10, key="markov_discount")
     with c3:
-        industry = st.number_input("Customers in industry", min_value=1.0, value=1_000_000.0)
-        investment = st.number_input("Marketing investment", min_value=0.0, value=8_000_000.0)
+        industry = st.number_input("Customers in industry", min_value=1.0, value=500_000.0)
+        investment = st.number_input("Marketing investment", min_value=0.0, value=5_000_000.0)
     if st.button("Calculate Markov ROI", type="primary"):
         try:
             matrices: dict[str, np.ndarray] = {}
@@ -800,10 +800,10 @@ elif page == "Complaints & recovery":
                 except Exception as exc:
                     show_error(exc)
     with tab2:
-        future_value = st.number_input("Future value if the customer stays", min_value=0.0, value=200.0)
-        recovered = st.number_input("Stay probability with recovery", min_value=0.0, max_value=1.0, value=0.90)
-        unrecovered = st.number_input("Stay probability without recovery", min_value=0.0, max_value=1.0, value=0.60)
-        cost = st.number_input("Proposed recovery cost", min_value=0.0, value=20.0)
+        future_value = st.number_input("Future value if the customer stays", min_value=0.0, value=250.0)
+        recovered = st.number_input("Stay probability with recovery", min_value=0.0, max_value=1.0, value=0.85)
+        unrecovered = st.number_input("Stay probability without recovery", min_value=0.0, max_value=1.0, value=0.55)
+        cost = st.number_input("Proposed recovery cost", min_value=0.0, value=25.0)
         if st.button("Value recovery", type="primary"):
             values = recovery_value(future_value, recovered, unrecovered, cost)
             table = pd.DataFrame([values])
@@ -851,5 +851,9 @@ elif page == "About this app":
         others as an online service, original or modified, must pass on the source code and the same
         freedoms. Improvements are welcome — see `CONTRIBUTING.md` in the repository for how to get
         started.
+
+        The license covers this app's code. The statistical models it implements are the published
+        work of the researchers cited on each page and in `docs/methods.md` — this project claims no
+        ownership of the theory.
         """
     )

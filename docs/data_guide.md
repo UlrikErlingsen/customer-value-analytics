@@ -132,10 +132,10 @@ One row per period, with:
 | period | survivors |
 |---|---|
 | 0 | 1000 |
-| 1 | 869 |
-| 2 | 743 |
-| 3 | 653 |
-| 4 | 593 |
+| 1 | 872 |
+| 2 | 776 |
+| 3 | 703 |
+| 4 | 646 |
 
 *Example: sheet `contractual_survival` in `examples/example_data.xlsx`.*
 
