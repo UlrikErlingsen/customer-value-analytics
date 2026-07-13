@@ -117,7 +117,7 @@ python3 -m pytest
 
 ## About WorthSignal
 
-This app was built with AI assistance and reviewed against the published models it implements. The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope. The selection of models reflects a graduate customer-analytics curriculum; every method implemented here comes from the published literature cited in [docs/methods.md](docs/methods.md).
+This app was built with AI assistance and reviewed against the published models it implements. The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope. Every method implemented here comes from the published literature cited in [docs/methods.md](docs/methods.md).
 
 The public-facing product name is **WorthSignal**. The repository and Python project keep the stable `customer-value-analytics` name so existing links, clones, imports, and deployment instructions continue to work.
 
