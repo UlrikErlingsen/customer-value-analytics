@@ -123,6 +123,14 @@ The public-facing product name is **WorthSignal**. The repository and Python pro
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Security issues should be reported privately as described in [SECURITY.md](SECURITY.md).
 
+## Related tools
+
+WorthSignal is part of a small family of open, local-first marketing-analytics apps that share one design language but do different statistical jobs:
+
+- **[SegmentSignal](https://github.com/UlrikErlingsen/customer-segmentation)** — multi-variable B2C customer segmentation. Compare clustering methods and segment counts, test whether the groups survive resampling, profile and name them, and export a customer-to-segment map.
+
+The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), while SegmentSignal discovers and validates customer groups. Neither replaces the other.
+
 ## License
 
 AGPL-3.0-or-later. In plain words:
