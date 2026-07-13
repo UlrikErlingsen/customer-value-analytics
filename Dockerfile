@@ -15,7 +15,9 @@ COPY assets/ ./assets/
 COPY .streamlit/config.toml ./.streamlit/config.toml
 
 # Make the computation package importable without an editable install.
-ENV PYTHONPATH=/app/src
+# The system Arrow allocator avoids mimalloc segfaults seen on some platforms.
+ENV PYTHONPATH=/app/src \
+    ARROW_DEFAULT_MEMORY_POOL=system
 
 # The application does not need root privileges at runtime.
 RUN useradd --create-home --uid 10001 worthsignal

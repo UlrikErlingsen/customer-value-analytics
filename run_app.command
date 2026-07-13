@@ -42,4 +42,7 @@ then
   .venv/bin/python -m pip install -r requirements.txt
 fi
 
+# pyarrow's bundled mimalloc allocator can segfault on macOS; use the system allocator.
+export ARROW_DEFAULT_MEMORY_POOL="${ARROW_DEFAULT_MEMORY_POOL:-system}"
+
 exec .venv/bin/python -m streamlit run app.py --browser.gatherUsageStats false "$@"

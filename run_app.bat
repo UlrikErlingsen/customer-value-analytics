@@ -28,6 +28,7 @@ rem Install/upgrade dependencies when anything is missing or older than requirem
   ".venv\Scripts\python.exe" -m pip install -r requirements.txt
 )
 
+if not defined ARROW_DEFAULT_MEMORY_POOL set ARROW_DEFAULT_MEMORY_POOL=system
 echo Starting WorthSignal - a browser tab will open shortly.
 ".venv\Scripts\python.exe" -m streamlit run app.py --browser.gatherUsageStats false
 pause
