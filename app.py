@@ -467,7 +467,9 @@ elif page == "Customer selection":
     st.header("Customer selection and profitable targeting")
     st.caption(
         "Who is worth contacting? Score customers with RFM (score 1 is best), fit a response model, "
-        "and target only the customers whose expected profit is positive."
+        "and target only the customers whose expected profit is positive. RFM groups customers by value "
+        "behaviour only — for multi-variable segmentation on needs, attitudes, or demographics, use our "
+        "sibling app **SegmentSignal**; to learn which product features customers value, use **ChoiceSignal**."
     )
     data_help(("transactions", "rfm_customers", "response_model"), "selection")
     frame = chosen_table(loaded, "selection", preferred=("transactions", "rfm_customers", "response_model"))
