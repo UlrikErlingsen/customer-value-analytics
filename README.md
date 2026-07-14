@@ -130,8 +130,9 @@ WorthSignal is part of a small family of open, local-first marketing-analytics a
 - **[SegmentSignal](https://github.com/UlrikErlingsen/customer-segmentation)** — multi-variable B2C customer segmentation. Compare clustering methods and segment counts, test whether the groups survive resampling, profile and name them, and export a customer-to-segment map.
 - **[ChoiceSignal](https://github.com/UlrikErlingsen/conjoint-analysis)** — conjoint (preference) analysis. Turn ratings of product profiles into part-worth utilities, attribute importance, and preference-share simulations.
 - **[AdoptSignal](https://github.com/UlrikErlingsen/adoption-forecasting)** — new-product adoption forecasting with the Bass diffusion model: published analogies, scenario stress-tests, and fitting to real history.
+- **[PositionSignal](https://github.com/UlrikErlingsen/brand-positioning)** — perceptual mapping for brand positioning: where brands sit relative to competitors, from brand-attribute ratings.
 
-The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, and AdoptSignal forecasts when the market adopts. None replaces the others.
+The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, AdoptSignal forecasts when the market adopts, and PositionSignal shows how brands are perceived. None replaces the others.
 
 ## License
 
