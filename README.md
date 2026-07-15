@@ -80,6 +80,10 @@ This is a standard Streamlit app, so it can be deployed on [Streamlit Community 
 
 **Privacy changes when you host it:** in local mode, an uploaded file stays on that computer. In hosted mode, the file is sent to and processed by the chosen host. WorthSignal adds no accounts, telemetry, or persistent customer-data storage, but the deployment operator is responsible for its server, access controls, logs, retention, and privacy obligations. See [PRIVACY.md](PRIVACY.md).
 
+## No install? Give this file to an AI
+
+Don't want to install anything? [AI_ANALYST.md](AI_ANALYST.md) is a single copy-paste file that turns a capable AI assistant (Claude, ChatGPT, Gemini, …) into this analysis. Copy the file into a chat, add your data, and the AI follows the same published methods and honesty rules as the app. The app is still the more private option: local mode keeps your data on your computer, while a cloud AI sees whatever you paste.
+
 ## Try it in two minutes
 
 1. Start the app and upload `examples/quick_test.xlsx` — a small, ready-made file that works with the data-driven analyses out of the box.
