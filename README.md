@@ -137,8 +137,9 @@ WorthSignal is part of a small family of open, local-first marketing-analytics a
 - **[PositionSignal](https://github.com/UlrikErlingsen/brand-positioning)** — perceptual mapping for brand positioning: where brands sit relative to competitors, from brand-attribute ratings.
 - **[AllocSignal](https://github.com/UlrikErlingsen/marketing-mix-allocation)** — marketing response and budget allocation: saturating response curves, constrained optimization, and a panel-evidence workspace.
 - **[DriverSignal](https://github.com/UlrikErlingsen/survey-driver-analysis)** — survey driver analysis: scale reliability, robust standardized drivers, and correlated-predictor importance for satisfaction and NPS.
+- **[GateSignal](https://github.com/UlrikErlingsen/launch-decision-gate)** — the decision gate: weighted criteria with must-pass checks, evidence coverage, scenario NPV, an explicit volume bridge, risk triage, and an honest go/hold/rework/kill brief for the next bounded investment.
 
-The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, AdoptSignal forecasts when the market adopts, PositionSignal shows how brands are perceived, DriverSignal finds what drives satisfaction, and AllocSignal allocates the budget. None replaces the others.
+The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, AdoptSignal forecasts when the market adopts, PositionSignal shows how brands are perceived, DriverSignal finds what drives satisfaction, AllocSignal allocates the budget, and GateSignal structures the go/hold/rework/kill decision. None replaces the others.
 
 ## License
 
