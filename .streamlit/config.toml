@@ -5,6 +5,8 @@ gatherUsageStats = false
 # Maximum upload size in MB (Streamlit's default is 200). Raise it further if
 # your customer files are bigger; available memory is the real limit.
 maxUploadSize = 1024
+headless = true
+fileWatcherType = "none"
 
 [theme]
 base = "light"

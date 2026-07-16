@@ -9,7 +9,6 @@ traceback. Analyses keep their full power; only the error messages change.
 
 from __future__ import annotations
 
-import numpy as np
 import pandas as pd
 
 

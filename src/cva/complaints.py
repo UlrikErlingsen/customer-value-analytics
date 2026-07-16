@@ -11,7 +11,6 @@ recovery to put a ceiling on justifiable recovery spending.
 
 from __future__ import annotations
 
-import numpy as np
 import pandas as pd
 
 

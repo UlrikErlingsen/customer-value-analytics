@@ -1,3 +1,5 @@
+# ruff: noqa: E402
+
 from __future__ import annotations
 
 import os
@@ -1058,6 +1060,8 @@ elif page == "About this app":
         The license covers this app's code. The statistical models it implements are the published
         work of the researchers cited on each page and in `docs/methods.md` — this project claims no
         ownership of the theory.
+
+        **Source:** [github.com/UlrikErlingsen/customer-value-analytics](https://github.com/UlrikErlingsen/customer-value-analytics)
         """
     )
 
@@ -1065,12 +1069,10 @@ elif page == "About this app":
 st.markdown(
     f"""
     <footer class="ws-footer">
-      WorthSignal {__version__} <span>•</span>
-      <a href="https://github.com/UlrikErlingsen/customer-value-analytics" target="_blank">Source code</a>
-      <span>•</span>
-      <a href="https://github.com/UlrikErlingsen/customer-value-analytics/blob/main/PRIVACY.md" target="_blank">Privacy</a>
-      <span>•</span>
-      <a href="https://github.com/UlrikErlingsen/customer-value-analytics/blob/main/LICENSE" target="_blank">AGPL-3.0-or-later</a>
+      WorthSignal v{__version__} <span>◆</span>
+      Customer-value estimates, not future truth <span>◆</span>
+      Part of the Signal suite <span>◆</span>
+      AGPL-3.0-or-later
     </footer>
     """,
     unsafe_allow_html=True,

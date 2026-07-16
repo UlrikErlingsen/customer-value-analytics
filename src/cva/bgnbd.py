@@ -19,7 +19,7 @@ from dataclasses import asdict, dataclass
 import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
-from scipy.special import gammaln, hyp2f1, logsumexp
+from scipy.special import gammaln, hyp2f1
 
 
 @dataclass(frozen=True)
