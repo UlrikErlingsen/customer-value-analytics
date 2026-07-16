@@ -2,9 +2,10 @@
 gatherUsageStats = false
 
 [server]
-# Maximum upload size in MB (Streamlit's default is 200). Raise it further if
-# your customer files are bigger; available memory is the real limit.
-maxUploadSize = 1024
+# Maximum upload size in MB (matches the app's own 200 MB parsing limit).
+# Raise both this and CVA_MAX_UPLOAD_MB deliberately if your customer files
+# are bigger; available memory is the real limit.
+maxUploadSize = 200
 headless = true
 fileWatcherType = "none"
 

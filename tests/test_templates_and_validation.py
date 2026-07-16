@@ -5,7 +5,7 @@ import io
 import pandas as pd
 import pytest
 
-from cva.io import load_data
+from cva.io import load_data, results_to_excel
 from cva.templates import TEMPLATES, example_frames, example_json, template_csv, template_workbook
 from cva.validation import (
     DataProblem,
@@ -44,6 +44,29 @@ def test_template_csv_roundtrips_through_loader():
 def test_example_json_keeps_historical_keys():
     loaded = load_data(io.BytesIO(example_json()), "example.json")
     assert {"equity", "contractual_survival", "bgnbd", "bgbb_histories", "events"} <= set(loaded.tables)
+
+
+def test_excel_export_neutralizes_formula_like_cells_and_headers():
+    """Formula-looking strings in values AND headers must open as inert text."""
+    frame = pd.DataFrame({"=cmd|' /C calc'!A0": ["=SUM(A1:A2)", " +payload", "safe"]})
+    exported = results_to_excel({"results": frame})
+    loaded = load_data(io.BytesIO(exported), "results.xlsx").tables["results"]
+    assert str(loaded.columns[0]).startswith("'")
+    assert str(loaded.iloc[0, 0]).startswith("'")
+    assert str(loaded.iloc[1, 0]).startswith("'")
+    assert loaded.iloc[2, 0] == "safe"
+
+
+def test_oversized_json_upload_is_rejected():
+    raw = b"[" + b"0," * 28_000_000 + b"0]"  # ~56 MB, above the 50 MB JSON cap
+    with pytest.raises(DataProblem, match="50 MB"):
+        load_data(io.BytesIO(raw), "huge.json")
+
+
+def test_table_row_limit_is_enforced_after_parsing(monkeypatch):
+    monkeypatch.setattr("cva.io.MAX_TABLE_ROWS", 2)
+    with pytest.raises(DataProblem, match="safety limit"):
+        load_data(io.BytesIO(b"a\n1\n2\n3\n"), "small.csv")
 
 
 def test_template_columns_are_auto_suggested_for_their_roles():

@@ -4,6 +4,13 @@ Notable changes to WorthSignal are documented here. This project follows [Semant
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-07-16
+
+### Security
+
+- Uploads are now size-checked before parsing (200 MB default, 50 MB for JSON, 400 MB unpacked Excel, plus row and cell caps), and the default Streamlit upload limit dropped from 1 GB to 200 MB.
+- Excel exports neutralize formula-like text in cell values and column headers, and defusedxml hardens workbook XML parsing.
+
 ## [1.1.0] - 2026-07-12
 
 ### Added
@@ -26,6 +33,7 @@ Notable changes to WorthSignal are documented here. This project follows [Semant
 - Nine analysis areas, downloadable results, model documentation, examples, and automated tests.
 - AGPL-3.0-or-later license.
 
-[Unreleased]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/UlrikErlingsen/customer-value-analytics/releases/tag/v1.0.0

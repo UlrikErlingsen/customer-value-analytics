@@ -7,4 +7,4 @@ profiling, and export utilities. Kept free of UI dependencies so the models
 can also be used as a plain Python library.
 """
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
