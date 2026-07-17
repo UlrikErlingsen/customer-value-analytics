@@ -141,12 +141,14 @@ WorthSignal is part of a small family of open, local-first marketing-analytics a
 - **[ExperimentSignal](https://github.com/UlrikErlingsen/experiment-analysis)** — randomized experiment analysis: design audit, covariate-adjusted HC3 intervals, Holm multiplicity control, and a practical-effect decision bound declared before the result.
 - **[MeasureSignal](https://github.com/UlrikErlingsen/measurement-validation)** — measurement diagnostics: factorability, parallel analysis, common-factor EFA, alpha and omega, and a frozen scoring recipe for holdout confirmation.
 - **[TextSignal](https://github.com/UlrikErlingsen/open-text-analysis)** — open-text evidence: corpus audit, lexical contrast, perturbation-stable NMF patterns, and a human codebook hand-off.
-- **Pricing-evidence prototype (private pending rename)** — evidence from assigned prices, historical variation, or willingness to pay, with transparent margin economics.
+- **[TagSignal](https://github.com/UlrikErlingsen/pricing-analysis)** — pricing evidence from assigned-price experiments, historical variation, or willingness to pay, feeding volume × margin economics with the uncertainty intact.
 - **[RecommendSignal](https://github.com/UlrikErlingsen/recommender-evaluation)** — temporal offline comparison of recommendation policies and their exposure trade-offs.
+- **[TraceSignal](https://github.com/UlrikErlingsen/journey-path-analysis)** — descriptive customer-journey evidence from event logs: transitions, path support, drop-off, and Markov removal sensitivity, with no causal channel credit.
+- **[TrackSignal](https://github.com/UlrikErlingsen/brand-tracking)** — brand-tracking wave comparison: separate measures with intervals, multiple-comparison control, and declared practical thresholds.
 
-The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, AdoptSignal forecasts when the market adopts, PositionSignal shows how brands are perceived, DriverSignal finds what drives satisfaction, AllocSignal allocates the budget, ExperimentSignal tests what a change caused, MeasureSignal validates multi-item scores, TextSignal reads open-text evidence, and GateSignal structures the go/hold/rework/kill decision. None replaces the others.
+The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, AdoptSignal forecasts when the market adopts, PositionSignal shows how brands are perceived, DriverSignal finds what drives satisfaction, AllocSignal allocates the budget, ExperimentSignal tests what a change caused, MeasureSignal validates multi-item scores, TextSignal reads open-text evidence, GateSignal structures the go/hold/rework/kill decision, TraceSignal describes how logged journeys unfold, and TrackSignal watches brand measures move across waves. None replaces the others.
 
-See the maintained suite overview at [ulrikerlingsen.com](https://ulrikerlingsen.com). Product labels that have not passed their own publication screen remain outside the public catalog.
+See the maintained suite overview at [ulrikerlingsen.com](https://ulrikerlingsen.com).
 
 ## License
 
