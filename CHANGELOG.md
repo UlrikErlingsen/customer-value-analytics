@@ -4,6 +4,19 @@ Notable changes to WorthSignal are documented here. This project follows [Semant
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-10-01
+
+A pin point for downstream users (Freddo CRM, the Signal Hub): no change to any calculation.
+
+### Changed
+
+- plotly 7 is allowed (requirement now `>=5.18,<8`).
+- CI runs on `actions/setup-python` 7.
+
+### Documentation
+
+- The README links the new sibling apps TagSignal, TraceSignal and TrackSignal.
+
 ## [1.1.1] - 2026-07-16
 
 ### Security
@@ -33,7 +46,8 @@ Notable changes to WorthSignal are documented here. This project follows [Semant
 - Nine analysis areas, downloadable results, model documentation, examples, and automated tests.
 - AGPL-3.0-or-later license.
 
-[Unreleased]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.2...HEAD
+[1.1.2]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/UlrikErlingsen/customer-value-analytics/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/UlrikErlingsen/customer-value-analytics/releases/tag/v1.0.0
