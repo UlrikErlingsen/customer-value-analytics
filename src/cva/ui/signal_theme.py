@@ -207,6 +207,9 @@ a {{ color:var(--sg-a700); }} a:hover {{ color:var(--sg-a800); }}
 [data-testid="stSidebar"] [role="radiogroup"] label {{ border-radius:999px; padding:.3rem .8rem; margin:0; }}
 [data-testid="stSidebar"] [role="radiogroup"] label:hover {{ background:rgba(249,244,237,.08); }}
 [data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {{ background:var(--sg-a700); }}
+[data-testid="stSidebar"] [data-testid="stExpander"] {{ background:rgba(249,244,237,.06); border-color:rgba(249,244,237,.18); }}
+[data-testid="stSidebar"] [data-testid="stExpander"] summary, [data-testid="stSidebar"] [data-testid="stExpander"] summary * {{ color:{c['sidebar_text']} !important; }}
+[data-testid="stSidebar"] [data-testid="stExpander"] [data-testid="stMarkdownContainer"] * {{ color:{c['sidebar_text']}; }}
 
 /* st.navigation menu (multipage apps and Signal Hub) */
 [data-testid="stSidebarNav"] a {{ border-radius:999px; }}
