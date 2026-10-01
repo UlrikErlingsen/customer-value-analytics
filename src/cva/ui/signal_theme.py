@@ -149,13 +149,14 @@ def template(key: str) -> str:
     return f"signal-{key}"
 
 
-def chart(app_key: str, fig, **kwargs) -> None:
+def chart(app_key: str, fig, **kwargs):
     """Show a Plotly figure in the Signal look: the app's template, and theme=None so Streamlit's own chart theme
-    does not replace Figtree and the palette. Other keyword arguments go to st.plotly_chart (key=, on_select=...)."""
+    does not replace Figtree and the palette. Other keyword arguments go to st.plotly_chart (key=, on_select=...);
+    its return value (the selection state when on_select is set) is passed back."""
     fig.update_layout(template=template(app_key))
     kwargs.setdefault("theme", None)
     kwargs.setdefault("width", "stretch")
-    st.plotly_chart(fig, **kwargs)
+    return st.plotly_chart(fig, **kwargs)
 
 
 def roles(key: str) -> dict:
