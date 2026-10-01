@@ -1,6 +1,6 @@
-# Contributing to WorthSignal
+# Contributing to Worth Signal
 
-Thanks for your interest in improving WorthSignal! Contributions of all
+Thanks for your interest in improving Worth Signal! Contributions of all
 kinds are welcome: bug reports, documentation fixes, new analyses, and
 better explanations for non-specialists.
 
@@ -35,17 +35,23 @@ pull request.
 ## Project layout
 
 ```
-app.py           Streamlit UI — all pages, widgets, and presentation
+app.py           Thin standalone entry point: page config, then render()
 src/cva/         Pure computation modules (the actual models)
-tests/           Pytest suite covering the computation modules
+src/cva/ui/      Streamlit UI — all pages, widgets, and presentation;
+                 render() is also the Signal Hub entry point
+tests/           Pytest suite covering the computation modules and the app
 docs/            Written guides and model documentation
 examples/        Sample input files you can load into the app
 ```
 
-The split matters: everything in `src/cva/` is plain Python that can be
-imported and used **without Streamlit** — no UI imports, no session state,
-no side effects. `app.py` is a thin presentation layer that calls into
-those modules and renders the results.
+The split matters: everything in `src/cva/` outside `src/cva/ui/` is plain
+Python that can be imported and used **without Streamlit or Plotly** — no UI
+imports, no session state, no side effects. A test enforces this. `src/cva/ui/`
+is a thin presentation layer that calls into those modules and renders the
+results. Every session-state and widget key there goes through `k()`, which
+prefixes it with `worth:` so the app can share one Signal Hub session with the
+other Signal apps. `src/cva/ui/signal_theme.py` and `src/cva/ui/assets/marks/`
+are synced from Signal Hub; do not edit them here.
 
 ## Code style
 
@@ -64,8 +70,9 @@ those modules and renders the results.
    containing pure, typed functions that implement the computation. If
    the model comes from the literature, cite the paper in the module
    docstring.
-2. **Add a page** in `app.py` that collects inputs, calls your module,
-   and presents the results.
+2. **Add a page** function in `src/cva/ui/app.py` (and register it in
+   `PAGES`) that collects inputs, calls your module, and presents the
+   results. Give every widget an explicit `key=k("...")`.
 3. **Write a test** in `tests/` that exercises the module directly —
    ideally against a worked example from the source paper or a hand-checked
    calculation.

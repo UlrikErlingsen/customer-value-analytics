@@ -6,11 +6,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve WorthSignal. Never attach real customer data, credentials, or other sensitive information.
+        Thanks for helping improve Worth Signal. Never attach real customer data, credentials, or other sensitive information.
   - type: dropdown
     id: platform
     attributes:
-      label: How are you running WorthSignal?
+      label: How are you running Worth Signal?
       options:
         - Windows launcher
         - macOS launcher
@@ -24,7 +24,7 @@ body:
     id: version
     attributes:
       label: Version or commit
-      placeholder: "1.1.0 or a commit SHA"
+      placeholder: "1.2.0 or a commit SHA"
   - type: textarea
     id: problem
     attributes:

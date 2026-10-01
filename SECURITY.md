@@ -7,7 +7,7 @@ Security fixes are made on the latest `main` branch. The project does not curren
 ## Report a vulnerability privately
 
 Email [code.modular578@passmail.net](mailto:code.modular578@passmail.net) with the subject
-`[WorthSignal security]`. If GitHub private vulnerability reporting is enabled for the public
+`[Worth Signal security]`. If GitHub private vulnerability reporting is enabled for the public
 repository, you may instead use its [private security advisory form](https://github.com/UlrikErlingsen/customer-value-analytics/security/advisories/new).
 Please include:
 
@@ -20,4 +20,4 @@ Please do not open a public issue for an unpatched vulnerability and never attac
 
 ## Deployment responsibility
 
-WorthSignal is local-first. If you expose it over a network, you are responsible for authentication, TLS, network controls, dependency updates, data handling, and server hardening. Read [PRIVACY.md](PRIVACY.md) before accepting uploads on a hosted deployment.
+Worth Signal is local-first. If you expose it over a network, you are responsible for authentication, TLS, network controls, dependency updates, data handling, and server hardening. Read [PRIVACY.md](PRIVACY.md) before accepting uploads on a hosted deployment.

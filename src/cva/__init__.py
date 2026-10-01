@@ -1,4 +1,4 @@
-"""WorthSignal's customer-value analytical engine.
+"""Worth Signal's customer-value analytical engine.
 
 Pure computation modules for classic customer-base analysis — contractual
 retention (shifted-beta-geometric), BG/NBD and BG/BB repeat-purchase models,

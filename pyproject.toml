@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "customer-value-analytics"
 version = "1.1.2"
-description = "WorthSignal: an open, local-first customer value toolkit for marketers"
+description = "Worth Signal: an open, local-first customer value toolkit for marketers"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "AGPL-3.0-or-later" }

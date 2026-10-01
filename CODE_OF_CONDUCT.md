@@ -1,6 +1,6 @@
 # Code of conduct
 
-WorthSignal is intended to be a practical, welcoming open-source project for marketers, analysts, students, and developers.
+Worth Signal is intended to be a practical, welcoming open-source project for marketers, analysts, students, and developers.
 
 ## Our standard
 
@@ -14,4 +14,4 @@ This standard applies to issues, pull requests, discussions, and other spaces wh
 
 To report sensitive conduct privately, email
 [code.modular578@passmail.net](mailto:code.modular578@passmail.net) with the subject
-`[WorthSignal conduct]`. Do not include the report in a public issue.
+`[Worth Signal conduct]`. Do not include the report in a public issue.

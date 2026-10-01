@@ -1,30 +1,95 @@
 <p align="center">
-  <img src="assets/worthsignal-banner.svg" alt="WorthSignal — Find the customers, value, and moves that matter" width="100%">
+  <img src="assets/worthsignal-banner.png" alt="Worth Signal: What are customers and relationships worth?" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/UlrikErlingsen/customer-value-analytics/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/UlrikErlingsen/customer-value-analytics/actions/workflows/tests.yml/badge.svg"></a>
-  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-173C3A?logo=python&logoColor=white">
-  <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-app-D95B40?logo=streamlit&logoColor=white">
-  <a href="LICENSE"><img alt="License: AGPL-3.0-or-later" src="https://img.shields.io/badge/License-AGPL--3.0--or--later-36534E"></a>
+  <a href="https://github.com/UlrikErlingsen/customer-value-analytics/actions"><img alt="Tests" src="https://github.com/UlrikErlingsen/customer-value-analytics/actions/workflows/tests.yml/badge.svg"></a>
+  <a href="https://github.com/UlrikErlingsen/signal-hub"><img alt="Signal · Customer" src="https://img.shields.io/badge/Signal-Customer-aa5d83?labelColor=2e2b25"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-2e2b25?logo=python&logoColor=f9f4ed">
+  <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-app-aa5d83?logo=streamlit&logoColor=f9f4ed">
+  <a href="LICENSE"><img alt="License: AGPL-3.0-or-later" src="https://img.shields.io/badge/License-AGPL--3.0--or--later-645c50"></a>
 </p>
 
 <p align="center"><strong>Open customer-value analytics for marketers — transparent models, local-first data, no black box.</strong></p>
 
-**WorthSignal** turns an Excel, CSV, or JSON customer file into segmentation, lifetime value, retention, and marketing ROI through a point-and-click interface. Confirm the suggested columns, run an analysis, and download the results as Excel or JSON. No account is required, the methods are documented, and local mode keeps customer data on your computer.
+**Worth Signal** turns an Excel, CSV, or JSON customer file into segmentation, lifetime value, retention, and marketing ROI through a point-and-click interface. Confirm the suggested columns, run an analysis, and download the results as Excel or JSON. No account is required, the methods are documented, and local mode keeps customer data on your computer.
 
-## Read this first
+> What are customers and relationships worth?
 
-> **Use estimates wisely.** Every model simplifies real customer behaviour and depends on the quality of its inputs. Treat each output as **decision support, not truth**: use it to compare options, challenge assumptions, and frame discussions — not as a precise prediction of the future.
-
-## Why WorthSignal
+Everything runs locally with open-source Python packages. There is no account, telemetry, external AI call, remote database, or built-in persistence of customer data.
 
 - **Made for working marketers:** guided pages, plain-language errors, downloadable templates, and no notebook or statistics software required.
 - **Explainable by design:** every method is named, documented, cited, and tested against published or independently derived references.
 - **Local-first:** run it on your computer with no account, telemetry, or built-in customer-data storage.
 - **Portable:** read Excel, CSV, and JSON; export every result to Excel or JSON.
 
-## Get the app
+## Read this first
+
+> **Use estimates wisely.** Every model simplifies real customer behaviour and depends on the quality of its inputs. Treat each output as **decision support, not truth**: use it to compare options, challenge assumptions, and frame discussions — not as a precise prediction of the future.
+
+The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. They assume the future will broadly behave like the past and compress messy human behaviour into a handful of parameters. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope. If a decision is expensive to get wrong, use these results as a starting point for judgement, not a substitute for it.
+
+## Scope
+
+**Version 1.2 supports nine analysis areas, each answering a concrete business question:**
+
+1. **Customer selection and profitable targeting** — *Which customers should get the next campaign?* RFM segmentation using the classic direct-marketing nested-quintile scoring (score 1 = best), logistic-regression and decision-tree response models, a profit-based targeting rule, and lift charts.
+2. **Customer lifetime value (CLV)** — *What is a customer worth today?* Infinite-horizon, finite-horizon, growing-margin, and custom-timing variants of the margin-multiple approach (Gupta & Lehmann 2003, "Customers as Assets").
+3. **Customer equity and elasticities** — *What is the whole customer base worth, including customers you haven't acquired yet?* Fits an acquisition curve, forecasts future customers, applies tax, and reports annual elasticities (Gupta, Lehmann & Stuart 2004, "Valuing Customers").
+4. **Acquisition and retention budgets** — *How much should you spend on winning new customers versus keeping the ones you have?* Optimizes both budgets against the customer-equity test (Blattberg & Deighton 1996, "Manage Marketing by the Customer Equity Test").
+5. **Markov switching ROI** — *Does a marketing investment that shifts brand-switching behavior actually pay off?* Turns before/after brand-switching matrices into CLV, customer equity, and ROI (Rust, Lemon & Zeithaml 2004, "Return on Marketing").
+6. **Contractual retention** — *How many of your subscribers will still be with you in a year? In five?* Fits the shifted beta-geometric survival model and forecasts retention (Fader & Hardie 2007, "How to Project Customer Retention").
+7. **BG/NBD customer-base analysis** — *When customers can buy at any time, who is still active and how many purchases should you expect?* Maximum-likelihood estimation and per-customer scoring (Fader, Hardie & Lee 2005, "Counting Your Customers the Easy Way").
+8. **BG/BB customer-base analysis** — *Same question when activity is recorded period by period (bought / didn't buy).* Maximum-likelihood estimation and per-customer scoring (Fader, Hardie & Shang 2010, "Customer-Base Analysis in a Discrete-Time Noncontractual Setting").
+9. **Complaints and recovery** — *What is it worth to win back a complaining customer?* Prepares the customer summaries needed by the complaint-and-recovery customer-base model (Knox & van Oest 2014, "Customer Complaints and Recovery Effectiveness") and values recovery spending as the CLV difference between a recovered and an unrecovered customer.
+
+**It does not:** fit hierarchical Bayesian, machine-learning, or causal-attribution models; fit the full 11-parameter purchase-and-complaint model (it prepares that model's exact inputs and applies the financial recovery rule); segment customers on needs, attitudes, or demographics (RFM groups customers by value behaviour only); measure which product features customers value; or modify your uploaded file. Where a sibling app covers it, use **[Segment Signal](https://github.com/UlrikErlingsen/customer-segmentation)** for multi-variable segmentation and **[Choice Signal](https://github.com/UlrikErlingsen/conjoint-analysis)** for feature preferences.
+
+## Try the demo in three minutes
+
+1. Start the app (see [Run locally](#run-locally)) and click **No file yet? Get a test workbook** in the sidebar, or use `examples/quick_test.xlsx` — a small, ready-made file that works with the data-driven analyses out of the box. Upload it.
+2. Pick an analysis in the sidebar, keep the suggested column mappings, and press the run button.
+3. Three analyses — CLV, budgets, and Markov ROI — need no file at all; you type your assumptions directly.
+4. Download any result as Excel or JSON.
+
+For fuller examples, `examples/example_data.xlsx` and `examples/example_data.json` contain one table per analysis, and `examples/transactions.csv` is a raw transaction-log example. Every analysis page that reads a file also has a **"What data do I need?"** section with **Download template** buttons that give you a pre-formatted file to fill with your own data.
+
+The example tables are deterministic and generated by code in `src/cva/templates.py`. They describe invented customers, except the contractual-retention survival counts, which reproduce the published example in Fader & Hardie (2007), originally from Berry & Linoff (2004). They represent no real customer or organisation.
+
+## Data contract
+
+The app reads `.xlsx`, `.xls`, `.xlsm`, `.csv`, and `.json`, suggests which columns to use, and lets you correct every mapping. It never modifies your uploaded file. Put column names in the first row and one record per row. A JSON file is either a list of records (one table) or an object whose keys map to lists of records (one table per key, like named Excel sheets).
+
+| Analysis | One row per | Example columns |
+|---|---|---|
+| RFM from transactions, BG/NBD from transactions | purchase | `customer_id`, `purchase_date`, `amount` |
+| RFM from customer metrics | customer | `customer_id`, `recency_days`, `frequency_per_month`, `monetary_average` |
+| Response models | customer | predictors such as `recency_days`, `purchases_last_year`, and a 0/1 `response` |
+| Customer equity | period | `period`, `customers` |
+| Contractual retention | period | `period`, `survivors` |
+| BG/NBD summaries | customer | `x`, `tx`, `T` |
+| BG/BB histories | history (optionally grouped) | `n`, `tx`, `x`, `count` |
+| Complaints | event | `customer_id`, `event_date`, `event_type` |
+
+Uploads are size-checked before parsing: the standalone app accepts files up to 50 MB by default (`maxUploadSize` in `.streamlit/config.toml`), the parser allows up to 200 MB (`CVA_MAX_UPLOAD_MB`), JSON up to 50 MB, and unpacked Excel up to 400 MB, with row and cell caps. See **[docs/data_guide.md](docs/data_guide.md)** for exactly what each analysis needs, with example tables and troubleshooting tips.
+
+## Methods
+
+Every formula and convention the app uses is documented in **[docs/methods.md](docs/methods.md)**, with citations to the original papers. Each page names the published work it follows.
+
+A practical rule for choosing among the retention models: in a **contractual** setting the firm knows when a customer leaves; in a **non-contractual** setting inactivity is hidden and must be inferred. With **continuous** time purchases can happen at any moment (BG/NBD); with **discrete** time each period records purchase / no purchase (BG/BB).
+
+An automated test suite reproduces published and reference examples to check the implementations (see [Development](#development)).
+
+See [methods](docs/methods.md).
+
+## Exports
+
+Every analysis page offers its results as an Excel workbook (one sheet per table, with a frozen, filterable header row) or as JSON (`{table name: list of records}`). Depending on the analysis, the export holds customer scores, segment summaries, model parameters, lift tables, forecasts, and elasticities.
+
+Customer-level exports contain the rows you uploaded plus their scores, so treat them as carefully as the source file. Exported text is neutralised against spreadsheet-formula interpretation, and workbook XML is parsed with defusedxml.
+
+## Run locally
 
 You need the project folder on your computer first. Two ways — pick one:
 
@@ -36,8 +101,6 @@ You need the project folder on your computer first. Two ways — pick one:
   ```
 
 You also need **Python 3.10 or newer** — many computers already have it. If not, install it free from [python.org/downloads](https://www.python.org/downloads/). **On Windows, tick the "Add python.exe to PATH" checkbox during installation** — it matters.
-
-## Quick start
 
 **Windows**
 
@@ -58,101 +121,117 @@ If macOS blocks the first double-click, right-click `run_app.command`, choose **
 **Any operating system (terminal)**
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-(Use `python3` instead of `python` if that is what your system calls it.)
+(Use `python3` instead of `python` if that is what your system calls it.) The app opens on Streamlit's default port 8501. Set `CVA_MAX_UPLOAD_MB` to change the parser's upload limit.
 
-**Docker**
+### Docker
 
 A `Dockerfile` is included at the repository root:
 
 ```bash
-docker build -t worthsignal . && docker run -p 8501:8501 worthsignal
+docker build -t worthsignal .
+docker run --rm -p 8501:8501 worthsignal
 ```
 
-Then open http://localhost:8501.
+Then open http://localhost:8501. The container runs as a non-root user and includes a health check.
 
-**Deploying for your team**
+### Deploying for your team
 
 This is a standard Streamlit app, so it can be deployed on [Streamlit Community Cloud](https://streamlit.io/cloud) straight from a GitHub repository (private repositories work too) — just point the deployment at `app.py`.
 
-**Privacy changes when you host it:** in local mode, an uploaded file stays on that computer. In hosted mode, the file is sent to and processed by the chosen host. WorthSignal adds no accounts, telemetry, or persistent customer-data storage, but the deployment operator is responsible for its server, access controls, logs, retention, and privacy obligations. See [PRIVACY.md](PRIVACY.md).
+## Privacy
+
+In local mode, an uploaded file stays on that computer. In hosted mode, the file is sent to and processed by the chosen host. Worth Signal adds no accounts, telemetry, or persistent customer-data storage, but the deployment operator is responsible for its server, access controls, logs, retention, and privacy obligations. See [PRIVACY.md](PRIVACY.md).
 
 ## No install? Give this file to an AI
 
 Don't want to install anything? [AI_ANALYST.md](AI_ANALYST.md) is a single copy-paste file that turns a capable AI assistant (Claude, ChatGPT, Gemini, …) into this analysis. Copy the file into a chat, add your data, and the AI follows the same published methods and honesty rules as the app. The app is still the more private option: local mode keeps your data on your computer, while a cloud AI sees whatever you paste.
 
-## Try it in two minutes
-
-1. Start the app and upload `examples/quick_test.xlsx` — a small, ready-made file that works with the data-driven analyses out of the box.
-2. Pick an analysis in the sidebar, keep the suggested column mappings, and press the run button.
-
-For fuller examples, `examples/example_data.xlsx` and `examples/example_data.json` contain one table per analysis, and `examples/transactions.csv` is a raw transaction-log example. Every analysis page that reads a file also has a **"What data do I need?"** section with **Download template** buttons that give you a pre-formatted file to fill with your own data. (Three analyses — CLV, budgets, and Markov ROI — need no file at all; you type your assumptions directly.)
-
-## What it can do
-
-Nine analysis areas, each answering a concrete business question:
-
-1. **Customer selection and profitable targeting** — *Which customers should get the next campaign?* RFM segmentation using the classic direct-marketing nested-quintile scoring (score 1 = best), logistic-regression and decision-tree response models, a profit-based targeting rule, and lift charts.
-2. **Customer lifetime value (CLV)** — *What is a customer worth today?* Infinite-horizon, finite-horizon, growing-margin, and custom-timing variants of the margin-multiple approach (Gupta & Lehmann 2003, "Customers as Assets").
-3. **Customer equity and elasticities** — *What is the whole customer base worth, including customers you haven't acquired yet?* Fits an acquisition curve, forecasts future customers, applies tax, and reports annual elasticities (Gupta, Lehmann & Stuart 2004, "Valuing Customers").
-4. **Acquisition and retention budgets** — *How much should you spend on winning new customers versus keeping the ones you have?* Optimizes both budgets against the customer-equity test (Blattberg & Deighton 1996, "Manage Marketing by the Customer Equity Test").
-5. **Markov switching ROI** — *Does a marketing investment that shifts brand-switching behavior actually pay off?* Turns before/after brand-switching matrices into CLV, customer equity, and ROI (Rust, Lemon & Zeithaml 2004, "Return on Marketing").
-6. **Contractual retention** — *How many of your subscribers will still be with you in a year? In five?* Fits the shifted beta-geometric survival model and forecasts retention (Fader & Hardie 2007, "How to Project Customer Retention").
-7. **BG/NBD customer-base analysis** — *When customers can buy at any time, who is still active and how many purchases should you expect?* Maximum-likelihood estimation and per-customer scoring (Fader, Hardie & Lee 2005, "Counting Your Customers the Easy Way").
-8. **BG/BB customer-base analysis** — *Same question when activity is recorded period by period (bought / didn't buy).* Maximum-likelihood estimation and per-customer scoring (Fader, Hardie & Shang 2010, "Customer-Base Analysis in a Discrete-Time Noncontractual Setting").
-9. **Complaints and recovery** — *What is it worth to win back a complaining customer?* Prepares the customer summaries needed by the complaint-and-recovery customer-base model (Knox & van Oest 2014, "Customer Complaints and Recovery Effectiveness") and values recovery spending as the CLV difference between a recovered and an unrecovered customer.
-
-A practical rule for choosing among the retention models: in a **contractual** setting the firm knows when a customer leaves; in a **non-contractual** setting inactivity is hidden and must be inferred. With **continuous** time purchases can happen at any moment (BG/NBD); with **discrete** time each period records purchase / no purchase (BG/BB).
-
-## Data formats
-
-The app reads `.xlsx`, `.xls`, `.xlsm`, `.csv`, and `.json`, suggests which columns to use, and lets you correct every mapping. It never modifies your uploaded file. See **[docs/data_guide.md](docs/data_guide.md)** for exactly what each analysis needs, with example tables and troubleshooting tips.
-
-## Methods and accuracy
-
-Every formula and convention the app uses is documented in **[docs/methods.md](docs/methods.md)**, with citations to the original papers. An automated test suite reproduces published and reference examples to check the implementations:
+## Development
 
 ```bash
-python3 -m pytest
+python -m pip install -e ".[test]"
+python -m pytest
+python -m ruff check .
 ```
 
-## About WorthSignal
+The analysis core (`cva`) installs without Streamlit or Plotly; the app needs the `ui` extra (`python -m pip install -e ".[ui]"`), and `requirements.txt` lists everything for the launchers and Docker. [Signal Hub](https://github.com/UlrikErlingsen/signal-hub) embeds the app through `cva.ui.render()`.
 
-This app was built with AI assistance and reviewed against the published models it implements. The methods are classic, deliberately simple models — chosen because they are transparent, well-documented, and easy to sanity-check. More advanced statistical approaches exist for every one of these problems and are beyond this app's scope. Every method implemented here comes from the published literature cited in [docs/methods.md](docs/methods.md).
+The suite reproduces published and hand-derived reference values for every model, runs each pipeline end to end on the bundled examples, checks templates, upload limits and validation messages, renders every Streamlit page, and checks the Signal Hub contract (no Streamlit or Plotly import outside `ui/`, `render()` without a page config, namespaced keys) and the shared Signal brand.
 
-The public-facing product name is **WorthSignal**. The repository and Python project keep the stable `customer-value-analytics` name so existing links, clones, imports, and deployment instructions continue to work.
+The public-facing product name is **Worth Signal**. The repository and Python project keep the stable `customer-value-analytics` name (import package `cva`) so existing links, clones, imports, and deployment instructions continue to work.
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Security issues should be reported privately as described in [SECURITY.md](SECURITY.md).
 
-## Relationship to the Signal suite
+## Where this fits in Signal
 
-WorthSignal is part of a small family of open, local-first marketing-analytics apps that share one design language but do different statistical jobs:
+Worth Signal is part of a small family of open, local-first marketing-analytics apps that share one design language but do different statistical jobs. Segment Signal and Choice Signal sit next to it in customer work; Trace Signal describes the journeys behind the value.
 
-- **[SegmentSignal](https://github.com/UlrikErlingsen/customer-segmentation)** — multi-variable B2C customer segmentation. Compare clustering methods and segment counts, test whether the groups survive resampling, profile and name them, and export a customer-to-segment map.
-- **[ChoiceSignal](https://github.com/UlrikErlingsen/conjoint-analysis)** — conjoint (preference) analysis. Turn ratings of product profiles into part-worth utilities, attribute importance, and preference-share simulations.
-- **[AdoptSignal](https://github.com/UlrikErlingsen/adoption-forecasting)** — new-product adoption forecasting with the Bass diffusion model: published analogies, scenario stress-tests, and fitting to real history.
-- **[PositionSignal](https://github.com/UlrikErlingsen/brand-positioning)** — perceptual mapping for brand positioning: where brands sit relative to competitors, from brand-attribute ratings.
-- **[AllocSignal](https://github.com/UlrikErlingsen/marketing-mix-allocation)** — marketing response and budget allocation: saturating response curves, constrained optimization, and a panel-evidence workspace.
-- **[DriverSignal](https://github.com/UlrikErlingsen/survey-driver-analysis)** — survey driver analysis: scale reliability, robust standardized drivers, and correlated-predictor importance for satisfaction and NPS.
-- **[GateSignal](https://github.com/UlrikErlingsen/launch-decision-gate)** — the decision gate: weighted criteria with must-pass checks, evidence coverage, scenario NPV, an explicit volume bridge, risk triage, and an honest go/hold/rework/kill brief for the next bounded investment.
-- **[ExperimentSignal](https://github.com/UlrikErlingsen/experiment-analysis)** — randomized experiment analysis: design audit, covariate-adjusted HC3 intervals, Holm multiplicity control, and a practical-effect decision bound declared before the result.
-- **[MeasureSignal](https://github.com/UlrikErlingsen/measurement-validation)** — measurement diagnostics: factorability, parallel analysis, common-factor EFA, alpha and omega, and a frozen scoring recipe for holdout confirmation.
-- **[TextSignal](https://github.com/UlrikErlingsen/open-text-analysis)** — open-text evidence: corpus audit, lexical contrast, perturbation-stable NMF patterns, and a human codebook hand-off.
-- **[TagSignal](https://github.com/UlrikErlingsen/pricing-analysis)** — pricing evidence from assigned-price experiments, historical variation, or willingness to pay, feeding volume × margin economics with the uncertainty intact.
-- **[RecommendSignal](https://github.com/UlrikErlingsen/recommender-evaluation)** — temporal offline comparison of recommendation policies and their exposure trade-offs.
-- **[TraceSignal](https://github.com/UlrikErlingsen/journey-path-analysis)** — descriptive customer-journey evidence from event logs: transitions, path support, drop-off, and Markov removal sensitivity, with no causal channel credit.
-- **[TrackSignal](https://github.com/UlrikErlingsen/brand-tracking)** — brand-tracking wave comparison: separate measures with intervals, multiple-comparison control, and declared practical thresholds.
+- **[Segment Signal](https://github.com/UlrikErlingsen/customer-segmentation)** — multi-variable B2C customer segmentation. Compare clustering methods and segment counts, test whether the groups survive resampling, profile and name them, and export a customer-to-segment map.
+- **[Choice Signal](https://github.com/UlrikErlingsen/conjoint-analysis)** — conjoint (preference) analysis. Turn ratings of product profiles into part-worth utilities, attribute importance, and preference-share simulations.
+- **[Adopt Signal](https://github.com/UlrikErlingsen/adoption-forecasting)** — new-product adoption forecasting with the Bass diffusion model: published analogies, scenario stress-tests, and fitting to real history.
+- **[Position Signal](https://github.com/UlrikErlingsen/brand-positioning)** — perceptual mapping for brand positioning: where brands sit relative to competitors, from brand-attribute ratings.
+- **[Alloc Signal](https://github.com/UlrikErlingsen/marketing-mix-allocation)** — marketing response and budget allocation: saturating response curves, constrained optimization, and a panel-evidence workspace.
+- **[Driver Signal](https://github.com/UlrikErlingsen/survey-driver-analysis)** — survey driver analysis: scale reliability, robust standardized drivers, and correlated-predictor importance for satisfaction and NPS.
+- **[Gate Signal](https://github.com/UlrikErlingsen/launch-decision-gate)** — the decision gate: weighted criteria with must-pass checks, evidence coverage, scenario NPV, an explicit volume bridge, risk triage, and an honest go/hold/rework/kill brief for the next bounded investment.
+- **[Experiment Signal](https://github.com/UlrikErlingsen/experiment-analysis)** — randomized experiment analysis: design audit, covariate-adjusted HC3 intervals, Holm multiplicity control, and a practical-effect decision bound declared before the result.
+- **[Measure Signal](https://github.com/UlrikErlingsen/measurement-validation)** — measurement diagnostics: factorability, parallel analysis, common-factor EFA, alpha and omega, and a frozen scoring recipe for holdout confirmation.
+- **[Text Signal](https://github.com/UlrikErlingsen/open-text-analysis)** — open-text evidence: corpus audit, lexical contrast, perturbation-stable NMF patterns, and a human codebook hand-off.
+- **[Tag Signal](https://github.com/UlrikErlingsen/pricing-analysis)** — pricing evidence from assigned-price experiments, historical variation, or willingness to pay, feeding volume × margin economics with the uncertainty intact.
+- **[Recommend Signal](https://github.com/UlrikErlingsen/recommender-evaluation)** — temporal offline comparison of recommendation policies and their exposure trade-offs.
+- **[Trace Signal](https://github.com/UlrikErlingsen/journey-path-analysis)** — descriptive customer-journey evidence from event logs: transitions, path support, drop-off, and Markov removal sensitivity, with no causal channel credit.
+- **[Track Signal](https://github.com/UlrikErlingsen/brand-tracking)** — brand-tracking wave comparison: separate measures with intervals, multiple-comparison control, and declared practical thresholds.
 
-The apps deliberately stay separate: WorthSignal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), SegmentSignal discovers and validates customer groups, ChoiceSignal measures what customers want, AdoptSignal forecasts when the market adopts, PositionSignal shows how brands are perceived, DriverSignal finds what drives satisfaction, AllocSignal allocates the budget, ExperimentSignal tests what a change caused, MeasureSignal validates multi-item scores, TextSignal reads open-text evidence, GateSignal structures the go/hold/rework/kill decision, TraceSignal describes how logged journeys unfold, and TrackSignal watches brand measures move across waves. None replaces the others.
+The apps deliberately stay separate: Worth Signal answers customer-value questions (RFM targeting, CLV, retention, marketing ROI), Segment Signal discovers and validates customer groups, Choice Signal measures what customers want, Adopt Signal forecasts when the market adopts, Position Signal shows how brands are perceived, Driver Signal finds what drives satisfaction, Alloc Signal allocates the budget, Experiment Signal tests what a change caused, Measure Signal validates multi-item scores, Text Signal reads open-text evidence, Gate Signal structures the go/hold/rework/kill decision, Trace Signal describes how logged journeys unfold, and Track Signal watches brand measures move across waves. None replaces the others.
 
-See the maintained suite overview at [ulrikerlingsen.com](https://ulrikerlingsen.com).
+| App | Asks |
+|---|---|
+| [Track Signal](https://github.com/UlrikErlingsen/brand-tracking) | Is the brand moving, or is the tracker just noisy? |
+| [Position Signal](https://github.com/UlrikErlingsen/brand-positioning) | Where do brands sit relative to competitors? |
+| [Prospect Signal](https://github.com/UlrikErlingsen/b2b-prospecting) | Which Norwegian companies fit the ideal customer? |
+| [Listen Signal](https://github.com/UlrikErlingsen/media-listening) | What are Norwegian media and social channels saying? |
+| [Influence Signal](https://github.com/UlrikErlingsen/influencer-campaigns) | Which creators delivered, and was every post labelled? |
+| [Season Signal](https://github.com/UlrikErlingsen/marketing-calendar) | What does the Norwegian marketing year look like, worked backwards? |
+| [Adopt Signal](https://github.com/UlrikErlingsen/adoption-forecasting) | When will a new product be adopted? |
+| [Worth Signal](https://github.com/UlrikErlingsen/customer-value-analytics) | What are customers and relationships worth? |
+| [Segment Signal](https://github.com/UlrikErlingsen/customer-segmentation) | Do customers form stable, useful groups? |
+| [Trace Signal](https://github.com/UlrikErlingsen/journey-path-analysis) | How do logged customer journeys actually unfold? |
+| [Recommend Signal](https://github.com/UlrikErlingsen/recommender-evaluation) | Which recommendation policy should be tested live? |
+| [Choice Signal](https://github.com/UlrikErlingsen/conjoint-analysis) | How do product attributes drive choice? |
+| [Driver Signal](https://github.com/UlrikErlingsen/survey-driver-analysis) | Which measured experiences move with satisfaction? |
+| [Measure Signal](https://github.com/UlrikErlingsen/measurement-validation) | Does a multi-item score have a defensible structure? |
+| [Text Signal](https://github.com/UlrikErlingsen/open-text-analysis) | What recurring patterns appear in open-ended responses? |
+| [Tag Signal](https://github.com/UlrikErlingsen/pricing-analysis) | What price range is supported, and how does profit move? |
+| [Experiment Signal](https://github.com/UlrikErlingsen/experiment-analysis) | Did the treatment cause a practically meaningful change? |
+| [Gate Signal](https://github.com/UlrikErlingsen/launch-decision-gate) | Does a concept deserve the next investment? |
+| [Alloc Signal](https://github.com/UlrikErlingsen/marketing-mix-allocation) | Where should the next marketing budget go? |
 
-## License
+The maintained public suite is listed at [ulrikerlingsen.com](https://ulrikerlingsen.com) and in [Signal Hub](https://github.com/UlrikErlingsen/signal-hub).
 
-AGPL-3.0-or-later. In plain words:
+## References
+
+- Blattberg, R. C., & Deighton, J. (1996). Manage Marketing by the Customer Equity Test. *Harvard Business Review*, 74(4), 136–144.
+- Fader, P. S., & Hardie, B. G. S. (2007). How to Project Customer Retention. *Journal of Interactive Marketing*, 21(1), 76–90.
+- Fader, P. S., Hardie, B. G. S., & Lee, K. L. (2005). "Counting Your Customers" the Easy Way: An Alternative to the Pareto/NBD Model. *Marketing Science*, 24(2), 275–284.
+- Fader, P. S., Hardie, B. G. S., & Shang, J. (2010). Customer-Base Analysis in a Discrete-Time Noncontractual Setting. *Marketing Science*, 29(6), 1086–1108.
+- Gupta, S., & Lehmann, D. R. (2003). Customers as Assets. *Journal of Interactive Marketing*, 17(1), 9–24.
+- Gupta, S., Lehmann, D. R., & Stuart, J. A. (2004). Valuing Customers. *Journal of Marketing Research*, 41(1), 7–18.
+- Knox, G., & van Oest, R. (2014). Customer Complaints and Recovery Effectiveness: A Customer Base Approach. *Journal of Marketing*, 78(5), 42–57.
+- Rust, R. T., Lemon, K. N., & Zeithaml, V. A. (2004). Return on Marketing: Using Customer Equity to Focus Marketing Strategy. *Journal of Marketing*, 68(1), 109–127.
+- Van Oest, R., & Knox, G. (2011). Extending the BG/NBD: A Simple Model of Purchases and Complaints. *International Journal of Research in Marketing*, 28(1), 30–37.
+
+Formulas, conventions and the reference each test is checked against are in [docs/methods.md](docs/methods.md).
+
+## Originality and license
+
+Worth Signal is an independent implementation of the published models cited above and in [docs/methods.md](docs/methods.md). Every method implemented here comes from that literature; the example data are described under [Try the demo](#try-the-demo-in-three-minutes).
+
+The software and documentation are free under **AGPL-3.0-or-later**. In plain words:
 
 - **Commercial use is allowed.** Anyone — including companies — may use, study, modify, copy, distribute, or sell this software.
 - **Distribution carries source obligations.** If you give someone the original or a modified version, the AGPL requires the corresponding source and the same license freedoms to travel with it.
@@ -164,3 +243,14 @@ That combination is deliberate: this should be a project everyone can benefit fr
 This section is a practical summary, not legal advice. If it conflicts with the license text, the license text controls.
 
 **What the license covers — and what it doesn't.** The license applies to the *code and text of this project*, which are original work. The statistical models themselves — CLV, customer equity, sBG, BG/NBD, BG/BB, and the rest — are the intellectual contribution of the researchers cited in [docs/methods.md](docs/methods.md). Mathematical methods and formulas are not owned by this project (copyright law does not protect ideas or formulas, only their concrete expression), and nothing here restricts anyone from implementing the same models independently.
+
+This app was built with AI assistance and reviewed against the published models it implements: the implementations were checked against the published papers, and an automated test suite reproduces reference examples on every change. Verify results independently before using them for important decisions; no warranty is provided.
+
+See [CITATION.cff](CITATION.cff) to cite the software and the original papers.
+
+---
+
+<p>
+  <img src="assets/worthsignal-mark-64.png" width="20" height="20" alt="" align="absmiddle">
+  <strong>Worth Signal</strong> is part of <a href="https://github.com/UlrikErlingsen/signal-hub"><strong>Signal</strong></a>, open marketing-evidence tools by <a href="https://ulrikerlingsen.com">Ulrik Erlingsen</a>.
+</p>

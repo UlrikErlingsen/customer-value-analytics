@@ -10,13 +10,13 @@ else
 fi
 
 if ! "$PYTHON_BIN" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)' ; then
-  echo "WorthSignal needs Python 3.10 or newer."
+  echo "Worth Signal needs Python 3.10 or newer."
   read "?Press Return to close."
   exit 1
 fi
 
 if [[ ! -x ".venv/bin/python" ]]; then
-  echo "Preparing WorthSignal for first use..."
+  echo "Preparing Worth Signal for first use..."
   "$PYTHON_BIN" -m venv .venv
 fi
 

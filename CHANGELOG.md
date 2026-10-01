@@ -1,6 +1,6 @@
 # Changelog
 
-Notable changes to WorthSignal are documented here. This project follows [Semantic Versioning](https://semver.org/).
+Notable changes to Worth Signal are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 

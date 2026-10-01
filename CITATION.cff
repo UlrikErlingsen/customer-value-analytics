@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If WorthSignal supports your work, please cite the software and the original papers for the models you use."
-title: "WorthSignal: Open customer value toolkit"
+message: "If Worth Signal supports your work, please cite the software and the original papers for the models you use."
+title: "Worth Signal: Open customer value toolkit"
 type: software
 authors:
   - family-names: "Erlingsen"
