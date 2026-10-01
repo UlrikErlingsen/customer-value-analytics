@@ -14,4 +14,4 @@ This standard applies to issues, pull requests, discussions, and other spaces wh
 
 To report sensitive conduct privately, email
 [code.modular578@passmail.net](mailto:code.modular578@passmail.net) with the subject
-`[Worth Signal conduct]`. Do not include the report in a public issue.
+`[WorthSignal conduct]`. Do not include the report in a public issue.

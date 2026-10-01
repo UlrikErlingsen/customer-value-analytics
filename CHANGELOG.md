@@ -12,7 +12,7 @@ Signal brand refresh and Signal Hub entry point. No calculation, data contract o
 
 - Display name written **Worth Signal** (with a space) in the app, README, docs, issue templates, launchers and metadata. The distribution `customer-value-analytics`, the import package `cva`, `CVA_*` environment variables, the Docker tag and user and file names stay unchanged.
 - The app uses the shared `signal_theme` module (Organic Signal design, Customer family colour `#aa5d83`, Figtree): sidebar lockup, masthead, hero, notes, footer, the per-app Plotly template on every chart and the mark as favicon replace the pasted styles.
-- New banner, social preview and marks in `assets/`; the old banner and social SVGs and the old mark PNG are removed. `.streamlit/config.toml` uses the family colours and the shared Signal settings, which lower the standalone Streamlit upload limit to 50 MB (the parser limit `CVA_MAX_UPLOAD_MB` still defaults to 200 MB; raise both to accept larger files).
+- New banner, social preview and marks in `assets/`; the old banner and social SVGs and the old mark PNG are removed. `.streamlit/config.toml` uses the family colours and the shared Signal settings; the upload limits are unchanged.
 - README follows the Signal template; the issue templates use the new name.
 
 ### Signal Hub contract

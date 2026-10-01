@@ -26,6 +26,6 @@ The Worth Signal code does not add persistent customer-data storage, but a host 
 ## Reporting a privacy or security concern
 
 Email [code.modular578@passmail.net](mailto:code.modular578@passmail.net) with the subject
-`[Worth Signal privacy]`. If GitHub private vulnerability reporting is enabled, its
+`[WorthSignal privacy]`. If GitHub private vulnerability reporting is enabled, its
 [private security advisory form](https://github.com/UlrikErlingsen/customer-value-analytics/security/advisories/new)
 is also suitable. Do not put sensitive data or an exploitable report in a public issue.

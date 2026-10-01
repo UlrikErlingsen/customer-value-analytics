@@ -7,7 +7,7 @@ Security fixes are made on the latest `main` branch. The project does not curren
 ## Report a vulnerability privately
 
 Email [code.modular578@passmail.net](mailto:code.modular578@passmail.net) with the subject
-`[Worth Signal security]`. If GitHub private vulnerability reporting is enabled for the public
+`[WorthSignal security]`. If GitHub private vulnerability reporting is enabled for the public
 repository, you may instead use its [private security advisory form](https://github.com/UlrikErlingsen/customer-value-analytics/security/advisories/new).
 Please include:
 

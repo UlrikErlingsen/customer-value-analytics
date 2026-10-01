@@ -71,7 +71,7 @@ The app reads `.xlsx`, `.xls`, `.xlsm`, `.csv`, and `.json`, suggests which colu
 | BG/BB histories | history (optionally grouped) | `n`, `tx`, `x`, `count` |
 | Complaints | event | `customer_id`, `event_date`, `event_type` |
 
-Uploads are size-checked before parsing: the standalone app accepts files up to 50 MB by default (`maxUploadSize` in `.streamlit/config.toml`), the parser allows up to 200 MB (`CVA_MAX_UPLOAD_MB`), JSON up to 50 MB, and unpacked Excel up to 400 MB, with row and cell caps. See **[docs/data_guide.md](docs/data_guide.md)** for exactly what each analysis needs, with example tables and troubleshooting tips.
+Uploads are size-checked before parsing: 200 MB per file by default (Streamlit's `maxUploadSize` and the `CVA_MAX_UPLOAD_MB` environment variable), 50 MB for JSON, and 400 MB for unpacked Excel, plus row and cell caps. See **[docs/data_guide.md](docs/data_guide.md)** for exactly what each analysis needs, with example tables and troubleshooting tips.
 
 ## Methods
 
