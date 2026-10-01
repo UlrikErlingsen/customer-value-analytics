@@ -93,6 +93,42 @@ def test_core_package_imports_without_streamlit_or_plotly() -> None:
     assert result.returncode == 0, result.stderr
 
 
+def test_render_works_from_the_packaged_files_alone(tmp_path: Path) -> None:
+    # Signal Hub installs the release as a normal package: only src/cva/**/*.py and the declared package data
+    # ("cva.ui": assets/marks/*) exist there, so render() must not read examples/, docs/ or assets/ at the repo root.
+    for path in PACKAGE.rglob("*"):
+        relative = path.relative_to(PACKAGE)
+        packaged = path.suffix == ".py" or relative.parent == Path("ui", "assets", "marks")
+        if path.is_file() and packaged and "__pycache__" not in relative.parts:
+            target = tmp_path / "site" / "cva" / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(path.read_bytes())
+    site = str(tmp_path / "site")
+    script = f"import sys\nsys.path.insert(0, {site!r})\nfrom cva.ui import render\nrender()\n"
+    code = (
+        f"import sys\nsys.path.insert(0, {site!r})\n"
+        "from pathlib import Path\n"
+        "from streamlit.testing.v1 import AppTest\n"
+        "import cva\n"
+        f"assert Path(cva.__file__).is_relative_to({site!r}), cva.__file__\n"
+        "from cva.ui import signal_theme as sig\n"
+        "assert Path(sig.page_config('worth')['page_icon']).exists()\n"
+        f"app = AppTest.from_string({script!r}, default_timeout=120)\n"
+        "app.run()\n"
+        "assert not app.exception, [error.value for error in app.exception]\n"
+        "app.sidebar.radio[0].set_value('Customer selection').run()\n"
+        "assert not app.exception, [error.value for error in app.exception]\n"
+    )
+    result = subprocess.run(
+        [sys.executable, "-c", code],
+        capture_output=True,
+        text=True,
+        timeout=180,
+        cwd=tmp_path,
+    )
+    assert result.returncode == 0, result.stderr
+
+
 def test_render_never_sets_page_config_or_navigation() -> None:
     for path in UI.glob("*.py"):
         if path.name == "signal_theme.py":
