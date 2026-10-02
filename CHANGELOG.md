@@ -14,9 +14,11 @@ Signal brand refresh and Signal Hub entry point. No calculation, data contract o
 - The app uses the shared `signal_theme` module (Organic Signal design, Customer family colour `#aa5d83`, Figtree): sidebar lockup, masthead, hero, notes, footer, the per-app Plotly template on every chart and the mark as favicon replace the pasted styles.
 - New banner, social preview and marks in `assets/`; the old banner and social SVGs and the old mark PNG are removed. `.streamlit/config.toml` uses the family colours and the shared Signal settings; the upload limits are unchanged.
 - README follows the Signal template; the issue templates use the new name.
+- Embedded Figtree font, no Google Fonts request: the shared theme ships the font as `signal_font.py` and uses a per-family contrast order for chart colours.
 
 ### Signal Hub contract
 
+- Opens with the fictional demo preloaded: the generated test workbook (one example sheet per analysis, the same as `examples/quick_test.xlsx`) loads on first run, so every page works without an upload. An upload replaces it; removing the upload returns to the demo. The RFM data-layout choice now defaults to the layout of the chosen sheet.
 - `cva.ui` exposes `APP_INFO` and `render()`, so Signal Hub can embed the app; `app.py` is now a thin standalone entry point.
 - All session-state and widget keys are namespaced `worth:` (including the page selector). Pages no longer call `st.stop()`.
 - `streamlit` and `plotly` moved to a `ui` extra (also in `test`); the analysis core installs without them. `requirements.txt` still lists everything.

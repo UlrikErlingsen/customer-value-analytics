@@ -66,6 +66,8 @@ MASTHEAD_KICKER = "OPEN CUSTOMER VALUE TOOLKIT"
 MASTHEAD_PROMISES = ["Local-first", "Explainable", "Open source"]
 FOOTER_LINE = "Customer-value estimates, not future truth"
 XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+DEMO_FILENAME = "worthsignal_quick_test.xlsx"
+DEMO_NAME = "Fictional demo workbook"
 
 
 def fmt_number(value: float) -> str:
@@ -187,10 +189,19 @@ def load_for_session(raw: bytes, filename: str) -> LoadedData:
     return parsed
 
 
+def demo_data() -> LoadedData:
+    """The generated test workbook (one fictional example sheet per analysis), parsed like an upload."""
+    parsed = load_data(io.BytesIO(cached_template_workbook(None, True)), DEMO_FILENAME)
+    return LoadedData(tables=parsed.tables, source_name=DEMO_NAME)
+
+
 def _ensure_state() -> None:
     # The parsed upload lives only in this browser session (never in a global cache).
     if k("upload") not in st.session_state:
         st.session_state[k("upload")] = None
+    # First run: preload the fictional demo workbook so every page works before anything is uploaded.
+    if k("demo") not in st.session_state:
+        st.session_state[k("demo")] = demo_data()
 
 
 def page_start(loaded: LoadedData | None) -> None:
@@ -221,7 +232,9 @@ def page_start(loaded: LoadedData | None) -> None:
         """
         **First time here?**
 
-        1. Download the test workbook from the sidebar (or use `examples/quick_test.xlsx`) and upload it.
+        1. A fictional demo workbook is already loaded — one example sheet per analysis, no real customers.
+           Upload your own Excel, CSV, or JSON file in the sidebar to replace it; remove the upload to
+           return to the demo.
         2. Pick an analysis on the left — every page has a *"What data do I need?"* section with
            downloadable templates you can fill with your own data.
         3. Results can be downloaded as Excel or JSON on every page.
@@ -274,8 +287,17 @@ def page_selection(loaded: LoadedData | None) -> None:
         "Method", ["RFM analysis", "Logistic regression", "Decision tree"], horizontal=True, key=k("selection_method")
     )
     if analysis == "RFM analysis":
+        # Default to the layout the chosen sheet looks like (the demo opens on its transaction rows).
+        columns = [str(column) for column in frame.columns]
+        looks_like_transactions = suggest_column(columns, "recency") is None and all(
+            suggest_column(columns, role) for role in ("customer_id", "date", "amount")
+        )
         source_kind = st.radio(
-            "Your data", ["Customer-level R, F, M columns", "Transaction rows"], horizontal=True, key=k("rfm_source")
+            "Your data",
+            ["Customer-level R, F, M columns", "Transaction rows"],
+            index=1 if looks_like_transactions else 0,
+            horizontal=True,
+            key=k("rfm_source"),
         )
         if source_kind.startswith("Customer"):
             c1, c2, c3 = st.columns(3)
@@ -951,16 +973,18 @@ def _sidebar() -> tuple[str, LoadedData | None]:
                     "Supported: Excel (.xlsx, .xls, .xlsm), CSV, and JSON (a list of records, or named tables)."
                 )
         else:
+            loaded = st.session_state[k("demo")]
+            st.info("Showing the **fictional demo workbook**. Upload a file to replace it.")
             st.download_button(
-                "No file yet? Get a test workbook",
+                "Download the demo workbook",
                 data=cached_template_workbook(None, True),
-                file_name="worthsignal_quick_test.xlsx",
+                file_name=DEMO_FILENAME,
                 mime=XLSX_MIME,
                 key=k("download_quick_test"),
             )
             st.caption(
-                "One example sheet per analysis — upload it as-is to try everything, "
-                "then replace the rows with your own data."
+                "One fictional example sheet per analysis — replace the rows with your own data "
+                "and upload it to analyse your customers."
             )
         st.header("2. Choose your lens")
         page = st.radio("Analysis", list(PAGES), label_visibility="collapsed", key=k("page"))

@@ -47,10 +47,11 @@ The methods are classic, deliberately simple models — chosen because they are 
 
 ## Try the demo in three minutes
 
-1. Start the app (see [Run locally](#run-locally)) and click **No file yet? Get a test workbook** in the sidebar, or use `examples/quick_test.xlsx` — a small, ready-made file that works with the data-driven analyses out of the box. Upload it.
-2. Pick an analysis in the sidebar, keep the suggested column mappings, and press the run button.
-3. Three analyses — CLV, budgets, and Markov ROI — need no file at all; you type your assumptions directly.
-4. Download any result as Excel or JSON.
+1. Start the app (see [Run locally](#run-locally)). It opens with a **fictional demo workbook already loaded** — one small example sheet per data-driven analysis, describing invented customers — so there is nothing to upload. (The same file is `examples/quick_test.xlsx`, and **Download the demo workbook** in the sidebar saves a copy.)
+2. Pick an analysis in the sidebar, keep the suggested sheet and column mappings, and press the run button.
+3. To use your own data, upload an Excel, CSV, or JSON file in the sidebar; it replaces the demo. Remove the upload to return to the demo.
+4. Three analyses — CLV, budgets, and Markov ROI — need no file at all; you type your assumptions directly.
+5. Download any result as Excel or JSON.
 
 For fuller examples, `examples/example_data.xlsx` and `examples/example_data.json` contain one table per analysis, and `examples/transactions.csv` is a raw transaction-log example. Every analysis page that reads a file also has a **"What data do I need?"** section with **Download template** buttons that give you a pre-formatted file to fill with your own data.
 
