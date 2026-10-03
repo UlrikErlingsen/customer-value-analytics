@@ -14,6 +14,16 @@ from __future__ import annotations
 import pandas as pd
 
 
+SUMMARY_COLUMNS = (
+    "xp_repeat_purchases",
+    "xc_given_p_same_day_complaints",
+    "xc_other_complaints",
+    "tx_last_event",
+    "zc_last_event_involves_complaint",
+    "T_observation_length",
+)
+
+
 def complaint_summary(
     events: pd.DataFrame,
     customer_id: str,
@@ -41,32 +51,41 @@ def complaint_summary(
     if divisor is None:
         raise ValueError("Time unit must be days, weeks, or months.")
     end = pd.Timestamp(observation_end) if observation_end is not None else data[event_date].max()
-    rows = []
-    for customer, group in data.groupby(customer_id):
-        purchases = group[group[event_type].str.contains("purchase|order", regex=True)]
-        complaints = group[group[event_type].str.contains("complaint", regex=True)]
-        if purchases.empty:
-            continue
-        initial = purchases[event_date].min()
-        repeat_purchases = max(len(purchases) - 1, 0)
-        purchase_days = set(purchases[event_date].dt.normalize())
-        same_day = int(complaints[event_date].dt.normalize().isin(purchase_days).sum())
-        other = int(len(complaints) - same_day)
-        last_event = group[event_date].max()
-        last_rows = group[group[event_date] == last_event]
-        last_is_complaint = int(last_rows[event_type].str.contains("complaint").any())
-        rows.append(
-            {
-                customer_id: customer,
-                "xp_repeat_purchases": repeat_purchases,
-                "xc_given_p_same_day_complaints": same_day,
-                "xc_other_complaints": other,
-                "tx_last_event": (last_event - initial).days / divisor,
-                "zc_last_event_involves_complaint": last_is_complaint,
-                "T_observation_length": (end - initial).days / divisor,
-            }
-        )
-    return pd.DataFrame(rows)
+    # Vectorized per-customer aggregation (one pass of groupbys, no Python loop over customers), so event logs with
+    # millions of rows summarize in seconds; the output is identical to the former row-by-row version.
+    is_purchase = data[event_type].str.contains("purchase|order", regex=True)
+    is_complaint = data[event_type].str.contains("complaint", regex=True)
+    day = data[event_date].dt.normalize()
+    purchases = data.loc[is_purchase, [customer_id, event_date]]
+    initial = purchases.groupby(customer_id)[event_date].min()
+    if initial.empty:
+        return pd.DataFrame(columns=[customer_id, *SUMMARY_COLUMNS])
+    repeat_purchases = (purchases.groupby(customer_id).size() - 1).clip(lower=0)
+    purchase_days = pd.DataFrame({customer_id: data.loc[is_purchase, customer_id], "_day": day[is_purchase]})
+    complaints = pd.DataFrame({customer_id: data.loc[is_complaint, customer_id], "_day": day[is_complaint]})
+    same_day_rows = complaints.merge(purchase_days.drop_duplicates(), on=[customer_id, "_day"], how="inner")
+    same_day = same_day_rows.groupby(customer_id).size()
+    all_complaints = complaints.groupby(customer_id).size()
+    last_event = data.groupby(customer_id)[event_date].max()
+    is_last = data[event_date].eq(data.groupby(customer_id)[event_date].transform("max"))
+    last_is_complaint = data.loc[is_last & is_complaint].groupby(customer_id).size().gt(0)
+
+    customers = initial.index
+    same = same_day.reindex(customers, fill_value=0).astype(int)
+    result = pd.DataFrame(
+        {
+            customer_id: customers,
+            "xp_repeat_purchases": repeat_purchases.reindex(customers).astype(int).to_numpy(),
+            "xc_given_p_same_day_complaints": same.to_numpy(),
+            "xc_other_complaints": (all_complaints.reindex(customers, fill_value=0).astype(int) - same).to_numpy(),
+            "tx_last_event": ((last_event.reindex(customers) - initial).dt.days / divisor).to_numpy(),
+            "zc_last_event_involves_complaint": last_is_complaint.reindex(customers, fill_value=False)
+            .astype(int)
+            .to_numpy(),
+            "T_observation_length": ((end - initial).dt.days / divisor).to_numpy(),
+        }
+    )
+    return result
 
 
 def recovery_value(

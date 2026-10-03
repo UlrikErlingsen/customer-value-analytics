@@ -4,6 +4,23 @@ Notable changes to Worth Signal are documented here. This project follows [Seman
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-10-03
+
+### Larger datasets
+
+- **Larger datasets: no built-in data limits when run locally** (was 200 MB per file via `CVA_MAX_UPLOAD_MB`, 50 MB for JSON, 400 MB of unpacked Excel, 1,000,000 rows per table and 10,000,000 cells). File size, rows and cells are limited only by memory; running out of memory (including Arrow allocation failures) is reported as a plain `DataProblem` / message. A public demo (`SIGNAL_PUBLIC=1`) keeps the old values as demo caps, all in the new `cva.limits` module, and its messages say the downloaded app has none. The `MAX_*` size constants in `cva.io` are gone; every public function keeps its name and signature (Freddo CRM compatible).
+- BG/NBD and BG/BB pool customers with identical histories (their sufficient statistics) before fitting, an exact identity: results are unchanged, and BG/BB, whose likelihood loops per history in Python, now costs per distinct history instead of per customer. `score_bgbb` scores each distinct history once and maps the scores back.
+- `complaint_summary` is vectorized (no Python loop over customers) with identical output; the RFM segment label is built without a row-wise `apply`.
+- Exports scale: `results_to_excel` streams rows (openpyxl write-only) and continues a table on further sheets ("Customer scores (2)", …) beyond Excel's 1,048,575-row limit instead of failing; `results_to_json` writes compactly with pandas above 100,000 rows; new `results_to_csv_zip`. Results above 200,000 rows get CSV-zip, Excel and JSON downloads that are built on click. Every format holds every row.
+- Charts with more than 20,000 customers show a fixed random sample with a note; the complaint-summary preview shows the first 1,000 customers. Scores and downloads cover everyone.
+- Measured on this machine (5,000,000 transactions, 128 MB CSV, about 1 million customers): load 2 s, RFM inputs 5 s, RFM scores 2 s, BG/NBD summaries 7 s, BG/NBD fit and scores 40 s, CSV zip 8 s, JSON 1 s, Excel 55 s; peak memory 1.4 GB.
+- Launchers pass `CVA_MAX_UPLOAD_MB` (default 10000) to `--server.maxUploadSize`; the Dockerfile sets `STREAMLIT_SERVER_MAX_UPLOAD_SIZE=10000`. Hub mode (`SIGNAL_HUB=1`) is unchanged.
+- New `tests/test_large_data.py` (local mode accepts input above the demo caps, `SIGNAL_PUBLIC=1` enforces each cap, out-of-memory message, Excel sheet split, CSV zip and compact JSON, pooling leaves the fits unchanged, launcher/Docker/config caps); the old 50 MB JSON and row-limit tests are replaced.
+
+### Suite
+
+- Suite: Rival, Reach, Learn and Blueprint Signal added to the suite table; the synced Signal config raises `maxUploadSize` to 10000.
+
 ## [1.2.0] - 2026-10-02
 
 Signal brand refresh and Signal Hub entry point. No calculation, data contract or export format changed.

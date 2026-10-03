@@ -24,7 +24,7 @@ from cva.complaints import complaint_summary, recovery_value
 from cva.contractual import contractual_forecast
 from cva.equity import annual_elasticities, customer_equity
 from cva.investment import optimize_budgets
-from cva.io import LoadedData, load_data, profile_table, results_to_excel, results_to_json
+from cva.io import LoadedData, load_data, profile_table, results_to_csv_zip, results_to_excel, results_to_json
 from cva.markov import markov_clv, markov_roi
 from cva.schema import normalize_name, suggest_column
 from cva.selection import (
@@ -67,6 +67,10 @@ MASTHEAD_PROMISES = ["Local-first", "Explainable", "Open source"]
 FOOTER_LINE = "Customer-value estimates, not future truth"
 XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 DEMO_FILENAME = "worthsignal_quick_test.xlsx"
+# Big results: the browser gets a sample on charts; downloads always hold every row.
+CHART_POINTS = 20_000
+LARGE_EXPORT_ROWS = 200_000
+DEFERRED_DOWNLOADS = "callable" in (st.download_button.__doc__ or "")  # Streamlit builds the file on click
 DEMO_NAME = "Fictional demo workbook"
 
 
@@ -139,7 +143,22 @@ def column_select(label: str, frame: pd.DataFrame, role: str, key: str, allow_no
     return None if selected == "— none —" else selected
 
 
+def chart_rows(frame: pd.DataFrame) -> pd.DataFrame:
+    """At most CHART_POINTS rows for a chart (a fixed random sample, with a note); the analysis uses every row."""
+    if len(frame) <= CHART_POINTS:
+        return frame
+    st.caption(
+        f"The chart shows a random sample of {CHART_POINTS:,} of {len(frame):,} customers to stay responsive; "
+        "the scores and the downloads cover every customer."
+    )
+    return frame.sample(CHART_POINTS, random_state=0)
+
+
 def render_downloads(name: str, tables: dict[str, pd.DataFrame], stem: str) -> None:
+    rows = sum(len(frame) for frame in tables.values())
+    if rows > LARGE_EXPORT_ROWS:
+        _render_large_downloads(name, tables, stem, rows)
+        return
     left, right = st.columns(2)
     with left:
         st.download_button(
@@ -157,6 +176,31 @@ def render_downloads(name: str, tables: dict[str, pd.DataFrame], stem: str) -> N
             mime="application/json",
             key=k(f"json_{stem}"),
         )
+
+
+def _render_large_downloads(name: str, tables: dict[str, pd.DataFrame], stem: str, rows: int) -> None:
+    """Every row, in formats that scale: CSV (zip), and Excel split into sheets of Excel's row limit, and JSON."""
+    if DEFERRED_DOWNLOADS:
+        st.caption(
+            f"{rows:,} result rows. Each file is built when you click it (a minute or more for millions of rows); "
+            "Excel continues on further sheets after 1,048,575 rows. Every format holds every row."
+        )
+        downloads = [
+            ("Download CSV results (zip)", lambda: results_to_csv_zip(tables), f"{name}_csv.zip", "application/zip", "csv"),
+            ("Download Excel results", lambda: results_to_excel(tables), f"{name}.xlsx", XLSX_MIME, "xlsx"),
+            ("Download JSON results", lambda: results_to_json(tables), f"{name}.json", "application/json", "json"),
+        ]
+    else:  # older Streamlit builds files up front: offer the format that is fast for millions of rows
+        st.caption(
+            f"{rows:,} result rows: the CSV download (zip) holds every row. Excel and JSON for results this large "
+            "are offered by newer Streamlit versions, which build files on click; update Streamlit to get them."
+        )
+        with st.spinner("Preparing the CSV download…"):
+            payload = results_to_csv_zip(tables)
+        downloads = [("Download CSV results (zip)", payload, f"{name}_csv.zip", "application/zip", "csv")]
+    for column, (label, data, file_name, mime, kind) in zip(st.columns(len(downloads)), downloads):
+        with column:
+            st.download_button(label, data=data, file_name=file_name, mime=mime, key=k(f"{kind}_{stem}"))
 
 
 def chosen_table(data: LoadedData | None, stem: str, preferred: tuple[str, ...] = ()) -> pd.DataFrame | None:
@@ -774,7 +818,9 @@ def page_bgnbd(loaded: LoadedData | None) -> None:
             cols = st.columns(4)
             for col, name in zip(cols, ["r", "alpha", "a", "b"]):
                 col.metric(name, f"{getattr(params, name):.4f}")
-            fig = px.scatter(scored, x=tx_col, y="expected_future_purchases", color=x_col, template=sig.template(NS))
+            fig = px.scatter(
+                chart_rows(scored), x=tx_col, y="expected_future_purchases", color=x_col, template=sig.template(NS)
+            )
             sig.chart(NS, fig, key=k("bgnbd_chart"))
             render_downloads("bgnbd_results", {"Parameters": parameter_table, "Customer scores": scored}, "bgnbd")
         except Exception as exc:
@@ -831,7 +877,9 @@ def page_bgbb(loaded: LoadedData | None) -> None:
             cols = st.columns(4)
             for col, name in zip(cols, ["alpha", "beta", "gamma", "delta"]):
                 col.metric(name, f"{getattr(params, name):.4f}")
-            fig = px.scatter(scored, x=tx_col, y="expected_future_purchases", color=x_col, template=sig.template(NS))
+            fig = px.scatter(
+                chart_rows(scored), x=tx_col, y="expected_future_purchases", color=x_col, template=sig.template(NS)
+            )
             sig.chart(NS, fig, key=k("bgbb_chart"))
             render_downloads("bgbb_results", {"Parameters": parameter_table, "Customer scores": scored}, "bgbb")
         except Exception as exc:
@@ -865,7 +913,9 @@ def page_complaints(loaded: LoadedData | None) -> None:
                     require_distinct({"customer ID": customer, "event date": event_date, "event type": event_type})
                     date_series(frame, event_date, "event date")
                     summary = complaint_summary(frame, customer, event_date, event_type, end, unit)
-                    st.dataframe(summary, width="stretch", hide_index=True)
+                    if len(summary) > 1_000:
+                        st.caption(f"Showing the first 1,000 of {len(summary):,} customers; the download has all.")
+                    st.dataframe(summary.head(1_000), width="stretch", hide_index=True)
                     render_downloads("complaint_model_inputs", {"Customer summaries": summary}, "complaint_inputs")
                 except Exception as exc:
                     show_error(exc)

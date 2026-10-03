@@ -72,7 +72,7 @@ The app reads `.xlsx`, `.xls`, `.xlsm`, `.csv`, and `.json`, suggests which colu
 | BG/BB histories | history (optionally grouped) | `n`, `tx`, `x`, `count` |
 | Complaints | event | `customer_id`, `event_date`, `event_type` |
 
-Uploads are size-checked before parsing: 200 MB per file by default (Streamlit's `maxUploadSize` and the `CVA_MAX_UPLOAD_MB` environment variable), 50 MB for JSON, and 400 MB for unpacked Excel, plus row and cell caps. See **[docs/data_guide.md](docs/data_guide.md)** for exactly what each analysis needs, with example tables and troubleshooting tips.
+**Data limits.** On your own computer (standalone, a local Signal Hub, an internal company deployment or as a Python library) Worth Signal has no built-in limit on file size, rows or cells: memory is the limit, and running out of memory is reported as a plain message instead of a crash. Streamlit's upload cap is 10,000 MB. Transactions are aggregated to customers with vectorized pandas (measured: 5,000,000 transactions, 128 MB, load in about 2 s, RFM inputs in 5 s, RFM scores for about a million customers in 2 s, BG/NBD summaries in 7 s and the BG/NBD fit and scores in about 40 s, at 1.1 GB peak memory). BG/NBD and BG/BB pool customers with identical histories before fitting (an exact identity), charts with more than 20,000 customers show a fixed random sample with a note, and results above 200,000 rows offer a CSV zip, an Excel workbook that continues on further sheets after Excel's 1,048,575-row limit, and JSON, each built on click and each holding every row. A public demo (`SIGNAL_PUBLIC=1`, set by Signal Hub's public image) caps uploads at 50 MB (JSON 50 MB), 400 MB of unpacked Excel, 1,000,000 rows per table and 10,000,000 cells, and says so when a cap is hit; all caps live in [`src/cva/limits.py`](src/cva/limits.py). See **[docs/data_guide.md](docs/data_guide.md)** for exactly what each analysis needs, with example tables and troubleshooting tips.
 
 ## Methods
 
@@ -128,7 +128,7 @@ python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-(Use `python3` instead of `python` if that is what your system calls it.) The app opens on Streamlit's default port 8501. Set `CVA_MAX_UPLOAD_MB` to change the parser's upload limit.
+(Use `python3` instead of `python` if that is what your system calls it.) The app opens on Streamlit's default port 8501. Both launchers pass `CVA_MAX_UPLOAD_MB` (default 10000) to Streamlit's `--server.maxUploadSize`; the app itself has no file-size limit when run locally.
 
 ### Docker
 
@@ -139,7 +139,7 @@ docker build -t worthsignal .
 docker run --rm -p 8501:8501 worthsignal
 ```
 
-Then open http://localhost:8501. The container runs as a non-root user and includes a health check.
+Then open http://localhost:8501. The container runs as a non-root user and includes a health check. The upload cap is set with `STREAMLIT_SERVER_MAX_UPLOAD_SIZE=10000` in the image (override with `docker run -e STREAMLIT_SERVER_MAX_UPLOAD_SIZE=<MB> …`).
 
 ### Deploying for your team
 
@@ -163,7 +163,7 @@ python -m ruff check .
 
 The analysis core (`cva`) installs without Streamlit or Plotly; the app needs the `ui` extra (`python -m pip install -e ".[ui]"`), and `requirements.txt` lists everything for the launchers and Docker. [Signal Hub](https://github.com/UlrikErlingsen/signal-hub) embeds the app through `cva.ui.render()`.
 
-The suite reproduces published and hand-derived reference values for every model, runs each pipeline end to end on the bundled examples, checks templates, upload limits and validation messages, renders every Streamlit page, and checks the Signal Hub contract (no Streamlit or Plotly import outside `ui/`, `render()` without a page config, namespaced keys) and the shared Signal brand.
+The suite reproduces published and hand-derived reference values for every model, runs each pipeline end to end on the bundled examples, checks templates, local versus public-demo data limits and validation messages, renders every Streamlit page, and checks the Signal Hub contract (no Streamlit or Plotly import outside `ui/`, `render()` without a page config, namespaced keys) and the shared Signal brand.
 
 The public-facing product name is **Worth Signal**. The repository and Python project keep the stable `customer-value-analytics` name (import package `cva`) so existing links, clones, imports, and deployment instructions continue to work.
 

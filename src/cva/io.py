@@ -5,34 +5,36 @@ Turns an uploaded file into named pandas tables: Excel workbooks
 table, and JSON yields one table per top-level list/dict (a top-level list of
 records becomes a single "data" table; top-level scalars are collected into a
 "summary" table). Sources may be file paths or open binary streams, such as
-uploads from a web form. Uploads are size-checked before parsing so a single
-file cannot exhaust local memory. Companion helpers profile a table's columns
-and export result tables to a formatted Excel workbook or JSON records; Excel
-exports neutralize formula-like strings so opening them is safe.
+uploads from a web form. Run locally there is no limit on file size, rows or
+cells (memory is the limit, and running out of it is a plain DataProblem); a
+public demo (``SIGNAL_PUBLIC=1``) applies the caps in ``cva.limits``. Companion
+helpers profile a table's columns and export result tables to a formatted Excel
+workbook (streamed, split across sheets beyond Excel's row limit), JSON records
+or a zip of CSV files; exports neutralize formula-like strings so opening them is
+safe.
 """
 
 from __future__ import annotations
 
 import io
 import json
-import os
 import re
 import zipfile
-from copy import copy
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, BinaryIO
 
+import numpy as np
 import pandas as pd
+from openpyxl import Workbook
+from openpyxl.cell import WriteOnlyCell
+from openpyxl.styles import Font
+from openpyxl.utils import get_column_letter
 
-from cva.validation import DataProblem
+from cva import limits
 
-MAX_UPLOAD_MB = max(1, min(int(os.getenv("CVA_MAX_UPLOAD_MB", "200")), 1000))
-MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
-MAX_JSON_BYTES = 50 * 1024 * 1024
-MAX_UNCOMPRESSED_EXCEL_BYTES = 400 * 1024 * 1024
-MAX_TABLE_ROWS = 1_000_000
-MAX_TOTAL_CELLS = 10_000_000
+EXCEL_MAX_DATA_ROWS = 1_048_575  # Excel's own sheet limit (1,048,576 rows) minus the header row
+WIDTH_SAMPLE_ROWS = 2_000  # rows inspected to size export columns
 ILLEGAL_XML_CHARACTERS = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 
 
@@ -55,16 +57,8 @@ def _source_bytes(source: str | Path | BinaryIO) -> bytes:
 
 
 def _check_table_sizes(tables: dict[str, pd.DataFrame]) -> None:
-    """Reject parsed tables that exceed the local row and cell safety limits."""
-    total_cells = 0
-    for table_name, frame in tables.items():
-        total_cells += int(frame.shape[0] * frame.shape[1])
-        if len(frame) > MAX_TABLE_ROWS or total_cells > MAX_TOTAL_CELLS:
-            raise DataProblem(
-                f"The table '{table_name}' pushes this file past the local safety limit "
-                f"of {MAX_TABLE_ROWS:,} rows per table or {MAX_TOTAL_CELLS:,} cells in total.",
-                "Keep fewer rows or columns and upload again.",
-            )
+    """Apply the public demo's row and cell caps (no-op when run locally)."""
+    limits.check_tables({name: (int(frame.shape[0]), int(frame.shape[1])) for name, frame in tables.items()})
 
 
 def _flatten_json_payload(payload: Any) -> dict[str, pd.DataFrame]:
@@ -92,8 +86,9 @@ def load_data(source: str | Path | BinaryIO, name: str | None = None) -> LoadedD
 
     `source` may be a path or an open binary stream; the format is chosen from the
     file extension (pass `name` to supply one for anonymous streams). Raises
-    ValueError for unsupported extensions and DataProblem (a ValueError) when a
-    file exceeds the upload, expansion, or table-size limits.
+    ValueError for unsupported extensions and DataProblem (a ValueError) when the
+    computer runs out of memory or, in a public demo (``SIGNAL_PUBLIC=1``), a file
+    exceeds the demo's upload, expansion, or table-size caps.
     """
     source_name = name or getattr(source, "name", None) or str(source)
     suffix = Path(source_name).suffix.lower()
@@ -101,33 +96,21 @@ def load_data(source: str | Path | BinaryIO, name: str | None = None) -> LoadedD
         raise ValueError("Supported files are .xlsx, .xls, .xlsm, .json, and .csv.")
 
     raw = _source_bytes(source)
-    if len(raw) > MAX_UPLOAD_BYTES:
-        raise DataProblem(
-            f"This file is larger than the configured {MAX_UPLOAD_MB} MB upload limit.",
-            "Remove unneeded sheets, rows, or columns — or raise CVA_MAX_UPLOAD_MB if you truly need more.",
-        )
-
-    if suffix in {".xlsx", ".xls", ".xlsm"}:
-        if suffix in {".xlsx", ".xlsm"}:
-            with zipfile.ZipFile(io.BytesIO(raw)) as workbook:
-                expanded_size = sum(member.file_size for member in workbook.infolist())
-                if expanded_size > MAX_UNCOMPRESSED_EXCEL_BYTES:
-                    raise DataProblem(
-                        "This workbook expands beyond 400 MB when unpacked.",
-                        "Keep only the sheets the analysis needs and upload again.",
-                    )
-        sheets = pd.read_excel(io.BytesIO(raw), sheet_name=None)
-        tables = {str(k): v for k, v in sheets.items()}
-    elif suffix == ".csv":
-        tables = {"data": pd.read_csv(io.BytesIO(raw))}
-    else:
-        if len(raw) > MAX_JSON_BYTES:
-            raise DataProblem(
-                "JSON uploads are limited to 50 MB because they expand in memory.",
-                "Export the same data as CSV or Excel instead.",
-            )
-        payload = json.loads(raw.decode("utf-8-sig"))
-        tables = _flatten_json_payload(payload)
+    limits.check_upload_bytes(len(raw), json_file=suffix == ".json")
+    try:
+        if suffix in {".xlsx", ".xls", ".xlsm"}:
+            if suffix in {".xlsx", ".xlsm"}:
+                with zipfile.ZipFile(io.BytesIO(raw)) as workbook:
+                    limits.check_workbook_expansion(sum(member.file_size for member in workbook.infolist()))
+            sheets = pd.read_excel(io.BytesIO(raw), sheet_name=None)
+            tables = {str(k): v for k, v in sheets.items()}
+        elif suffix == ".csv":
+            tables = {"data": pd.read_csv(io.BytesIO(raw))}
+        else:
+            payload = json.loads(raw.decode("utf-8-sig"))
+            tables = _flatten_json_payload(payload)
+    except MemoryError as exc:  # includes pyarrow's ArrowMemoryError
+        raise limits.out_of_memory() from exc
 
     _check_table_sizes(tables)
     return LoadedData(tables, Path(source_name).name)
@@ -189,40 +172,99 @@ def safe_for_spreadsheet(frame: pd.DataFrame) -> pd.DataFrame:
     return safe
 
 
+def _sheet_name(raw_name: object, used: set[str], part: int = 0) -> str:
+    """Excel-safe, unique sheet name of at most 31 characters; parts of a split table get " (2)", " (3)" ..."""
+    base = "".join(ch if ch not in "[]:*?/\\" else "_" for ch in str(raw_name))[:31] or "Results"
+    if part > 1:
+        tail = f" ({part})"
+        base = f"{base[:31 - len(tail)]}{tail}"
+    name = base
+    counter = 2
+    while name in used:
+        suffix = f"_{counter}"
+        name = f"{base[:31-len(suffix)]}{suffix}"
+        counter += 1
+    used.add(name)
+    return name
+
+
+def _excel_value(value: object) -> object:
+    """Python value openpyxl can store: NaN/NaT/None become empty cells, numpy scalars become Python scalars."""
+    if value is None or value is pd.NaT:
+        return None
+    if isinstance(value, float) and np.isnan(value):
+        return None
+    if isinstance(value, np.generic):
+        return value.item()
+    return value
+
+
 def results_to_excel(tables: dict[str, pd.DataFrame]) -> bytes:
     """Write result tables to an Excel workbook (one sheet per table) and return the bytes.
 
     Sheet names are sanitized, truncated to Excel's 31-character limit, and de-duplicated;
     every frame passes through `safe_for_spreadsheet` so formula-like strings stay inert;
     each sheet gets a bold, frozen, filterable header row and readable column widths.
+    Rows are streamed (openpyxl write-only mode), so millions of rows do not need
+    gigabytes of memory, and a table longer than Excel's sheet limit continues on
+    further sheets ("Customer scores (2)", ...) instead of failing: every row is kept.
     """
-    output = io.BytesIO()
-    with pd.ExcelWriter(output, engine="openpyxl") as writer:
-        used: set[str] = set()
-        for raw_name, frame in tables.items():
-            base = "".join(ch if ch not in "[]:*?/\\" else "_" for ch in str(raw_name))[:31] or "Results"
-            name = base
-            counter = 2
-            while name in used:
-                suffix = f"_{counter}"
-                name = f"{base[:31-len(suffix)]}{suffix}"
-                counter += 1
-            used.add(name)
-            safe_for_spreadsheet(frame).to_excel(writer, sheet_name=name, index=False)
-            sheet = writer.book[name]
+    workbook = Workbook(write_only=True)
+    used: set[str] = set()
+    for raw_name, frame in tables.items():
+        safe = safe_for_spreadsheet(frame)
+        starts = range(0, max(len(safe), 1), EXCEL_MAX_DATA_ROWS)
+        for part, start in enumerate(starts, start=1):
+            chunk = safe.iloc[start:start + EXCEL_MAX_DATA_ROWS]
+            sheet = workbook.create_sheet(_sheet_name(raw_name, used, part if len(starts) > 1 else 0))
+            sample = chunk.head(WIDTH_SAMPLE_ROWS)
+            for index, column in enumerate(chunk.columns, start=1):
+                lengths = sample[column].map(lambda value: len(str(value)) if pd.notna(value) else 0)
+                widest = max([len(str(column)), *lengths.tolist()]) if len(sample) else len(str(column))
+                sheet.column_dimensions[get_column_letter(index)].width = min(45, max(10, widest + 2))
             sheet.freeze_panes = "A2"
-            sheet.auto_filter.ref = sheet.dimensions
-            for cell in sheet[1]:
-                font = copy(cell.font)
-                font.bold = True
-                cell.font = font
-            for column_cells in sheet.columns:
-                width = min(45, max(10, max(len(str(cell.value or "")) for cell in column_cells) + 2))
-                sheet.column_dimensions[column_cells[0].column_letter].width = width
+            if len(chunk.columns):
+                sheet.auto_filter.ref = f"A1:{get_column_letter(len(chunk.columns))}{len(chunk) + 1}"
+            header = []
+            for column in chunk.columns:
+                cell = WriteOnlyCell(sheet, value=str(column))
+                cell.font = Font(bold=True)
+                header.append(cell)
+            sheet.append(header)
+            for row in chunk.itertuples(index=False, name=None):
+                sheet.append([_excel_value(value) for value in row])
+    if not used:
+        workbook.create_sheet("Results")
+    output = io.BytesIO()
+    workbook.save(output)
     return output.getvalue()
 
 
+def results_to_csv_zip(tables: dict[str, pd.DataFrame]) -> bytes:
+    """Every result table as a UTF-8 CSV file (Excel-friendly BOM) in one zip archive; fast for millions of rows."""
+    output = io.BytesIO()
+    used: set[str] = set()
+    with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for raw_name, frame in tables.items():
+            name = _sheet_name(raw_name, used)
+            archive.writestr(f"{name}.csv", safe_for_spreadsheet(frame).to_csv(index=False).encode("utf-8-sig"))
+    return output.getvalue()
+
+
+COMPACT_JSON_ROWS = 100_000  # above this many rows in total, JSON is written compactly by pandas' C encoder
+
+
 def results_to_json(tables: dict[str, pd.DataFrame]) -> bytes:
-    """Serialize result tables to UTF-8 JSON: {table name: list of records}, with missing values as null."""
-    payload = {name: frame.where(pd.notna(frame), None).to_dict(orient="records") for name, frame in tables.items()}
-    return json.dumps(payload, ensure_ascii=False, indent=2, default=str).encode("utf-8")
+    """Serialize result tables to UTF-8 JSON: {table name: list of records}, with missing values as null.
+
+    Small exports are indented for reading; above COMPACT_JSON_ROWS rows the same structure is written
+    compactly by pandas (much faster and lighter for millions of rows).
+    """
+    if sum(len(frame) for frame in tables.values()) <= COMPACT_JSON_ROWS:
+        payload = {name: frame.where(pd.notna(frame), None).to_dict(orient="records") for name, frame in tables.items()}
+        return json.dumps(payload, ensure_ascii=False, indent=2, default=str).encode("utf-8")
+    parts = [
+        json.dumps(str(name), ensure_ascii=False) + ":" + frame.to_json(orient="records", date_format="iso", force_ascii=False)
+        for name, frame in tables.items()
+    ]
+    return ("{" + ",".join(parts) + "}").encode("utf-8")

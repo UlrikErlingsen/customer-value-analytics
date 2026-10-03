@@ -77,7 +77,8 @@ def rfm_scores(
     else:
         result["F_score"] = _quantile_score(result[frequency], higher_is_better=True, groups=groups)
         result["M_score"] = _quantile_score(result[monetary], higher_is_better=True, groups=groups)
-    result["RFM_segment"] = result[["R_score", "F_score", "M_score"]].astype("string").agg("-".join, axis=1)
+    scores = result[["R_score", "F_score", "M_score"]].astype("string")
+    result["RFM_segment"] = scores["R_score"] + "-" + scores["F_score"] + "-" + scores["M_score"]  # vectorized
     result["RFM_total"] = result[["R_score", "F_score", "M_score"]].sum(axis=1, min_count=3)
     return result
 

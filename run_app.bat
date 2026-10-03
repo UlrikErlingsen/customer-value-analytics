@@ -29,6 +29,8 @@ rem Install/upgrade dependencies when anything is missing or older than requirem
 )
 
 if not defined ARROW_DEFAULT_MEMORY_POOL set ARROW_DEFAULT_MEMORY_POOL=system
+rem Streamlit's upload cap in MB (the app itself has no file-size limit when run locally).
+if not defined CVA_MAX_UPLOAD_MB set CVA_MAX_UPLOAD_MB=10000
 echo Starting Worth Signal - a browser tab will open shortly.
-".venv\Scripts\python.exe" -m streamlit run app.py --browser.gatherUsageStats false
+".venv\Scripts\python.exe" -m streamlit run app.py --browser.gatherUsageStats false --server.maxUploadSize %CVA_MAX_UPLOAD_MB%
 pause

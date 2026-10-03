@@ -20,4 +20,4 @@ Please do not open a public issue for an unpatched vulnerability and never attac
 
 ## Deployment responsibility
 
-Worth Signal is local-first. If you expose it over a network, you are responsible for authentication, TLS, network controls, dependency updates, data handling, and server hardening. Read [PRIVACY.md](PRIVACY.md) before accepting uploads on a hosted deployment.
+Worth Signal is local-first. If you expose it over a network, you are responsible for authentication, TLS, network controls, dependency updates, data handling, and server hardening. Read [PRIVACY.md](PRIVACY.md) before accepting uploads on a hosted deployment. Run locally the app has no built-in data limits; a shared server should set `SIGNAL_PUBLIC=1`, which applies the demo caps in `src/cva/limits.py` (50 MB uploads, 1,000,000 rows per table, 10,000,000 cells).

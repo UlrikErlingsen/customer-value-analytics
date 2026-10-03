@@ -78,11 +78,19 @@ def fit_bgnbd(
     Optional `weights` allow aggregated inputs where one row represents several customers
     with identical histories. Optimizes in log-parameter space from several starting
     points and keeps the best solution.
+
+    Customers with identical (x, tx, T) are pooled into one weighted row before optimizing
+    (they are the likelihood's sufficient statistics), so the result is unchanged and large
+    customer bases with shared histories fit faster.
     """
     x, tx, T = _validate_summary(x, tx, T)
     w = np.ones_like(x) if weights is None else np.asarray(weights, dtype=float)
     if len(w) != len(x) or np.any(w < 0):
         raise ValueError("Weights must be non-negative and match the number of rows.")
+    median_T = max(float(np.median(T)), 1e-3)  # of customers, before pooling (start values as before)
+    histories, inverse = np.unique(np.column_stack([x, tx, T]), axis=0, return_inverse=True)
+    w = np.bincount(np.asarray(inverse).ravel(), weights=w, minlength=len(histories))
+    x, tx, T = histories[:, 0], histories[:, 1], histories[:, 2]
 
     def objective(log_params: np.ndarray) -> float:
         params = np.exp(log_params)
@@ -90,7 +98,6 @@ def fit_bgnbd(
         value = np.dot(w, ll)
         return float(-value) if np.isfinite(value) else 1e100
 
-    median_T = max(float(np.median(T)), 1e-3)
     starts = [
         [0.5, median_T / 2, 1.5, 3.0],
         [1.0, median_T, 2.0, 4.0],

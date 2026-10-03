@@ -45,4 +45,6 @@ fi
 # pyarrow's bundled mimalloc allocator can segfault on macOS; use the system allocator.
 export ARROW_DEFAULT_MEMORY_POOL="${ARROW_DEFAULT_MEMORY_POOL:-system}"
 
-exec .venv/bin/python -m streamlit run app.py --browser.gatherUsageStats false "$@"
+# Streamlit's upload cap in MB (the app itself has no file-size limit when run locally).
+exec .venv/bin/python -m streamlit run app.py --browser.gatherUsageStats false \
+  --server.maxUploadSize "${CVA_MAX_UPLOAD_MB:-10000}" "$@"

@@ -57,18 +57,6 @@ def test_excel_export_neutralizes_formula_like_cells_and_headers():
     assert loaded.iloc[2, 0] == "safe"
 
 
-def test_oversized_json_upload_is_rejected():
-    raw = b"[" + b"0," * 28_000_000 + b"0]"  # ~56 MB, above the 50 MB JSON cap
-    with pytest.raises(DataProblem, match="50 MB"):
-        load_data(io.BytesIO(raw), "huge.json")
-
-
-def test_table_row_limit_is_enforced_after_parsing(monkeypatch):
-    monkeypatch.setattr("cva.io.MAX_TABLE_ROWS", 2)
-    with pytest.raises(DataProblem, match="safety limit"):
-        load_data(io.BytesIO(b"a\n1\n2\n3\n"), "small.csv")
-
-
 def test_template_columns_are_auto_suggested_for_their_roles():
     """The app must auto-map every template column to the role its page asks for."""
     from cva.schema import suggest_column

@@ -125,6 +125,12 @@ def friendly_message(exc: BaseException) -> str:
     """Translate an exception into a message a non-technical user can act on."""
     if isinstance(exc, DataProblem):
         return str(exc)
+    if isinstance(exc, MemoryError):  # includes pyarrow's ArrowMemoryError
+        return (
+            "There is not enough memory on this computer for this file or analysis. Close other programs, keep "
+            "only the columns the analysis needs, or group customers with identical histories into one row with "
+            "a count column (BG/NBD and BG/BB give identical results)."
+        )
     text = str(exc)
     if isinstance(exc, KeyError):
         return (

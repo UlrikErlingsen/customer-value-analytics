@@ -17,7 +17,8 @@ COPY .streamlit/config.toml ./.streamlit/config.toml
 # Make the computation package importable without an editable install.
 # The system Arrow allocator avoids mimalloc segfaults seen on some platforms.
 ENV PYTHONPATH=/app/src \
-    ARROW_DEFAULT_MEMORY_POOL=system
+    ARROW_DEFAULT_MEMORY_POOL=system \
+    STREAMLIT_SERVER_MAX_UPLOAD_SIZE=10000
 
 # The application does not need root privileges at runtime.
 RUN useradd --create-home --uid 10001 worthsignal

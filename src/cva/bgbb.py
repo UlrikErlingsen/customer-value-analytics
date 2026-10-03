@@ -92,6 +92,15 @@ def _validate(n: np.ndarray, tx: np.ndarray, x: np.ndarray) -> tuple[np.ndarray,
     return n, tx, x
 
 
+def _pool_patterns(
+    n: np.ndarray, tx: np.ndarray, x: np.ndarray, w: np.ndarray
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """Unique (n, tx, x) histories with their summed weights (sufficient statistics of the BG/BB likelihood)."""
+    patterns, inverse = np.unique(np.column_stack([n, tx, x]), axis=0, return_inverse=True)
+    pooled = np.bincount(np.asarray(inverse).ravel(), weights=w, minlength=len(patterns))
+    return patterns[:, 0], patterns[:, 1], patterns[:, 2], pooled
+
+
 def fit_bgbb(
     n: np.ndarray, tx: np.ndarray, x: np.ndarray, weights: np.ndarray | None = None
 ) -> BGBBParams:
@@ -100,11 +109,16 @@ def fit_bgbb(
     Optional `weights` allow aggregated inputs where one row counts several customers
     with the same history. Optimizes in log-parameter space from several starting
     points and keeps the best solution.
+
+    The likelihood depends on a customer only through (n, tx, x), so customers with the
+    same history are pooled into one weighted pattern before optimizing. The result is
+    identical, and a million customers cost no more than the few dozen patterns they share.
     """
     n, tx, x = _validate(n, tx, x)
     w = np.ones(len(n)) if weights is None else np.asarray(weights, dtype=float)
     if len(w) != len(n) or np.any(w < 0):
         raise ValueError("Weights must be non-negative and match the rows.")
+    n, tx, x, w = _pool_patterns(n, tx, x, w)
 
     def objective(log_params: np.ndarray) -> float:
         params = tuple(np.exp(log_params))
@@ -176,7 +190,8 @@ def score_bgbb(
     """Fit BG/BB on a summary table and append per-customer scores.
 
     Adds `probability_alive` and `expected_future_purchases` columns for the given
-    `future_periods`; rows with non-numeric inputs are dropped.
+    `future_periods`; rows with non-numeric inputs are dropped. Scores are computed once
+    per distinct (n, tx, x) history and mapped back to every customer.
     """
     data = frame.copy()
     n = pd.to_numeric(data[n_col], errors="coerce")
@@ -189,12 +204,12 @@ def score_bgbb(
     weights = None if weight_col is None else pd.to_numeric(data.loc[valid, weight_col], errors="coerce").fillna(0).to_numpy()
     params = fit_bgbb(n_values, tx_values, x_values, weights)
     scored = data.loc[valid].copy()
-    scored["probability_alive"] = [
-        probability_alive(int(ni), int(txi), int(xi), params)
-        for ni, txi, xi in zip(n_values, tx_values, x_values)
-    ]
-    scored["expected_future_purchases"] = [
-        expected_future_purchases(int(ni), int(txi), int(xi), future_periods, params)
-        for ni, txi, xi in zip(n_values, tx_values, x_values)
-    ]
+    patterns, inverse = np.unique(np.column_stack([n_values, tx_values, x_values]), axis=0, return_inverse=True)
+    inverse = np.asarray(inverse).ravel()
+    alive = np.array([probability_alive(int(ni), int(txi), int(xi), params) for ni, txi, xi in patterns])
+    future = np.array(
+        [expected_future_purchases(int(ni), int(txi), int(xi), future_periods, params) for ni, txi, xi in patterns]
+    )
+    scored["probability_alive"] = alive[inverse] if len(patterns) else []
+    scored["expected_future_purchases"] = future[inverse] if len(patterns) else []
     return params, scored
